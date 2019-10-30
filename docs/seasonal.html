@@ -1,460 +1,532 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>What&#39;s in Season</title>
-    <meta name="description" content="See what&#39;s food is in season for each month"/>
+    <meta name="description" content="See what&#39;s food is in season for each month" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="./scripts/js.cookie.js"></script>
     <link rel="stylesheet" href="./css/main.css?cache_bust=1.33.0">
-    
-<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
-<link rel="mask-icon" sizes="any" href="./images/logotype.svg" color="#14d5de">
-<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="192x192" href="./images/fav/apple-touch-icon.png" />
-<link rel="manifest" href="./images/fav/manifest.json">
-<meta name="apple-mobile-web-app-title" content="What&#39;s in Season" />
-<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-<meta name="msapplication-TileColor" content="#14d5de">
-<meta name="theme-color" content="#14d5de">
-<meta property="og:url" content="https://seasonal.today" />
-<meta property="og:site_name" content="" />
-<meta property="og:locale" content="en_GB" />
-<meta property="og:title" content="What&#39;s in Season">
-<meta property="og:description" content="See what&#39;s food is in season for each month">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image" content="https://seasonal.today/images/og/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@dogwonder">
-<meta name="twitter:title" content="What&#39;s in Season">
-<meta name="twitter:description" content="See what&#39;s food is in season for each month">
-<meta name="twitter:image" content="https://seasonal.today/images/og/og-image.png">
-<meta property="twitter:url" content="https://seasonal.today" />
-    <script type='application/ld+json'>{"@context":"https://schema.org","@type":"WebSite","@id":"https://seasonal.today#website","url":"https://seasonal.today","name":"Dogwonder Ltd","logo":"https://seasonal.today/images/og/logo-160x60.png"}</script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+    <link rel="mask-icon" sizes="any" href="./images/logotype.svg" color="#14d5de">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./images/fav/apple-touch-icon.png" />
+    <link rel="manifest" href="./images/fav/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="What&#39;s in Season" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="msapplication-TileColor" content="#14d5de">
+    <meta name="theme-color" content="#14d5de">
+    <meta property="og:url" content="https://seasonal.today" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="What&#39;s in Season">
+    <meta property="og:description" content="See what&#39;s food is in season for each month">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://seasonal.today/images/og/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dogwonder">
+    <meta name="twitter:title" content="What&#39;s in Season">
+    <meta name="twitter:description" content="See what&#39;s food is in season for each month">
+    <meta name="twitter:image" content="https://seasonal.today/images/og/og-image.png">
+    <meta property="twitter:url" content="https://seasonal.today" />
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://seasonal.today#website",
+            "url": "https://seasonal.today",
+            "name": "Dogwonder Ltd",
+            "logo": "https://seasonal.today/images/og/logo-160x60.png"
+        }
+    </script>
     <script>
-(function (w,d,s,o,f,js,fjs) {
-w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
-js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
-js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-}(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
-plausible('page')
-</script>
+        (function(w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function() {
+                (w[o].q = w[o].q || []).push(arguments)
+            };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
+        plausible('page')
+    </script>
 </head>
+
 <body class="jw jw-seasonal" data-theme="default">
     <div id="cookieNotice" class="cookie-notice open" role="region">
-    <div class="container">
-        <p>Like most websites What&#39;s in Season uses cookies to give you the best experience. <a href="./privacy.html">Read our privacy policy</a>
-        <button id="cookieButton" class="cookieButton close" type="button" aria-label="Accept cookies">Accept cookies</button>
-        </p>
+        <div class="container">
+            <p>Like most websites What&#39;s in Season uses cookies to give you the best experience. <a href="./privacy.html">Read our privacy policy</a>
+                <button id="cookieButton" class="cookieButton close" type="button" aria-label="Accept cookies">Accept cookies</button>
+            </p>
+        </div>
     </div>
-</div>
     <div class="jw-wrapper">
-    <div class="jw-masthead">
-  <div class="jw-masthead__container">
-    
-    <header class="jw-masthead__logo">
-    <a href="./">
-      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M225.87 451.35L440.93 17.86l58.18 27.68L284.05 479l-58.18-27.65zM198.7 154.27L64.7 258.7v5.72l133.55 103.44-37.7 48.67L4.14 289.69v-55.83l158.8-127.8 35.76 48.21z" fill-rule="nonzero"/></svg>
-      <span class="sr-only">Go to the homepage</span>
-    </a>
-    </header>
-    <nav id="site-navigation" class="nav-collapse jw-masthead__nav navigation-sidebar">
-						<a class="skip-link sr-only" href="#content">Skip to content</a>
-						<a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
-							<svg class="🍔" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"/></svg>
-							<span class="sr-only">Toggle menu</span>
-						</a>
-						<div id="nav-menu" class="nav-menu">
-                <a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
-                <svg class="🚫" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z"/>
-							  <span class="sr-only">Toggle menu</span>
-						    </a>
-                <ul>
-                  <li><a href="./index.html">What's in season</a></li>
-                  <li><a href="./about.html">About this project</a></li>
-                </ul>
-						</div><!-- #nav-menu -->
-		</nav><!-- #site-navigation -->
-  </div>
-</div>
-    <main id="content" class="jw-container">
-      <div class="jw-content">
-        
+        <div class="jw-masthead">
+            <div class="jw-masthead__container">
 
-<style type="text/css">
-.seasons {
-    margin:0 auto 4rem;
-    max-width: 100%;
-    padding:0 2rem;
-}
-.month-grid {
-    display:grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-flow: dense;
-    grid-gap: 2px 10px;
-    grid-template-columns: [january] 1fr [february] 1fr [march] 1fr [april] 1fr [may] 1fr [june] 1fr [july] 1fr [august] 1fr [september] 1fr [october] 1fr [november] 1fr [december] 1fr;
-}
-
-.january {
-    grid-column-start: january;
-}
-.february {
-    grid-column-start: february;
-}
-.march {
-    grid-column-start: march;
-}
-.april {
-    grid-column-start: april;
-}
-.may {
-    grid-column-start: may;
-}
-.june {
-    grid-column-start: june;
-}
-.july {
-    grid-column-start: july;
-}
-.august {
-    grid-column-start: august;
-}
-.september {
-    grid-column-start: september;
-}
-.october {
-    grid-column-start: october;
-}
-.november {
-    grid-column-start: november;
-}
-.december {
-    grid-column-start: december;
-}
-
-.month {
-    padding: 0.5rem 1rem;
-    font-weight:bold; 
-}
-
-.food {
-    background-color:#ddd;
-    padding:2px;
-    font-size:1.4rem;
-    font-weight:400;
-}
-.begins {
-    background-color:#C6F7E2;
-}
-
-[data-span="1"] { grid-column-end: span 1; }
-[data-span="2"] { grid-column-end: span 2; }
-[data-span="3"] { grid-column-end: span 3; }
-[data-span="4"] { grid-column-end: span 4; }
-[data-span="5"] { grid-column-end: span 5; }
-[data-span="6"] { grid-column-end: span 6; }
-[data-span="7"] { grid-column-end: span 7; }
-[data-span="8"] { grid-column-end: span 8; }
-[data-span="9"] { grid-column-end: span 9; }
-[data-span="10"] { grid-column-end: span 10; }
-[data-span="11"] { grid-column-end: span 11; }
-[data-span="12"] { grid-column-end: span 12; }
-
-</style>
+                <header class="jw-masthead__logo">
+                    <a href="./">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                            <path d="M225.87 451.35L440.93 17.86l58.18 27.68L284.05 479l-58.18-27.65zM198.7 154.27L64.7 258.7v5.72l133.55 103.44-37.7 48.67L4.14 289.69v-55.83l158.8-127.8 35.76 48.21z" fill-rule="nonzero" /></svg>
+                        <span class="sr-only">Go to the homepage</span>
+                    </a>
+                </header>
+                <nav id="site-navigation" class="nav-collapse jw-masthead__nav navigation-sidebar">
+                    <a class="skip-link sr-only" href="#content">Skip to content</a>
+                    <a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
+                        <svg class="🍔" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" /></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </a>
+                    <div id="nav-menu" class="nav-menu">
+                        <a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
+                            <svg class="🚫" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" />
+                                <span class="sr-only">Toggle menu</span>
+                        </a>
+                        <ul>
+                            <li><a href="./index.html">What's in season</a></li>
+                            <li><a href="./about.html">About this project</a></li>
+                        </ul>
+                    </div><!-- #nav-menu -->
+                </nav><!-- #site-navigation -->
+            </div>
+        </div>
+        <main id="content" class="jw-container">
+            <div class="jw-content">
 
 
-<div class="seasons">
+                <style type="text/css">
+                    .seasons {
+                        margin: 0 auto 4rem;
+                        max-width: 100%;
+                        padding: 0 2rem;
+                    }
 
-    <h1>Seasonal vegetables</h1>
-    
-    <div class="month-grid">        
-        
-        <div class="month">January</div>
-        
-        <div class="month">February</div>
-        
-        <div class="month">March</div>
-        
-        <div class="month">April</div>
-        
-        <div class="month">May</div>
-        
-        <div class="month">June</div>
-        
-        <div class="month">July</div>
-        
-        <div class="month">August</div>
-        
-        <div class="month">September</div>
-        
-        <div class="month">October</div>
-        
-        <div class="month">November</div>
-        
-        <div class="month">December</div>
-        
-    </div>
+                    .month-grid {
+                        display: grid;
+                        grid-template-columns: repeat(12, 1fr);
+                        grid-auto-flow: dense;
+                        grid-gap: 2px 10px;
+                        grid-template-columns: [january] 1fr [february] 1fr [march] 1fr [april] 1fr [may] 1fr [june] 1fr [july] 1fr [august] 1fr [september] 1fr [october] 1fr [november] 1fr [december] 1fr;
+                    }
 
-    <div class="month-grid">
-        
-        <div class="food begins may" style="grid-row: 1;">⏰</div>
-        <div class="food june" data-span="2" style="grid-row: 1;">Asparagus</div>
-        <div class="food begins may" style="grid-row: 2;">⏰</div>
-        <div class="food june" data-span="5" style="grid-row: 2;">Aubergine</div>
-        <div class="food begins june" style="grid-row: 3;">⏰</div>
-        <div class="food july" data-span="2" style="grid-row: 3;">Basil</div>
-        <div class="food january" data-span="1"  style="grid-row: 4;">Beetroot</div>
-        <div class="food july" data-span="6"  style="grid-row: 4;">Beetroot</div>
-        <div class="food begins july" style="grid-row: 5;">⏰</div>
-        <div class="food august" data-span="3"  style="grid-row: 5;">Broccoli</div>
-        <div class="food january" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
-        <div class="food october" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
-        <div class="food january" data-span="12" style="grid-row: 7;">Cabbage</div>
-        <div class="food begins may" style="grid-row: 8;">⏰</div>
-        <div class="food june" data-span="4" style="grid-row: 8;">Carrot</div>
-        <div class="food begins december" style="grid-row: 9;">⏰</div>
-        <div class="food january" data-span="4" style="grid-row: 9;">Cauliflower</div>
-        <div class="food begins june" style="grid-row: 10;">⏰</div>
-        <div class="food july" data-span="4" style="grid-row: 10;">Cavolo nero</div>
-        <div class="food january" data-span="4" style="grid-row: 11;">Celeriac</div>
-        <div class="food september" data-span="4" style="grid-row: 11;">Celeriac</div>
-        <div class="food january" data-span="2" style="grid-row: 12;">Celery</div>
-        <div class="food begins july" style="grid-row: 12;">⏰</div>
-        <div class="food august" data-span="5" style="grid-row: 12;" >Celery</div>
-        <div class="food january" data-span="3" style="grid-row: 13;">Chicory</div>
-        <div class="food june" data-span="4" style="grid-row: 14;">Courgette</div>
-        <div class="food june" data-span="3" style="grid-row: 15;">Courgette flower</div>
-        <div class="food june" data-span="4" style="grid-row: 16;">Fennel bulb</div>
-        <div class="food begins june" style="grid-row: 17;">⏰</div>
-        <div class="food july" data-span="4" style="grid-row: 17;">Garlic</div>
-        <div class="food begins may" style="grid-row: 18;">⏰</div>
-        <div class="food june" data-span="6" style="grid-row: 18;">Globe artichoke</div>
-        <div class="food january" data-span="3" style="grid-row: 19;">Jerusalem artichoke</div>
-        <div class="food begins october" style="grid-row: 19;">⏰</div>
-        <div class="food november" data-span="2" style="grid-row: 19;">Jerusalem artichoke</div>
-        <div class="food january" data-span="2" style="grid-row: 20;">Kale</div>
-        <div class="food begins september" style="grid-row: 20;">⏰</div>
-        <div class="food october" data-span="3" style="grid-row: 20;">Kale</div>
-        <div class="food begins july" style="grid-row: 21;">⏰</div>
-        <div class="food august" data-span="4" style="grid-row: 21;">Kohlrabi</div>
-        <div class="food may" data-span="7" style="grid-row: 22;">Lamb's lettuce (corn salad)</div>
-        <div class="food january" data-span="3" style="grid-row: 23;">Leek</div>
-        <div class="food september" data-span="4" style="grid-row: 23;">Leek</div>
-        <div class="food begins april" style="grid-row: 24;">⏰</div>
-        <div class="food may" data-span="8" style="grid-row: 24;">Lettuce</div>
-        <div class="food begins july" style="grid-row: 25;">⏰</div>
-        <div class="food august" data-span="2" style="grid-row: 25;">Marrow</div>
-        <div class="food april" data-span="4" style="grid-row: 26;">New potatoes</div>
-        <div class="food january" data-span="12" style="grid-row: 27;">Pak choi</div>
-        <div class="food january" data-span="3" style="grid-row: 28;">Parsnip</div>
-        <div class="food september" data-span="4" style="grid-row: 28;">Parsnip</div>
-        <div class="food begins april" style="grid-row: 29;">⏰</div>
-        <div class="food may" data-span="7" style="grid-row: 29;">Peas</div>
-        <div class="food begins february" style="grid-row: 30;">⏰</div>
-        <div class="food march" data-span="8" style="grid-row: 30;">Pepper</div>
-        <div class="food begins march" style="grid-row: 31;">⏰</div>
-        <div class="food april" data-span="4" style="grid-row: 31;">Potato</div>
-        <div class="food begins september" style="grid-row: 32;">⏰</div>
-        <div class="food october" data-span="3" style="grid-row: 32;">Pumpkin</div>
-        <div class="food begins january" style="grid-row: 33;">⏰</div>
-        <div class="food february" data-span="3" style="grid-row: 33;">Purple sprouting broccoli</div>
-        <div class="food january" data-span="12" style="grid-row:34;">Radicchio</div>
-        <div class="food begins april" style="grid-row: 35;">⏰</div>
-        <div class="food may" data-span="7" style="grid-row: 35;">Radish</div>
-        <div class="food june" data-span="6" style="grid-row: 36;">Runner bean</div>
-        <div class="food january" data-span="1" style="grid-row: 37;">Salsify</div>
-        <div class="food begins september" style="grid-row: 37;">⏰</div>
-        <div class="food october" data-span="3" style="grid-row: 37;">Salsify</div>
-        <div class="food july" data-span="2" style="grid-row: 38;">Samphire</div>
-        <div class="food begins march" style="grid-row: 39;">⏰</div>
-        <div class="food april" data-span="6" style="grid-row: 39;">Spinach</div>
-        <div class="food begins march" style="grid-row: 40;">⏰</div>
-        <div class="food" data-span="3" style="grid-row: 40;">Spring greens</div>        
-        <div class="food january" data-span="2" style="grid-row: 41;">Swede</div>
-        <div class="food begins october" style="grid-row: 41;">⏰</div>
-        <div class="food november" data-span="2" style="grid-row: 41;">Swede</div>
-        <div class="food january" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
-        <div class="food october" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
-        <div class="food begins august" style="grid-row: 43;">⏰</div>
-        <div class="food september" data-span="1" style="grid-row: 43;">Sweetcorn</div>
-        <div class="food july" data-span="5" style="grid-row: 44;">Swiss chard</div>
-        <div class="food january" data-span="2" style="grid-row: 45;">Turnip</div>
-        <div class="food october" data-span="3" style="grid-row: 45;">Turnip</div>
-        <div class="food begins march" style="grid-row: 46;">⏰</div>
-        <div class="food april" data-span="6" style="grid-row: 46;">Watercress</div>
-    </div><!--.week-->
-</div><!--.seasons-->
+                    .january {
+                        grid-column-start: january;
+                    }
 
+                    .february {
+                        grid-column-start: february;
+                    }
 
-<div class="seasons">
+                    .march {
+                        grid-column-start: march;
+                    }
 
-    <h1>Seasonal fruits</h1>
-    
-    <div class="month-grid">        
-        
-        <div class="month">January</div>
-        
-        <div class="month">February</div>
-        
-        <div class="month">March</div>
-        
-        <div class="month">April</div>
-        
-        <div class="month">May</div>
-        
-        <div class="month">June</div>
-        
-        <div class="month">July</div>
-        
-        <div class="month">August</div>
-        
-        <div class="month">September</div>
-        
-        <div class="month">October</div>
-        
-        <div class="month">November</div>
-        
-        <div class="month">December</div>
-        
-    </div>
+                    .april {
+                        grid-column-start: april;
+                    }
 
-    <div class="month-grid">
-        <div class="food begins" style="grid-row: 1;">⏰</div>
-        
-        <div class="food january" data-span="2" style="grid-row: 1;">Apple</div>
-        <div class="food september" data-span="4" style="grid-row: 1;">Apple</div>
-        <div class="food may" data-span="5" style="grid-row: 2;">Apricot</div>
-        <div class="food" data-span="12" style="grid-row: 3;">🍌 Banana</div>
-        <div class="food begins july" style="grid-row: 4;">⏰</div>
-        <div class="food august" data-span="3" style="grid-row: 4;">Blackberry</div>
-        <div class="food begins may" style="grid-row: 5;">⏰</div>
-        <div class="food june" data-span="2" style="grid-row: 5;">Blackcurrants</div>
-        <div class="food january" data-span="3" style="grid-row: 6;">Bramley apple</div>
-        <div class="food begins november" style="grid-row: 6;">⏰</div>
-        <div class="food december" data-span="1" style="grid-row: 6;">Bramley apple</div>
-        <div class="food begins july" style="grid-row: 7;">⏰</div>
-        <div class="food august" data-span="1" style="grid-row: 7;">Cherry</div>
-        <div class="food january" data-span="2" style="grid-row: 8;">Clementine</div>
-        <div class="food november" data-span="2" style="grid-row: 8;">Clementine</div>
-        <div class="food august" data-span="1" style="grid-row: 9;">Crab apple</div>
-        <div class="food october" data-span="3" style="grid-row: 10;">Cranberry</div>
-        <div class="food begins august" style="grid-row: 11;">⏰</div>
-        <div class="food september" data-span="1" style="grid-row: 11;">Damson</div>
-        <div class="food january" data-span="1" style="grid-row: 12;">Date</div>
-        <div class="food begins october" style="grid-row: 12;">⏰</div>
-        <div class="food november" data-span="2" style="grid-row: 12;">Date</div>
-        <div class="food august" data-span="3" style="grid-row: 13;">Elderberries</div>
-        <div class="food begins july" style="grid-row: 14;">⏰</div>
-        <div class="food august" data-span="3" style="grid-row: 14;">Fig</div>
-        <div class="food begins may" style="grid-row: 15;">⏰</div>
-        <div class="food june" data-span="4" style="grid-row: 15;">Gooseberry</div>
-        <div class="food january" data-span="5" style="grid-row: 16;">Grapefruit</div>
-        <div class="food december" data-span="1" style="grid-row: 16;">Grapefruit</div>
-        <div class="food january" data-span="3" style="grid-row: 17;">Lemon</div>
-        <div class="food may" data-span="5" style="grid-row: 18;">Nectarine</div>
-        <div class="food january" data-span="3" style="grid-row: 19;">Orange</div>
-        <div class="food begins july" style="grid-row: 20;">⏰</div>
-        <div class="food august" data-span="2" style="grid-row: 20;">Peach</div>
-        <div class="food january" data-span="1" style="grid-row: 21;">Pear</div>
-        <div class="food september" data-span="4" style="grid-row: 21;">Pear</div>
-        <div class="food begins august" style="grid-row: 22;">⏰</div>
-        <div class="food september" data-span="2" style="grid-row: 22;">Plum</div>
-        <div class="food" data-span="12" style="grid-row: 23;">Pomegranate</div>
-        <div class="food begins september" style="grid-row: 24;">⏰</div>
-        <div class="food october" data-span="3" style="grid-row: 24;">Quince</div>
-        <div class="food begins june" style="grid-row: 25;">⏰</div>
-        <div class="food july" data-span="3" style="grid-row: 25;">Raspberry</div>
-        <div class="food begins june" style="grid-row: 26;">⏰</div>
-        <div class="food july" data-span="3" style="grid-row: 26;">Redcurrant</div>
-        <div class="food january" data-span="6" style="grid-row: 27;">Rhubarb</div>
-        <div class="food begins may" style="grid-row: 28;">⏰</div>
-        <div class="food june" data-span="4" style="grid-row: 28;">Strawberry</div>
-        <div class="food begins may" style="grid-row: 29;">⏰</div>
-        <div class="food june" data-span="5" style="grid-row: 29;">Tomato</div>
-        <div class="food begins june" style="grid-row: 30;">⏰</div>
-        <div class="food july" data-span="2" style="grid-row: 30;">Watermelon</div>
-    </div><!--.week-->
-</div><!--.month-->
+                    .may {
+                        grid-column-start: may;
+                    }
+
+                    .june {
+                        grid-column-start: june;
+                    }
+
+                    .july {
+                        grid-column-start: july;
+                    }
+
+                    .august {
+                        grid-column-start: august;
+                    }
+
+                    .september {
+                        grid-column-start: september;
+                    }
+
+                    .october {
+                        grid-column-start: october;
+                    }
+
+                    .november {
+                        grid-column-start: november;
+                    }
+
+                    .december {
+                        grid-column-start: december;
+                    }
+
+                    .month {
+                        padding: 0.5rem 1rem;
+                        font-weight: bold;
+                    }
+
+                    .food {
+                        background-color: #ddd;
+                        padding: 2px;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                    }
+
+                    .begins {
+                        background-color: #C6F7E2;
+                    }
+
+                    [data-span="1"] {
+                        grid-column-end: span 1;
+                    }
+
+                    [data-span="2"] {
+                        grid-column-end: span 2;
+                    }
+
+                    [data-span="3"] {
+                        grid-column-end: span 3;
+                    }
+
+                    [data-span="4"] {
+                        grid-column-end: span 4;
+                    }
+
+                    [data-span="5"] {
+                        grid-column-end: span 5;
+                    }
+
+                    [data-span="6"] {
+                        grid-column-end: span 6;
+                    }
+
+                    [data-span="7"] {
+                        grid-column-end: span 7;
+                    }
+
+                    [data-span="8"] {
+                        grid-column-end: span 8;
+                    }
+
+                    [data-span="9"] {
+                        grid-column-end: span 9;
+                    }
+
+                    [data-span="10"] {
+                        grid-column-end: span 10;
+                    }
+
+                    [data-span="11"] {
+                        grid-column-end: span 11;
+                    }
+
+                    [data-span="12"] {
+                        grid-column-end: span 12;
+                    }
+                </style>
 
 
+                <div class="seasons">
+
+                    <h1>Seasonal vegetables</h1>
+
+                    <div class="month-grid">
+
+                        <div class="month">January</div>
+
+                        <div class="month">February</div>
+
+                        <div class="month">March</div>
+
+                        <div class="month">April</div>
+
+                        <div class="month">May</div>
+
+                        <div class="month">June</div>
+
+                        <div class="month">July</div>
+
+                        <div class="month">August</div>
+
+                        <div class="month">September</div>
+
+                        <div class="month">October</div>
+
+                        <div class="month">November</div>
+
+                        <div class="month">December</div>
+
+                    </div>
+
+                    <div class="month-grid">
+
+                        <div class="food begins may" style="grid-row: 1;">⏰</div>
+                        <div class="food june" data-span="2" style="grid-row: 1;">Asparagus</div>
+                        <div class="food begins may" style="grid-row: 2;">⏰</div>
+                        <div class="food june" data-span="5" style="grid-row: 2;">Aubergine</div>
+                        <div class="food begins june" style="grid-row: 3;">⏰</div>
+                        <div class="food july" data-span="2" style="grid-row: 3;">Basil</div>
+                        <div class="food january" data-span="1" style="grid-row: 4;">Beetroot</div>
+                        <div class="food july" data-span="6" style="grid-row: 4;">Beetroot</div>
+                        <div class="food begins july" style="grid-row: 5;">⏰</div>
+                        <div class="food august" data-span="3" style="grid-row: 5;">Broccoli</div>
+                        <div class="food january" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
+                        <div class="food october" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
+                        <div class="food january" data-span="12" style="grid-row: 7;">Cabbage</div>
+                        <div class="food begins may" style="grid-row: 8;">⏰</div>
+                        <div class="food june" data-span="4" style="grid-row: 8;">Carrot</div>
+                        <div class="food begins december" style="grid-row: 9;">⏰</div>
+                        <div class="food january" data-span="4" style="grid-row: 9;">Cauliflower</div>
+                        <div class="food begins june" style="grid-row: 10;">⏰</div>
+                        <div class="food july" data-span="4" style="grid-row: 10;">Cavolo nero</div>
+                        <div class="food january" data-span="4" style="grid-row: 11;">Celeriac</div>
+                        <div class="food september" data-span="4" style="grid-row: 11;">Celeriac</div>
+                        <div class="food january" data-span="2" style="grid-row: 12;">Celery</div>
+                        <div class="food begins july" style="grid-row: 12;">⏰</div>
+                        <div class="food august" data-span="5" style="grid-row: 12;">Celery</div>
+                        <div class="food january" data-span="3" style="grid-row: 13;">Chicory</div>
+                        <div class="food june" data-span="4" style="grid-row: 14;">Courgette</div>
+                        <div class="food june" data-span="3" style="grid-row: 15;">Courgette flower</div>
+                        <div class="food june" data-span="4" style="grid-row: 16;">Fennel bulb</div>
+                        <div class="food begins june" style="grid-row: 17;">⏰</div>
+                        <div class="food july" data-span="4" style="grid-row: 17;">Garlic</div>
+                        <div class="food begins may" style="grid-row: 18;">⏰</div>
+                        <div class="food june" data-span="6" style="grid-row: 18;">Globe artichoke</div>
+                        <div class="food january" data-span="3" style="grid-row: 19;">Jerusalem artichoke</div>
+                        <div class="food begins october" style="grid-row: 19;">⏰</div>
+                        <div class="food november" data-span="2" style="grid-row: 19;">Jerusalem artichoke</div>
+                        <div class="food january" data-span="2" style="grid-row: 20;">Kale</div>
+                        <div class="food begins september" style="grid-row: 20;">⏰</div>
+                        <div class="food october" data-span="3" style="grid-row: 20;">Kale</div>
+                        <div class="food begins july" style="grid-row: 21;">⏰</div>
+                        <div class="food august" data-span="4" style="grid-row: 21;">Kohlrabi</div>
+                        <div class="food may" data-span="7" style="grid-row: 22;">Lamb's lettuce (corn salad)</div>
+                        <div class="food january" data-span="3" style="grid-row: 23;">Leek</div>
+                        <div class="food september" data-span="4" style="grid-row: 23;">Leek</div>
+                        <div class="food begins april" style="grid-row: 24;">⏰</div>
+                        <div class="food may" data-span="8" style="grid-row: 24;">Lettuce</div>
+                        <div class="food begins july" style="grid-row: 25;">⏰</div>
+                        <div class="food august" data-span="2" style="grid-row: 25;">Marrow</div>
+                        <div class="food april" data-span="4" style="grid-row: 26;">New potatoes</div>
+                        <div class="food january" data-span="12" style="grid-row: 27;">Pak choi</div>
+                        <div class="food january" data-span="3" style="grid-row: 28;">Parsnip</div>
+                        <div class="food september" data-span="4" style="grid-row: 28;">Parsnip</div>
+                        <div class="food begins april" style="grid-row: 29;">⏰</div>
+                        <div class="food may" data-span="7" style="grid-row: 29;">Peas</div>
+                        <div class="food begins february" style="grid-row: 30;">⏰</div>
+                        <div class="food march" data-span="8" style="grid-row: 30;">Pepper</div>
+                        <div class="food begins march" style="grid-row: 31;">⏰</div>
+                        <div class="food april" data-span="4" style="grid-row: 31;">Potato</div>
+                        <div class="food begins september" style="grid-row: 32;">⏰</div>
+                        <div class="food october" data-span="3" style="grid-row: 32;">Pumpkin</div>
+                        <div class="food begins january" style="grid-row: 33;">⏰</div>
+                        <div class="food february" data-span="3" style="grid-row: 33;">Purple sprouting broccoli</div>
+                        <div class="food january" data-span="12" style="grid-row:34;">Radicchio</div>
+                        <div class="food begins april" style="grid-row: 35;">⏰</div>
+                        <div class="food may" data-span="7" style="grid-row: 35;">Radish</div>
+                        <div class="food june" data-span="6" style="grid-row: 36;">Runner bean</div>
+                        <div class="food january" data-span="1" style="grid-row: 37;">Salsify</div>
+                        <div class="food begins september" style="grid-row: 37;">⏰</div>
+                        <div class="food october" data-span="3" style="grid-row: 37;">Salsify</div>
+                        <div class="food july" data-span="2" style="grid-row: 38;">Samphire</div>
+                        <div class="food begins march" style="grid-row: 39;">⏰</div>
+                        <div class="food april" data-span="6" style="grid-row: 39;">Spinach</div>
+                        <div class="food begins march" style="grid-row: 40;">⏰</div>
+                        <div class="food" data-span="3" style="grid-row: 40;">Spring greens</div>
+                        <div class="food january" data-span="2" style="grid-row: 41;">Swede</div>
+                        <div class="food begins october" style="grid-row: 41;">⏰</div>
+                        <div class="food november" data-span="2" style="grid-row: 41;">Swede</div>
+                        <div class="food january" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
+                        <div class="food october" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
+                        <div class="food begins august" style="grid-row: 43;">⏰</div>
+                        <div class="food september" data-span="1" style="grid-row: 43;">Sweetcorn</div>
+                        <div class="food july" data-span="5" style="grid-row: 44;">Swiss chard</div>
+                        <div class="food january" data-span="2" style="grid-row: 45;">Turnip</div>
+                        <div class="food october" data-span="3" style="grid-row: 45;">Turnip</div>
+                        <div class="food begins march" style="grid-row: 46;">⏰</div>
+                        <div class="food april" data-span="6" style="grid-row: 46;">Watercress</div>
+                    </div>
+                    <!--.week-->
+                </div>
+                <!--.seasons-->
+
+
+                <div class="seasons">
+
+                    <h1>Seasonal fruits</h1>
+
+                    <div class="month-grid">
+
+                        <div class="month">January</div>
+
+                        <div class="month">February</div>
+
+                        <div class="month">March</div>
+
+                        <div class="month">April</div>
+
+                        <div class="month">May</div>
+
+                        <div class="month">June</div>
+
+                        <div class="month">July</div>
+
+                        <div class="month">August</div>
+
+                        <div class="month">September</div>
+
+                        <div class="month">October</div>
+
+                        <div class="month">November</div>
+
+                        <div class="month">December</div>
+
+                    </div>
+
+                    <div class="month-grid">
+                        <div class="food begins" style="grid-row: 1;">⏰</div>
+
+                        <div class="food january" data-span="2" style="grid-row: 1;">Apple</div>
+                        <div class="food september" data-span="4" style="grid-row: 1;">Apple</div>
+                        <div class="food may" data-span="5" style="grid-row: 2;">Apricot</div>
+                        <div class="food" data-span="12" style="grid-row: 3;">🍌 Banana</div>
+                        <div class="food begins july" style="grid-row: 4;">⏰</div>
+                        <div class="food august" data-span="3" style="grid-row: 4;">Blackberry</div>
+                        <div class="food begins may" style="grid-row: 5;">⏰</div>
+                        <div class="food june" data-span="2" style="grid-row: 5;">Blackcurrants</div>
+                        <div class="food january" data-span="3" style="grid-row: 6;">Bramley apple</div>
+                        <div class="food begins november" style="grid-row: 6;">⏰</div>
+                        <div class="food december" data-span="1" style="grid-row: 6;">Bramley apple</div>
+                        <div class="food begins july" style="grid-row: 7;">⏰</div>
+                        <div class="food august" data-span="1" style="grid-row: 7;">Cherry</div>
+                        <div class="food january" data-span="2" style="grid-row: 8;">Clementine</div>
+                        <div class="food november" data-span="2" style="grid-row: 8;">Clementine</div>
+                        <div class="food august" data-span="1" style="grid-row: 9;">Crab apple</div>
+                        <div class="food october" data-span="3" style="grid-row: 10;">Cranberry</div>
+                        <div class="food begins august" style="grid-row: 11;">⏰</div>
+                        <div class="food september" data-span="1" style="grid-row: 11;">Damson</div>
+                        <div class="food january" data-span="1" style="grid-row: 12;">Date</div>
+                        <div class="food begins october" style="grid-row: 12;">⏰</div>
+                        <div class="food november" data-span="2" style="grid-row: 12;">Date</div>
+                        <div class="food august" data-span="3" style="grid-row: 13;">Elderberries</div>
+                        <div class="food begins july" style="grid-row: 14;">⏰</div>
+                        <div class="food august" data-span="3" style="grid-row: 14;">Fig</div>
+                        <div class="food begins may" style="grid-row: 15;">⏰</div>
+                        <div class="food june" data-span="4" style="grid-row: 15;">Gooseberry</div>
+                        <div class="food january" data-span="5" style="grid-row: 16;">Grapefruit</div>
+                        <div class="food december" data-span="1" style="grid-row: 16;">Grapefruit</div>
+                        <div class="food january" data-span="3" style="grid-row: 17;">Lemon</div>
+                        <div class="food may" data-span="5" style="grid-row: 18;">Nectarine</div>
+                        <div class="food january" data-span="3" style="grid-row: 19;">Orange</div>
+                        <div class="food begins july" style="grid-row: 20;">⏰</div>
+                        <div class="food august" data-span="2" style="grid-row: 20;">Peach</div>
+                        <div class="food january" data-span="1" style="grid-row: 21;">Pear</div>
+                        <div class="food september" data-span="4" style="grid-row: 21;">Pear</div>
+                        <div class="food begins august" style="grid-row: 22;">⏰</div>
+                        <div class="food september" data-span="2" style="grid-row: 22;">Plum</div>
+                        <div class="food" data-span="12" style="grid-row: 23;">Pomegranate</div>
+                        <div class="food begins september" style="grid-row: 24;">⏰</div>
+                        <div class="food october" data-span="3" style="grid-row: 24;">Quince</div>
+                        <div class="food begins june" style="grid-row: 25;">⏰</div>
+                        <div class="food july" data-span="3" style="grid-row: 25;">Raspberry</div>
+                        <div class="food begins june" style="grid-row: 26;">⏰</div>
+                        <div class="food july" data-span="3" style="grid-row: 26;">Redcurrant</div>
+                        <div class="food january" data-span="6" style="grid-row: 27;">Rhubarb</div>
+                        <div class="food begins may" style="grid-row: 28;">⏰</div>
+                        <div class="food june" data-span="4" style="grid-row: 28;">Strawberry</div>
+                        <div class="food begins may" style="grid-row: 29;">⏰</div>
+                        <div class="food june" data-span="5" style="grid-row: 29;">Tomato</div>
+                        <div class="food begins june" style="grid-row: 30;">⏰</div>
+                        <div class="food july" data-span="2" style="grid-row: 30;">Watermelon</div>
+                    </div>
+                    <!--.week-->
+                </div>
+                <!--.month-->
 
 
 
 
 
-      </div>
-    </main><!--/.container-->
-    <footer id="footer" class="jw-footer">
-    
-    
-<ul class="nav-social">
-    <li class="nav-social__item">
-            <a href="https://instagram.com/dogwonder" rel="external">
-            <svg class="icon icon-social icon-social-instagram" viewBox="0 0 448 512" aria-labelledby="title" role="img">
-                <title id="title">Follow us on Instagram</title>
-                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+
+
+            </div>
+        </main>
+        <!--/.container-->
+        <footer id="footer" class="jw-footer">
+
+
+            <ul class="nav-social">
+                <li class="nav-social__item">
+                    <a href="https://instagram.com/dogwonder" rel="external">
+                        <svg class="icon icon-social icon-social-instagram" viewBox="0 0 448 512" aria-labelledby="title" role="img">
+                            <title id="title">Follow us on Instagram</title>
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                        <span class="sr-only">Visit instagram</span>
+                    </a>
+                </li>
+                <li class="nav-social__item">
+                    <a href="mailto:dogwonder@gmail.com" rel="external">
+                        <svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" />
+                            <span class="sr-only">Email</span>
+                    </a>
+                </li>
+                <li class="nav-social__item">
+                    <a href="tel:07967835097" rel="external">
+                        <svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" />
+                            <span class="sr-only">Phone</span>
+                    </a>
+                </li>
+            </ul>
+            <!--/nav-->
+
+            <p>© Copyright 2019 <br />
+                <a href="./privacy.html" aria-label="Read this site's Privacy policy">Privacy policy</a> | <a href="./cookies.html" aria-label="Read this site's Cookie policy">Cookie policy</a> | <a href="./terms.html" aria-label="Read this site's Terms of Service">Terms of Service</a>
+            </p>
+            <svg width="0" height="0">
+                <radialGradient id="rg" r="150%" cx="30%" cy="107%">
+                    <stop stop-color="#fdf497" offset="0" />
+                    <stop stop-color="#fdf497" offset="0.05" />
+                    <stop stop-color="#fd5949" offset="0.45" />
+                    <stop stop-color="#d6249f" offset="0.6" />
+                    <stop stop-color="#285AEB" offset="0.9" />
+                </radialGradient>
             </svg>
-            <span class="sr-only">Visit instagram</span>
-            </a>
-    </li>
-    <li class="nav-social__item">
-        <a href="mailto:dogwonder@gmail.com" rel="external">
-        <svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" />
-        <span class="sr-only">Email</span>
-        </a>
-    </li>
-    <li class="nav-social__item">
-        <a href="tel:07967835097" rel="external">
-        <svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z" />
-            <span class="sr-only">Phone</span>
-        </a>
-    </li>
-</ul><!--/nav-->
-
-    <p>© Copyright 2019 <br /> 
-    <a href="./privacy.html" aria-label="Read this site's Privacy policy">Privacy policy</a> | <a href="./cookies.html" aria-label="Read this site's Cookie policy">Cookie policy</a>  | <a href="./terms.html" aria-label="Read this site's Terms of Service">Terms of Service</a>
-    </p>
-    <svg width="0" height="0">
-    <radialGradient id="rg" r="150%" cx="30%" cy="107%">
-      <stop stop-color="#fdf497" offset="0" />
-      <stop stop-color="#fdf497" offset="0.05" />
-      <stop stop-color="#fd5949" offset="0.45" />
-      <stop stop-color="#d6249f" offset="0.6" />
-      <stop stop-color="#285AEB" offset="0.9" />
-    </radialGradient>
-    </svg>
-</footer>
-    </div><!--/.wrapper-->
+        </footer>
+    </div>
+    <!--/.wrapper-->
     <script src="./scripts/app.js"></script>
     <script>
-    // This is the service worker with the combined offline experience (Cache-first network) - https://preview.pwabuilder.com/serviceworker
-    if ("serviceWorker" in navigator) {
-        if (navigator.serviceWorker.controller) {
-            //console.log("active service worker found, no need to register");
-        } else {
-            // Register the service worker
-            navigator.serviceWorker
-            .register("sw.js", {
-                scope: "./"
-            })
-            .then(function (reg) {
-                //console.log("Service worker has been registered for scope: " + reg.scope);
-            });
+        // This is the service worker with the combined offline experience (Cache-first network) - https://preview.pwabuilder.com/serviceworker
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                //console.log("active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        //console.log("Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
         }
-    }
     </script>
-    
-        
-    
+
+
+
     <script>
-    
-    astro.init();
+        astro.init();
     </script>
 </body>
+
 </html>
