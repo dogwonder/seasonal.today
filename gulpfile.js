@@ -245,6 +245,15 @@ gulp.task('move-files', () => {
     .pipe(gulp.dest(dir.dist));
 });
 
+// Moving misc files
+gulp.task('move-js', () => {  
+  return gulp
+      .src([
+      'assets/vendor/js.cookie.js'
+      ])
+    .pipe(gulp.dest(path.join(dir.dist, 'scripts')));
+});
+
 // Static Server + watching scss/html files
 gulp.task('serve', () => {
 
@@ -261,7 +270,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 

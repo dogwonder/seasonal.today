@@ -3,6 +3,34 @@
     //remove no-js class
     document.documentElement.className = document.documentElement.className.replace("no-js","js");
 
+    //🍪 notice
+    function cookieNoticeSeen() {
+
+        var getCookie = function (name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+        };
+
+        // Cookie vars
+        var cookieNotice = document.getElementById('cookieNotice');
+        var cookieButton = document.getElementById('cookieButton');
+
+        // Set a cookie
+        cookieButton.addEventListener('click', function (event) {
+            Cookies.set('jw_cookie_notice', 'closed', { expires: 365, path: '' });
+            cookieNotice.classList.remove('open');
+            document.body.classList.remove('has-cookie');
+        }, false);
+
+        //Remove notice if cookie already set
+        if (Cookies.get('jw_cookie_notice') == 'closed') {
+            cookieNotice.classList.remove('open');
+            document.body.classList.remove('has-cookie');
+        }
+
+    }
+
     var getCurrentMonth = function() {
         var months = ['january','february','march','april','may','june','july','august','september','october','november','december'];
         var now = new Date();
@@ -34,9 +62,6 @@
         });
 
     };
-
-    //Hide all the months
-    hideMonths();
 
     // Listen for clicks in the document
     document.addEventListener('click', function (event) {
@@ -74,6 +99,16 @@
         }); 
 
     }, false);
+
+    // Handler when the DOM is fully loaded
+    document.addEventListener("DOMContentLoaded", function(){
+
+        //Hide all the months
+        hideMonths();
+        
+        //Cookie notice
+        cookieNoticeSeen();
+    });
 
 })();
 

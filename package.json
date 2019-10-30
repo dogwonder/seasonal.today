@@ -1,6 +1,6 @@
 {
   "name": "seasonal.today",
-  "version": "1.29.0",
+  "version": "1.33.0",
   "description": "",
   "main": "gulpfile.js",
   "directories": {
