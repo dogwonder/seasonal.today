@@ -1,0 +1,31 @@
+{% macro text(bgColor, alignment, color, image, image_large, heading, file, class) %}
+  <div class="block block--text{% if class %} {{ class }}{% endif %}{% if (alignment == 'right') %} right{% elif (alignment == 'left') %} left{% else %} center{% endif %}"{% if bgColor %} style="background-color: {{ bgColor }};"{% endif %}>
+    <div class="block__text"{% if (alignment == 'center') %} style="background-color: {{ color }};"{% endif %}{% if (alignment == 'left') or (alignment == 'right') %} data-col{% endif %}>
+        <div class="inner">
+          {% if heading %}
+          <h2 class="block__heading">{{ heading }}</h2>
+          {% endif %}
+          {% if file %}
+          {% markdown %}
+          {% include file %}
+          {% endmarkdown %}
+          {% endif %}
+        </div><!--/inner-->
+    </div><!--/block__text-->
+    {% if (alignment == 'left') or (alignment == 'right') %}
+    {% if color %}
+    <div class="block__color" style="background-color: {{ color }};" data-col></div>
+    {% endif %}
+    {% if image %}
+    <div class="block__image" data-col>
+    <figure class="block__background">
+          <picture>
+            <source media="(min-width: 900px)" srcset="{% if image_large %}{{ image_large }}{% else %}{{ image }}{% endif %}">
+            <img src="{{ image }}" alt="{{ heading }}" loading="lazy" />
+          </picture>
+        </figure><!--/block__background-->
+    </div>
+    {% endif %}
+    {% endif %}
+  </div><!--/block-->
+{% endmacro %}

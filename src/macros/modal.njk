@@ -1,0 +1,13 @@
+{% macro modal(bgColor, buttonText, file, class) %}
+<div class="block block--modal{% if class %} {{ class }}{% endif %}"{% if bgColor %} style="background-color: {{ bgColor }};"{% endif %}>
+    <button class="button" onclick="window.dialog.show();">{% if buttonText %}{{ buttonText }}{% else %}open{% endif %}</button>
+</div><!--/block-->
+<dialog id="dialog" class="modal">
+    {% if file %}
+    {% markdown %}
+    {% include file %}
+    {% endmarkdown %}
+    {% endif %}
+    <button class="modal__close" onclick="window.dialog.close();">&#10006;</button>
+</dialog><!--/modal-->
+{% endmacro %}

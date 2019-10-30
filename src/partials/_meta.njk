@@ -1,0 +1,25 @@
+
+<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+<link rel="mask-icon" sizes="any" href="./images/logotype.svg" color="#14d5de">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="192x192" href="./images/fav/apple-touch-icon.png" />
+<link rel="manifest" href="./images/fav/manifest.json">
+<meta name="apple-mobile-web-app-title" content="{{ siteTitle }}" />
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="msapplication-TileColor" content="#14d5de">
+<meta name="theme-color" content="#14d5de">
+<meta property="og:url" content="{% if page_name %}{{ siteUrl }}/{{ page_name }}{% else %}{{ siteUrl }}{% endif %}" />
+<meta property="og:site_name" content="" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:title" content="{% if pageTitle %}{{ siteTitle }} - {{ pageTitle }}{% else %}{{ siteTitle }}{% endif %}">
+<meta property="og:description" content="{{ siteDesc }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image" content="{{ siteImage }}">
+<meta name="twitter:card" content="summary_large_image">
+{% if twitter %}<meta name="twitter:site" content="@{{ twitter }}">{% endif %}
+<meta name="twitter:title" content="{% if pageTitle %}{{ siteTitle }} - {{ pageTitle }}{% else %}{{ siteTitle }}{% endif %}">
+<meta name="twitter:description" content="{{ siteDesc }}">
+<meta name="twitter:image" content="{{ siteImage }}">
+<meta property="twitter:url" content="{% if page_name %}{{ siteUrl }}/{{ page_name }}{% else %}{{ siteUrl }}{% endif %}" />

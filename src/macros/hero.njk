@@ -1,0 +1,24 @@
+{% macro hero(image, imageLarge, heading, content, class) %}
+  <div class="block block--media{% if class %} {{ class }}{% endif %}">
+
+        <figure class="block__background">
+          <picture>
+            <source media="(min-width: 900px)" srcset="{% if imageLarge %}{{ imageLarge }}{% else %}{{ image }}{% endif %}">
+            <img src="{{ image }}" alt="{{ heading }}" loading="lazy" />
+          </picture>
+        </figure><!--/block__background-->
+
+        <div class="block__wrapper">
+          <div class="inner">
+            {% if heading %}
+            <h2 class="block__heading">{{ heading }}</h2>
+            {% endif %}
+            {% if content %}
+            <div class="block__content">
+            {{content}}
+            </div>
+            {% endif %}
+          </div><!--/inner-->
+        </div><!--/block__wrapper-->
+  </div><!--/block-->
+{% endmacro %}

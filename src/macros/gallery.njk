@@ -1,0 +1,10 @@
+{% macro gallery(imageID, imageTitle, imageUrl, imageUrlLarge, imageWidth, imageHeight) %}
+  <figure id="image-{{ imageID}}" class="jw-gallery__item" itemprop="associatedMedia" itemscope
+        itemtype="http://schema.org/ImageObject">
+            <a class="frame" href="{{ imageUrlLarge }}" itemprop="contentUrl" 
+                data-size="{{ imageWidth }}x{{ imageHeight }}">
+                <img src="{{ imageUrl }}" alt="{{ imageTitle }}" loading="lazy" />
+            </a>
+            <figcaption class="jw-gallery__details" itemprop="caption description">{{ imageTitle }}</figcaption>
+    </figure><!--/gallery__item-->
+{% endmacro %}

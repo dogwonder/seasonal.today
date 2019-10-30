@@ -1,0 +1,140 @@
+/**
+ * Navigation Menu Container
+ */
+
+//Menu
+.js-astro {
+	.nav-toggle {
+	   display: block;
+	   visibility: visible;
+	}
+
+	//Overlay menu
+   .navigation-overlay {
+	   .nav-menu {
+
+		   width:100%;
+		   display: flex;
+		   align-items: center;
+		   text-align:center;
+		   
+		   -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+		   transition: opacity 0.5s, visibility 0s 0.5s;
+		   -webkit-backdrop-filter: blur(5px) contrast(.8);
+		   backdrop-filter: blur(5px) contrast(.8);
+		   
+		   &.active {
+			   opacity: 0.9;
+			   visibility: visible;
+			   -webkit-transition: opacity 0.5s;
+			   transition: opacity 0.5s;
+			}
+			
+	   }
+   }
+   //Sidebar menu
+   .navigation-sidebar {
+	   .nav-menu {
+
+		   left:-100%;
+		   width:85%;
+		   opacity: 1;
+		   
+		   -webkit-transform: translateX(0);
+			 transform: translateX(0);
+		   -webkit-transition: 0.5s ease all;
+			 transition: 0.5s ease all;
+
+		   &.active {
+			   left:0;
+			   opacity: 1;
+			   visibility: visible;
+		   }
+
+		   ul {
+			margin:0;
+			padding: 0;
+			li {
+				line-height: 2;
+			}
+		 	}
+
+	   } 
+  }
+}
+
+
+
+.nav-menu {
+   width:100%;
+   height:100vh;
+   opacity: 0;
+   visibility: hidden;
+   position: absolute;
+   z-index:998;
+   left:0;
+   top:0;
+
+   background-color:var(--highlight-dark);
+   margin:0;
+   padding:2rem;
+   
+   ul {
+	   margin:0 auto;
+   }
+   
+   li {
+	   display: block;
+	   width: 100%;
+	   font-size: 3rem;
+	   @media #{$large-up} {
+		   font-size: 4rem;
+	   }
+	   line-height: 1.5;
+	   > a {
+		   text-decoration: none;
+		   color:white;
+		   font-weight: bold;
+		   &:hover, &:focus {
+			   color:var(--highlight);
+		   }
+	   }
+   }
+}
+
+
+/**
+* Navigation Toggle
+*/
+.nav-toggle {
+	display: none;
+	visibility: hidden;
+	margin-top:0;
+
+	.🍔 {width:4.4rem;height:4.4rem;}
+	.🚫 {width:4.4rem;height:4.4rem;fill:white;position: absolute;right:2rem;top:2rem;z-index:999;}
+
+}
+
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+	.jw-masthead {
+	  position: sticky;
+	  top: 0;
+	  z-index:99;
+	}
+}
+
+
+/**
+* Clearfix
+*/
+.nav-wrap:before,
+.nav-wrap:after {
+	display: table;
+	content: "";
+}
+
+.nav-wrap:after {
+	clear: both;
+}

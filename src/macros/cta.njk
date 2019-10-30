@@ -1,0 +1,9 @@
+{% macro cta(color, cta, link, class) %}
+  <div class="block block--cta{% if class %} {{ class }}{% endif %}"{% if color %} style="background-color: {{ color }};"{% endif %}>
+        <div class="inner">
+          {% if cta %}
+          <a href="{{ link }}" class="block__cta button">{{ cta }}</a>
+          {% endif %}
+        </div><!--/inner-->
+  </div><!--/block-->
+{% endmacro %}

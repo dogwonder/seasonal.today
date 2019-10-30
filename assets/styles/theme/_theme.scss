@@ -1,0 +1,265 @@
+//CSS Vars - usage var(--background)
+:root, [data-theme="default"] {
+	--hue: 209; 
+	
+    --background: white;
+    --masthead: #1E1E1E;
+	
+    --border:#e5e7e9;
+	
+    --text-color-normal: hsl(209, 2%, 0%);
+    --heading: hsl(209, 20%, 0%);
+	--meta: hsl(209, 10%, 53%);
+
+    --highlight: hsl(209, 92%, 43%);
+	--highlight-dark: hsl(209, 61%, 14%);
+    --highlight-light: hsl(209, 31%, 80%);
+    --hover: hsl(209, 34%, 30%);
+	
+    --button-background: hsl(209, 39%, 23%);
+    --button-background-hover: hsl(209, 61%, 16%);
+	--button-text-color: white;
+	
+    --spacer: 2rem;
+    
+    --container: 70ch;
+}
+
+//Global
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: $default-line-height;
+    @media #{$large-up} {
+        font-size: $default-font-size;
+    }
+    font-weight: normal;
+    background-color:var(--textbackground);
+    color: var(--text-color-normal);
+    text-align:left;
+}
+
+@supports ( font-variation-settings: normal ) {
+
+	body {
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	}
+}
+
+%wjTitle,
+.wjTitle {
+  font-size:3rem;
+  line-height: 3.2rem;
+  color:var(--text-color-normal);
+  margin: 4rem 0 2rem 0;
+  @media #{$large-up} {
+    font-size:4.8rem;
+    line-height: 5rem;
+  }
+}
+
+//Links
+a, a:link {
+ -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  color:var(--highlight);
+  text-decoration: underline;
+  &:active {
+      
+  }
+  &:hover, &:focus {
+      color:var(--hover);
+      text-decoration: none;
+  }
+}
+
+
+//Typography
+h1,h2,h3,h4,h5,h6{
+  font-weight: $bold;
+  line-height: 1.33;
+  color:var(--heading);
+  margin:calc(var(--spacer) * 2) 0 var(--spacer);
+  letter-spacing: 0.1px;
+}
+
+.jw-content {
+    h1 {
+        @extend .wjTitle; //48px
+    }
+    h2 {
+        font-size: 3.2rem;
+    }
+    h3 {
+        font-size: 2.8rem;
+    }
+    h4 {
+        font-size: 2.4rem;
+    }
+    h5 {
+       font-size: 2.1rem;
+       font-weight: normal;
+    }
+    h6 {
+       font-size: 1.8rem;
+       font-weight: normal;
+    }
+    p {
+        margin:0 0 var(--spacer);
+    }
+    em {font-style:italic;}
+    strong {font-weight: 700;}
+    ul {
+        margin:0 0 calc(var(--spacer) * 2) calc(var(--spacer) * 2);
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: lower-alpha;
+        margin:0 0 calc(var(--spacer) * 2) calc(var(--spacer) * 2);
+        ol {
+            margin-top:var(--spacer);
+            list-style-type: lower-roman;
+        }
+    }
+    img {
+        margin-top:2rem;
+    }
+    code {
+        font-family: monospace;
+    }
+}
+
+
+//Siblings
+// h3 ~ h4 {margin-top:calc((var(--spacer) / 2) * -1);}
+
+/*Layout*/
+.jw-wrapper {
+
+}
+@media only screen and (min-width: 64rem) {
+    .jw-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+}
+
+.jw-masthead {
+    padding:0;
+    background-color:var(--border);
+    line-height: 1;
+    .jw-masthead__container {
+        padding:1rem;
+        @media #{$large-up} {
+            padding:2rem;
+        }
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}
+
+//Sticky footer
+.jw-container {
+    flex:1;
+}
+
+.jw-footer {
+  background-color: var(--masthead);
+  color:white;
+}
+
+//Nav
+.jw-nav {}
+
+//Logo
+.jw-masthead__logo {
+    svg {
+        width:4.4rem;
+        height:4.4rem;
+    }
+}
+
+.jw-content {
+    padding:0;
+    margin:0;
+}
+
+.jw-content__inner {
+    margin:0 auto 4rem;
+    max-width: 70ch;
+    padding:0 2rem;
+    @media #{$large-up} {
+        padding:0;
+    }
+}
+
+//Links
+.jw-content__links {
+    p {margin:0 0 0.25rem;}
+    [class^="fa"] {margin-right:1rem;}
+}
+
+
+//Footer
+.jw-footer {
+    padding:4rem 0;
+    color:var(--border);
+    .nav-social {
+        margin: 2rem auto;
+        padding:0;
+        max-width: 40rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        li {
+            display: block;
+            flex: 0 1 auto;
+        }
+    }
+    .icon-social {
+        width: 3rem;
+        height: 3rem;
+        transition: all .3s ease;
+        fill: var(--border);
+        -webkit-transition: all 150ms ease;
+         transition: all 150ms ease;
+        &:hover {
+            opacity: 1;
+            fill: var(--highlight-light);
+        }
+    }
+    .icon-social-instagram {
+        fill: url(#rg);
+    }
+    p {
+        color:inherit;
+        font-size:12px;
+        text-align: center;
+        margin:2rem 0;
+        > a {
+            color:inherit;
+            &:hover, &:focus {
+                text-decoration: none;
+                color: var(--highlight-light);
+            }
+        }
+    }
+}
+
+//Themes
+$themes: (
+    "light-grey": $jw-light-grey,
+    "dark-grey": $jw-dark-grey,
+    "coal": $jw-coal
+);
+@each $theme, $color in $themes {
+      .theme--#{$theme}  {
+        background-color:$color;
+      }
+}

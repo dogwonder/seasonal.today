@@ -1,0 +1,12 @@
+{% macro image(image, imageLarge, imageAlt, class) %}
+  <div class="block block--image{% if class %} {{ class }}{% endif %}">
+    <div class="frame">
+      <figure>
+        <picture>
+          <source media="(min-width: 900px)" srcset="{% if imageLarge %}{{ imageLarge }}{% else %}{{ image }}{% endif %}">
+          <img src="{{ image }}" alt="{{ imageAlt }}" loading="lazy" />
+        </picture>
+      </figure>
+    </div><!--/frame-->
+  </div><!--/block-->
+{% endmacro %}
