@@ -4,11 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>seasonal.today</title>
-    <meta name="description" content="What&#39;s in seasons" />
+    <title>What&#39;s in Season</title>
+    <meta name="description" content="See what&#39;s food is in season for each month" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="./scripts/js.cookie.js"></script>
-    <link rel="stylesheet" href="./css/main.css?cache_bust=1.3.0">
+    <link rel="stylesheet" href="./css/main.css?cache_bust=1.28.0">
 
     <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
     <link rel="mask-icon" sizes="any" href="./images/logotype.svg" color="#14d5de">
@@ -16,22 +15,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="192x192" href="./images/fav/apple-touch-icon.png" />
     <link rel="manifest" href="./images/fav/manifest.json">
-    <meta name="apple-mobile-web-app-title" content="seasonal.today" />
+    <meta name="apple-mobile-web-app-title" content="What&#39;s in Season" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white" />
     <meta name="msapplication-TileColor" content="#14d5de">
     <meta name="theme-color" content="#14d5de">
     <meta property="og:url" content="https://seasonal.today" />
     <meta property="og:site_name" content="" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:title" content="seasonal.today">
-    <meta property="og:description" content="What&#39;s in seasons">
+    <meta property="og:title" content="What&#39;s in Season">
+    <meta property="og:description" content="See what&#39;s food is in season for each month">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image" content="https://seasonal.today/images/og/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@dogwonder">
-    <meta name="twitter:title" content="seasonal.today">
-    <meta name="twitter:description" content="What&#39;s in seasons">
+    <meta name="twitter:title" content="What&#39;s in Season">
+    <meta name="twitter:description" content="See what&#39;s food is in season for each month">
     <meta name="twitter:image" content="https://seasonal.today/images/og/og-image.png">
     <meta property="twitter:url" content="https://seasonal.today" />
     <script type='application/ld+json'>
@@ -44,9 +43,22 @@
             "logo": "https://seasonal.today/images/og/logo-160x60.png"
         }
     </script>
+    <script>
+        (function(w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function() {
+                (w[o].q = w[o].q || []).push(arguments)
+            };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
+        plausible('page')
+    </script>
 </head>
 
-<body class="wj jw-seasonal" data-theme="default">
+<body class="jw jw-seasonal" data-theme="default">
     <div class="jw-wrapper">
         <div class="jw-masthead">
             <div class="jw-masthead__container">
@@ -72,10 +84,8 @@
                                 <span class="sr-only">Toggle menu</span>
                         </a>
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li><a href="./gallery.html">Gallery</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./index.html">What's in season</a></li>
+                            <li><a href="./about.html">About this project</a></li>
                         </ul>
                     </div><!-- #nav-menu -->
                 </nav><!-- #site-navigation -->

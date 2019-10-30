@@ -1,4 +1,4 @@
-const CACHE = "dgCache-{{ pkgVersion() }}";
+const CACHE = "stCache-{{ pkgVersion() }}";
 
 // This is the service worker with the Cache-first network
 const precacheFiles = [
@@ -12,9 +12,8 @@ const precacheFiles = [
 ];
 
 self.addEventListener("install", function (event) {
-  console.log("[PWA Builder] Install Event processing");
-
-  console.log("[PWA Builder] Skip waiting on install");
+  // console.log("[PWA Builder] Install Event processing");
+  // console.log("[PWA Builder] Skip waiting on install");
   self.skipWaiting();
 
   event.waitUntil(
@@ -25,10 +24,22 @@ self.addEventListener("install", function (event) {
   );
 });
 
-// Allow sw to control of current page
-self.addEventListener("activate", function (event) {
-  console.log("[PWA Builder] Claiming clients for current page");
-  event.waitUntil(self.clients.claim());
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    //Delete old caches
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE !== cacheName &&  cacheName.startsWith("stCache")) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(function() {
+      console.log('[ServiceWorker] Claiming clients for version - {{ pkgVersion() }}');
+      return self.clients.claim();
+    })  
+  );
 });
 
 // If any fetch fails, it will look for the request in the cache and serve it from there first

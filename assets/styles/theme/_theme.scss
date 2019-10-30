@@ -50,8 +50,8 @@ body {
 	}
 }
 
-%wjTitle,
-.wjTitle {
+%jwTitle,
+.jwTitle {
   font-size:3rem;
   line-height: 3.2rem;
   color:var(--text-color-normal);
@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5,h6{
 
 .jw-content {
     h1 {
-        @extend .wjTitle; //48px
+        @extend .jwTitle; //48px
     }
     h2 {
         font-size: 3.2rem;

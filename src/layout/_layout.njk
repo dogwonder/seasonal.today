@@ -6,12 +6,12 @@
     <title>{% if pageTitle %}{{ siteTitle }} - {{ pageTitle }}{% else %}{{ siteTitle }}{% endif %}</title>
     <meta name="description" content="{{ siteDesc }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="./scripts/js.cookie.js"></script>
     <link rel="stylesheet" href="./css/main.css?cache_bust={{ pkgVersion() }}">
     {% include "../partials/_meta.njk" %}
     {% include "../partials/_structured-data.njk" %}
+    {% include "../partials/_analytics.njk" %}
 </head>
-<body class="wj{% if body_class %} {{ body_class }}{% endif %}" data-theme="default">
+<body class="jw{% if body_class %} {{ body_class }}{% endif %}" data-theme="default">
     <div class="jw-wrapper">
     {% include "../partials/_header.njk" %}
     <main id="content" class="jw-container">
