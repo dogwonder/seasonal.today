@@ -1,0 +1,354 @@
+{% set body_class = "jw-seasonal" %}
+
+{% extends "layout/_layout.njk" %}
+
+{% block content %}
+
+<style type="text/css">
+.seasons {
+    margin:0 auto 4rem;
+    max-width: 100%;
+    padding:0 2rem;
+}
+.month-grid {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 2px 10px;
+    grid-template-columns: [january] 1fr [february] 1fr [march] 1fr [april] 1fr [may] 1fr [june] 1fr [july] 1fr [august] 1fr [september] 1fr [october] 1fr [november] 1fr [december] 1fr;
+}
+
+.january {
+    grid-column-start: january;
+}
+.february {
+    grid-column-start: february;
+}
+.march {
+    grid-column-start: march;
+}
+.april {
+    grid-column-start: april;
+}
+.may {
+    grid-column-start: may;
+}
+.june {
+    grid-column-start: june;
+}
+.july {
+    grid-column-start: july;
+}
+.august {
+    grid-column-start: august;
+}
+.september {
+    grid-column-start: september;
+}
+.october {
+    grid-column-start: october;
+}
+.november {
+    grid-column-start: november;
+}
+.december {
+    grid-column-start: december;
+}
+
+.month {
+    padding: 0.5rem 1rem;
+    font-weight:bold; 
+}
+
+.food {
+    background-color:#ddd;
+    padding:2px;
+    font-size:1.4rem;
+    font-weight:400;
+}
+.begins {
+    background-color:#C6F7E2;
+}
+
+[data-span="1"] { grid-column-end: span 1; }
+[data-span="2"] { grid-column-end: span 2; }
+[data-span="3"] { grid-column-end: span 3; }
+[data-span="4"] { grid-column-end: span 4; }
+[data-span="5"] { grid-column-end: span 5; }
+[data-span="6"] { grid-column-end: span 6; }
+[data-span="7"] { grid-column-end: span 7; }
+[data-span="8"] { grid-column-end: span 8; }
+[data-span="9"] { grid-column-end: span 9; }
+[data-span="10"] { grid-column-end: span 10; }
+[data-span="11"] { grid-column-end: span 11; }
+[data-span="12"] { grid-column-end: span 12; }
+
+</style>
+{% set months = [
+        'january', 
+        'february', 
+        'march', 
+        'april', 
+        'may',
+        'june', 
+        'july', 
+        'august', 
+        'september', 
+        'october', 
+        'november', 
+        'december'
+        ] %}
+
+<div class="seasons">
+
+    <h1>Seasonal vegetables</h1>
+    
+    <div class="month-grid">        
+        {% for month in months %}
+        <div class="month">{{ month | capitalize }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="month-grid">
+        {# https://www.bbcgoodfood.com/seasonal-calendar/20041  #}
+        <div class="food begins may" style="grid-row: 1;">⏰</div>
+        <div class="food june" data-span="2" style="grid-row: 1;">Asparagus</div>
+        <div class="food begins may" style="grid-row: 2;">⏰</div>
+        <div class="food june" data-span="5" style="grid-row: 2;">Aubergine</div>
+        <div class="food begins june" style="grid-row: 3;">⏰</div>
+        <div class="food july" data-span="2" style="grid-row: 3;">Basil</div>
+        <div class="food january" data-span="1"  style="grid-row: 4;">Beetroot</div>
+        <div class="food july" data-span="6"  style="grid-row: 4;">Beetroot</div>
+        <div class="food begins july" style="grid-row: 5;">⏰</div>
+        <div class="food august" data-span="3"  style="grid-row: 5;">Broccoli</div>
+        <div class="food january" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
+        <div class="food october" data-span="3" style="grid-row: 6;">Brussels sprouts</div>
+        <div class="food january" data-span="12" style="grid-row: 7;">Cabbage</div>
+        <div class="food begins may" style="grid-row: 8;">⏰</div>
+        <div class="food june" data-span="4" style="grid-row: 8;">Carrot</div>
+        <div class="food begins december" style="grid-row: 9;">⏰</div>
+        <div class="food january" data-span="4" style="grid-row: 9;">Cauliflower</div>
+        <div class="food begins june" style="grid-row: 10;">⏰</div>
+        <div class="food july" data-span="4" style="grid-row: 10;">Cavolo nero</div>
+        <div class="food january" data-span="4" style="grid-row: 11;">Celeriac</div>
+        <div class="food september" data-span="4" style="grid-row: 11;">Celeriac</div>
+        <div class="food january" data-span="2" style="grid-row: 12;">Celery</div>
+        <div class="food begins july" style="grid-row: 12;">⏰</div>
+        <div class="food august" data-span="5" style="grid-row: 12;" >Celery</div>
+        <div class="food january" data-span="3" style="grid-row: 13;">Chicory</div>
+        <div class="food june" data-span="4" style="grid-row: 14;">Courgette</div>
+        <div class="food june" data-span="3" style="grid-row: 15;">Courgette flower</div>
+        <div class="food june" data-span="4" style="grid-row: 16;">Fennel bulb</div>
+        <div class="food begins june" style="grid-row: 17;">⏰</div>
+        <div class="food july" data-span="4" style="grid-row: 17;">Garlic</div>
+        <div class="food begins may" style="grid-row: 18;">⏰</div>
+        <div class="food june" data-span="6" style="grid-row: 18;">Globe artichoke</div>
+        <div class="food january" data-span="3" style="grid-row: 19;">Jerusalem artichoke</div>
+        <div class="food begins october" style="grid-row: 19;">⏰</div>
+        <div class="food november" data-span="2" style="grid-row: 19;">Jerusalem artichoke</div>
+        <div class="food january" data-span="2" style="grid-row: 20;">Kale</div>
+        <div class="food begins september" style="grid-row: 20;">⏰</div>
+        <div class="food october" data-span="3" style="grid-row: 20;">Kale</div>
+        <div class="food begins july" style="grid-row: 21;">⏰</div>
+        <div class="food august" data-span="4" style="grid-row: 21;">Kohlrabi</div>
+        <div class="food may" data-span="7" style="grid-row: 22;">Lamb's lettuce (corn salad)</div>
+        <div class="food january" data-span="3" style="grid-row: 23;">Leek</div>
+        <div class="food september" data-span="4" style="grid-row: 23;">Leek</div>
+        <div class="food begins april" style="grid-row: 24;">⏰</div>
+        <div class="food may" data-span="8" style="grid-row: 24;">Lettuce</div>
+        <div class="food begins july" style="grid-row: 25;">⏰</div>
+        <div class="food august" data-span="2" style="grid-row: 25;">Marrow</div>
+        <div class="food april" data-span="4" style="grid-row: 26;">New potatoes</div>
+        <div class="food january" data-span="12" style="grid-row: 27;">Pak choi</div>
+        <div class="food january" data-span="3" style="grid-row: 28;">Parsnip</div>
+        <div class="food september" data-span="4" style="grid-row: 28;">Parsnip</div>
+        <div class="food begins april" style="grid-row: 29;">⏰</div>
+        <div class="food may" data-span="7" style="grid-row: 29;">Peas</div>
+        <div class="food begins february" style="grid-row: 30;">⏰</div>
+        <div class="food march" data-span="8" style="grid-row: 30;">Pepper</div>
+        <div class="food begins march" style="grid-row: 31;">⏰</div>
+        <div class="food april" data-span="4" style="grid-row: 31;">Potato</div>
+        <div class="food begins september" style="grid-row: 32;">⏰</div>
+        <div class="food october" data-span="3" style="grid-row: 32;">Pumpkin</div>
+        <div class="food begins january" style="grid-row: 33;">⏰</div>
+        <div class="food february" data-span="3" style="grid-row: 33;">Purple sprouting broccoli</div>
+        <div class="food january" data-span="12" style="grid-row:34;">Radicchio</div>
+        <div class="food begins april" style="grid-row: 35;">⏰</div>
+        <div class="food may" data-span="7" style="grid-row: 35;">Radish</div>
+        <div class="food june" data-span="6" style="grid-row: 36;">Runner bean</div>
+        <div class="food january" data-span="1" style="grid-row: 37;">Salsify</div>
+        <div class="food begins september" style="grid-row: 37;">⏰</div>
+        <div class="food october" data-span="3" style="grid-row: 37;">Salsify</div>
+        <div class="food july" data-span="2" style="grid-row: 38;">Samphire</div>
+        <div class="food begins march" style="grid-row: 39;">⏰</div>
+        <div class="food april" data-span="6" style="grid-row: 39;">Spinach</div>
+        <div class="food begins march" style="grid-row: 40;">⏰</div>
+        <div class="food" data-span="3" style="grid-row: 40;">Spring greens</div>        
+        <div class="food january" data-span="2" style="grid-row: 41;">Swede</div>
+        <div class="food begins october" style="grid-row: 41;">⏰</div>
+        <div class="food november" data-span="2" style="grid-row: 41;">Swede</div>
+        <div class="food january" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
+        <div class="food october" data-span="3" style="grid-row: 42;">🍠 Sweet potato</div>
+        <div class="food begins august" style="grid-row: 43;">⏰</div>
+        <div class="food september" data-span="1" style="grid-row: 43;">Sweetcorn</div>
+        <div class="food july" data-span="5" style="grid-row: 44;">Swiss chard</div>
+        <div class="food january" data-span="2" style="grid-row: 45;">Turnip</div>
+        <div class="food october" data-span="3" style="grid-row: 45;">Turnip</div>
+        <div class="food begins march" style="grid-row: 46;">⏰</div>
+        <div class="food april" data-span="6" style="grid-row: 46;">Watercress</div>
+    </div><!--.week-->
+</div><!--.seasons-->
+
+
+<div class="seasons">
+
+    <h1>Seasonal fruits</h1>
+    
+    <div class="month-grid">        
+        {% for month in months %}
+        <div class="month">{{ month | capitalize }}</div>
+        {% endfor %}
+    </div>
+
+    <div class="month-grid">
+        <div class="food begins" style="grid-row: 1;">⏰</div>
+        
+        <div class="food january" data-span="2" style="grid-row: 1;">Apple</div>
+        <div class="food september" data-span="4" style="grid-row: 1;">Apple</div>
+        <div class="food may" data-span="5" style="grid-row: 2;">Apricot</div>
+        <div class="food" data-span="12" style="grid-row: 3;">🍌 Banana</div>
+        <div class="food begins july" style="grid-row: 4;">⏰</div>
+        <div class="food august" data-span="3" style="grid-row: 4;">Blackberry</div>
+        <div class="food begins may" style="grid-row: 5;">⏰</div>
+        <div class="food june" data-span="2" style="grid-row: 5;">Blackcurrants</div>
+        <div class="food january" data-span="3" style="grid-row: 6;">Bramley apple</div>
+        <div class="food begins november" style="grid-row: 6;">⏰</div>
+        <div class="food december" data-span="1" style="grid-row: 6;">Bramley apple</div>
+        <div class="food begins july" style="grid-row: 7;">⏰</div>
+        <div class="food august" data-span="1" style="grid-row: 7;">Cherry</div>
+        <div class="food january" data-span="2" style="grid-row: 8;">Clementine</div>
+        <div class="food november" data-span="2" style="grid-row: 8;">Clementine</div>
+        <div class="food august" data-span="1" style="grid-row: 9;">Crab apple</div>
+        <div class="food october" data-span="3" style="grid-row: 10;">Cranberry</div>
+        <div class="food begins august" style="grid-row: 11;">⏰</div>
+        <div class="food september" data-span="1" style="grid-row: 11;">Damson</div>
+        <div class="food january" data-span="1" style="grid-row: 12;">Date</div>
+        <div class="food begins october" style="grid-row: 12;">⏰</div>
+        <div class="food november" data-span="2" style="grid-row: 12;">Date</div>
+        <div class="food august" data-span="3" style="grid-row: 13;">Elderberries</div>
+        <div class="food begins july" style="grid-row: 14;">⏰</div>
+        <div class="food august" data-span="3" style="grid-row: 14;">Fig</div>
+        <div class="food begins may" style="grid-row: 15;">⏰</div>
+        <div class="food june" data-span="4" style="grid-row: 15;">Gooseberry</div>
+        <div class="food january" data-span="5" style="grid-row: 16;">Grapefruit</div>
+        <div class="food december" data-span="1" style="grid-row: 16;">Grapefruit</div>
+        <div class="food january" data-span="3" style="grid-row: 17;">Lemon</div>
+        <div class="food may" data-span="5" style="grid-row: 18;">Nectarine</div>
+        <div class="food january" data-span="3" style="grid-row: 19;">Orange</div>
+        <div class="food begins july" style="grid-row: 20;">⏰</div>
+        <div class="food august" data-span="2" style="grid-row: 20;">Peach</div>
+        <div class="food january" data-span="1" style="grid-row: 21;">Pear</div>
+        <div class="food september" data-span="4" style="grid-row: 21;">Pear</div>
+        <div class="food begins august" style="grid-row: 22;">⏰</div>
+        <div class="food september" data-span="2" style="grid-row: 22;">Plum</div>
+        <div class="food" data-span="12" style="grid-row: 23;">Pomegranate</div>
+        <div class="food begins september" style="grid-row: 24;">⏰</div>
+        <div class="food october" data-span="3" style="grid-row: 24;">Quince</div>
+        <div class="food begins june" style="grid-row: 25;">⏰</div>
+        <div class="food july" data-span="3" style="grid-row: 25;">Raspberry</div>
+        <div class="food begins june" style="grid-row: 26;">⏰</div>
+        <div class="food july" data-span="3" style="grid-row: 26;">Redcurrant</div>
+        <div class="food january" data-span="6" style="grid-row: 27;">Rhubarb</div>
+        <div class="food begins may" style="grid-row: 28;">⏰</div>
+        <div class="food june" data-span="4" style="grid-row: 28;">Strawberry</div>
+        <div class="food begins may" style="grid-row: 29;">⏰</div>
+        <div class="food june" data-span="5" style="grid-row: 29;">Tomato</div>
+        <div class="food begins june" style="grid-row: 30;">⏰</div>
+        <div class="food july" data-span="2" style="grid-row: 30;">Watermelon</div>
+    </div><!--.week-->
+</div><!--.month-->
+
+
+{# 
+Asparagus 
+🍆 Aubergine
+🌿 Basil
+Beetroot
+🥦 Broccoli
+Brussels sprouts
+Cabbage
+🥕 Carrot
+Cauliflower
+Cavolo nero
+Celeriac
+Celery
+Chicory
+🥒 Courgette
+Courgette flower
+Fennel bulb
+Garlic
+Globe artichoke
+Jerusalem artichoke
+🥬 Kale
+Kohlrabi
+Lamb's lettuce
+Leek
+Lettuce
+Marrow
+🥔 New potatoes
+Pak choi
+Parsnip
+Peas
+Pepper
+🥔 Potato
+🎃 Pumpkin
+Purple sprouting broccoli
+Radicchio
+Radish
+Runner bean
+Salsify
+Samphire
+Spinach
+🥬 Spring greens
+Swede
+🍠 Sweet potato
+🌽 Sweetcorn
+Swiss chard
+Turnip
+Watercress
+
+
+
+🍎 Apple
+Apricot
+🍌 Banana
+Blackberry
+Blackcurrants
+🍎 Bramley apple
+🍒 Cherry
+🍊 Clementine
+🍏 Crab apple
+Cranberry
+Damson
+Date
+Elderberries
+Fig
+Gooseberry
+Grapefruit
+🍋 Lemon
+🍊 Nectarine
+Orange
+🍑 Peach
+🍐 Pear
+Plum
+Pomegranate
+Quince
+Raspberry
+Redcurrant
+Rhubarb
+🍓 Strawberry 
+#}
+
+
+
+{% endblock %} 
