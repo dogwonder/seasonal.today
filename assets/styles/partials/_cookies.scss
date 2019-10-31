@@ -1,18 +1,18 @@
 .cookie-notice {
-    color: #31708F;
-    background-color: #ECF3F7;
+    color: var(--highlight-dark);
+    background-color: var(--highlight-light);
     border:0;
-    border-bottom: 2px solid #BCDFF1;
+    border-bottom: 2px solid var(--highlight);
     padding: 0.6rem;
     display: none;
     text-align: center;
     p {margin:0;font-size: 1.4rem;line-height: 1.2;}
-    a {color: #31708F;}
+    a {color: var(--highlight-dark);}
     .cookieButton {
         font-size:1.2rem;
         font-weight: bold;
         background-color: transparent;
-        border: 2px solid #31708F;
+        border: 2px solid var(--highlight-dark);
         -webkit-appearance: none;
         padding: 0.1rem 0.8rem;
         margin:0.5rem 0 0 0.5rem;
@@ -24,7 +24,7 @@
         box-shadow: none;
         &:focus, 
         &:hover {
-            background-color: #31708F;
+            background-color: var(--highlight-dark);
             color:white;
             cursor: pointer;
         }

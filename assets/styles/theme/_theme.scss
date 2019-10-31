@@ -7,17 +7,20 @@
 	
     --border:#e5e7e9;
 	
-    --text-color-normal: hsl(209, 2%, 0%);
-    --heading: hsl(209, 20%, 0%);
-	--meta: hsl(209, 10%, 53%);
+    --text-color-normal: hsl(162, 2%, 0%);
+    --heading: hsl(162, 20%, 0%);
+	--meta: hsl(162, 10%, 53%);
 
-    --highlight: hsl(209, 92%, 43%);
-	--highlight-dark: hsl(209, 61%, 14%);
-    --highlight-light: hsl(209, 31%, 80%);
-    --hover: hsl(209, 34%, 30%);
+    --highlight: hsl(162, 80%, 23%);
+	--highlight-dark: hsl(162, 63%, 14%);
+    --highlight-light: hsl(162, 30%, 92%);
+    --hover: hsl(162, 34%, 30%);
+
+    --food: hsl(162, 4%, 90%);
+    --food-border: hsl(162, 12%, 80%);
 	
-    --button-background: hsl(209, 39%, 23%);
-    --button-background-hover: hsl(209, 61%, 16%);
+    --button-background: hsl(162, 39%, 24%);
+    --button-background-hover: hsl(162, 61%, 16%);
 	--button-text-color: white;
 	
     --spacer: 2rem;
@@ -52,7 +55,7 @@ body {
 
 %jwTitle,
 .jwTitle {
-  font-size:3rem;
+  font-size: 3rem;
   line-height: 3.2rem;
   color:var(--text-color-normal);
   margin: 4rem 0 2rem 0;
@@ -88,11 +91,8 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .jw-content {
-    h1 {
+    h1, h2 {
         @extend .jwTitle; //48px
-    }
-    h2 {
-        font-size: 3.2rem;
     }
     h3 {
         font-size: 2.8rem;
