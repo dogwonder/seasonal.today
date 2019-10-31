@@ -10,7 +10,11 @@
 // ● ○ ◌
 .nav-months {
     margin:2rem auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media #{$large-up} {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 [data-month] {
     display: flex;
