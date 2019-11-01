@@ -77,14 +77,9 @@ ul.months {
     .icon {
         font-size:3rem;
         line-height:1;
-        width:2rem;
-        height:2rem;
+        width:3rem;
+        height:3rem;
         display:inline-block;
         margin:0 1rem 0 0;
-        @media #{$large-up} {
-            width:3rem;
-            height:3rem;
-        }
-        
     }
 }
