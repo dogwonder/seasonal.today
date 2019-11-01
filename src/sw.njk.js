@@ -6,6 +6,7 @@ const precacheFiles = [
   'offline.html', 
   'index.html', 
   'css/main.css', 
+  'css/svg/sprite.css.svg', 
   'scripts/app.js',
   'images/fav/favicon-32x32.png',
   'images/fav/favicon-16x16.png'
