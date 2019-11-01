@@ -1,4 +1,4 @@
-const CACHE = "stCache-1.62.0";
+const CACHE = "stCache-1.63.0";
 
 // This is the service worker with the Cache-first network
 const precacheFiles = [
@@ -36,7 +36,7 @@ self.addEventListener("activate", function(event) {
         })
       );
     }).then(function() {
-      console.log('[ServiceWorker] Claiming clients for version - 1.62.0');
+      console.log('[ServiceWorker] Claiming clients for version - 1.63.0');
       return self.clients.claim();
     })  
   );
