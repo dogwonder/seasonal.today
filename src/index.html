@@ -31,81 +31,86 @@
 
     {% for thismonth in months %}
      <div class="month" data-season="{{ thismonth }}">
-      <h1>What's in season in <span>{{ thismonth | capitalize }}</span></h1>
-      <h2>Vegetables</h2>
-    
-      <ul class="months vegetables">  
-      {% for vegetable in vegetables %}
+      <h1>What's in season in <span>{{ thismonth | capitalize }} </span></h1>
 
-      {% set vegetableDuring = vegetable.during %}
+      {% if vegetables %}
+        <h2>Vegetables</h2>
+        <ul class="months vegetables">  
+        {# Start the count #}
+        {% set vegcount = 0 %}
+        {% for vegetable in vegetables %}
+        {% set vegetableDuring = vegetable.during %}
+            {# {{ vegetables | length }} #}
+            {% for month in vegetableDuring %}
+                {% if month == thismonth %}    
+                    <li>
+                    {# <img class="icon" src="./images/icons/vegetables/{{ vegetable.name | lower |  replace(" ", "_") }}.svg" alt="{{ vegetable.name }}"> #}
+                    <span class="icon svg-vegetables--{{ vegetable.name | lower |  replace(" ", "_") }}"></span>
+                    {{ vegetable.name }}
+                    </li>
+                {# Set the count #}
+                {% set vegcount = vegcount + 1 %}
+                {% endif %}
+            {% endfor %}      
+            {% endfor %}
+        </ul>
+        {% if vegcount === 0 %}
+            <p>Sorry, nothing in season</p>
+        {% endif %}
+      {% endif %}
+      
     
-        {# {{ vegetables | length }} #}
-
-        {% for month in vegetableDuring %}
-            {% if month == thismonth %}    
-                <li>
-                <img class="icon" src="./images/icons/vegetables/{{ vegetable.name | lower |  replace(" ", "_") }}.svg" alt="{{ vegetable.name }}">
-                {{ vegetable.name }}
-                </li>
-            {% endif %}
-        {% endfor %}  
-    
-        {% endfor %}
-      </ul>
-
+      {% if fruits %}
       <h2>Fruit</h2>
-
-      <ul class="months fruits">  
-      {% for fruit in fruits %}
-
-      {# {{ fruits | length }} #}
-
-      {% set fruitDuring = fruit.during %}
-
-        {% for month in fruitDuring %}
-            {% if month == thismonth %}
-                <li>
-                <img class="icon" src="./images/icons/fruit/{{ fruit.name | lower |  replace(" ", "_") }}.svg" alt="{{ fruit.name }}">
-                {{ fruit.name }}
-                </li>
-            {% endif %}
+        <ul class="months fruits">  
+        {# Start the count #}
+        {% set fruitcount = 0 %}
+        {% for fruit in fruits %}
+        {% set fruitDuring = fruit.during %}
+            {% for month in fruitDuring %}
+                {% if month == thismonth %}
+                    <li>
+                    {# <img class="icon" src="./images/icons/fruit/{{ fruit.name | lower |  replace(" ", "_") }}.svg" alt="{{ fruit.name }}"> #}
+                    <span class="icon svg-fruit--{{ fruit.name | lower |  replace(" ", "_") }}"></span>
+                    {{ fruit.name }}
+                    </li>
+                {# Set the count #}
+                {% set fruitcount = fruitcount + 1 %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
-    
-      {% endfor %}
-      </ul>
+        </ul>
+        {% if fruitcount === 0 %}
+            <p>Sorry, nothing in season</p>
+        {% endif %}
+      {% endif %}
 
-
+      {% if herbs %}  
       <h2>Herbs</h2>
-
-      <ul class="months herbs"> 
-
-       {# {{ herbs.length }} #}
-       {# {% if herbs.length === 0 %}asdasd{% endif %} #}
-    
-      {% for herb in herbs %} 
-
-        {% set herbDuring = herb.during %}
-        
-        {% for month in herbDuring %}
-
-            {% if month == thismonth %}
-                <li>
-                <img class="icon" src="./images/icons/herbs/{{ herb.name | lower |  replace(" ", "_") }}.svg" alt="{{ herb.name }}">
-                {{ herb.name }}
-                </li>
-            {% endif %}
-
+        <ul class="months herbs"> 
+        {# Start the count #}
+        {% set herbcount = 0 %}
+        {% for herb in herbs %} 
+            {% set herbDuring = herb.during %}
+            {% for month in herbDuring %}
+                {% if month == thismonth %}
+                    <li>
+                    {# <img class="icon" src="./images/icons/herbs/{{ herb.name | lower |  replace(" ", "_") }}.svg" alt="{{ herb.name }}"> #}
+                    <span class="icon svg-herbs--{{ herb.name | lower |  replace(" ", "_") }}"></span>
+                    {{ herb.name }}
+                    </li>
+                {# Set the count #}
+                {% set herbcount = herbcount + 1 %}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
-    
-      {% endfor %}
-      </ul>
-
-
-
+        </ul>
+        {% if herbcount == 0 %}
+           <p>Sorry, nothing in season</p>
+        {% endif %}
+      {% endif %}
       </div>
-
       {% endfor %}
-
 </div><!--.week-->
 
 {% endblock %} 

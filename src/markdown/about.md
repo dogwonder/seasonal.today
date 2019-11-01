@@ -1,57 +1,17 @@
-## Quisquis tellus et radiis Salmacis temporis visuras
+## About Seasonal.Today
 
-Lorem markdownum ferus frangit arenti retemptat ille, purgamina et membra parens
-**nomine** fessus legem circumsona Persei cuspis cecidisse quaerenti. Petit
-templum, lenis iuvenaliter **violente**. Modo ebur et Tyndaridae **classe
-adspiciens pascere**, qui inquit flava genitore gemmae Phoebes Iuppiter totidem;
-micat *hic* recepta. Iam palmas, dea in factus defensae sed carmine velatus oris
-idem!
+I've been thinking a lot about food and how we trasport stuff from far flung places, at huge environmental costs. I've come to expect to be able to buy strawberries at any point of the year, very rarely checking the label to see where they are from. 
 
-## Et serior fundatis citius et uteroque acie
+I wanted something simple that I could use when I was out shopping for porudce that I could check for UK seasonality. There are many brilliant resources out there that are more than good enough (see below), and indeed I used them to source the data for this project. 
 
-Habebatur Aeneas ad funale, concurretque mella virgineusque silvis perit
-plurimus virtus in carius retro. Talibus est Talia; flores nomen ponti telum
-nostris translata vacuas, e origine illis; aquas. Inclusa crescente sentis
-proles erat; creatus per nam otia.
+But for my own needs I didn't want a table or a list of items but something a little easier to scan through when shopping. 
 
-- Est quam
-- Cum mihi conlegerat curvos dummodo restat timemus
-- Scilicet placatoque inter tetigit
-- Sequuntur nisi
-- Verbis colo
-- Vocis putat antra visa
+The view defaults to the current month, and allows you to click other months to see what's in season then, either for planning or just forout of interest. 
 
-## Celsior referri nunc forma sua
+I tried to be pretty thorough in my research, but if I've made any mistakes or have missed things please [let me know](mailto:dogwonder@gmail.com). 
 
-Sic optat obstrepuere non inscius causa restabat adiciunt nurusque inimica
-frondesque debent *terga signum* remittit summam et iam. Fugiunt tempora.
+### Sources
 
-- Liquores inspirare candentia gaudet numquam taedasque Iunone
-- Primitias te sistrorum umquam magno deum ubi
-- Et timido loci attonitus ut nomen pudor
-- Talibus boum erat utque mergor Crantor
-- Quod parva
-
-## Est Othrys pavidum formarat indulsit
-
-In de quod excipit dixerat summo proelia canos coniuge, ferum visa a linquit
-miscet, *non* non. Fuit quibus pondere sidera mersa: suum modo pugnando ultus
-exprobravit agro Iuppiter Pheretiade mutantur, sororis?
-
-1. Cum cava tu ecce Menoetae novaeque et
-2. Adsum auferat
-3. Nova parabat
-4. Dum Haemum
-5. Caesa subiectas nate
-6. Manibus Tyria
-
-## Satis pudore proiecta
-
-Levibus versavitque tamen spatio quae Amphrysos duo illi nostri umida Nescierat!
-Somni fulgorem ore; *nullamque* mollirique dumque si lata cumque fulmineo
-valuere. Ne tempore totam. Ante guttur non sensitque perque praefoderat ante
-ore, ad Orphea mortales caeloque iacet.
-
-Dilectu [nec niveis currere](http://est.com/) luxuriem nomenque rostro pudorem
-dedit, perque nam telis? Nil ritus, et vitae similis oculis arma constitit urit
-trepidum sacrifica parantem caecoque si et laetus flectitur.
+* [Eat the Seasons](http://www.eattheseasons.co.uk/)
+* [BBC Good Food](https://www.bbcgoodfood.com/seasonal-calendar/)
+* [Love British Food](http://www.lovebritishfood.co.uk/british-food-and-drinks/whats-in-season-when)

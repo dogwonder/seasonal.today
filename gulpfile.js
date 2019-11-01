@@ -10,9 +10,12 @@ const postcss = require('gulp-postcss');
 const postcssCustomProperties = require('postcss-custom-properties');
 const postcssclean = require('postcss-clean');
 
-//Images
+//Images & SVGs
 const imagemin = require('gulp-imagemin');
+const svgmin = require('gulp-svgmin');
+const svgSprite = require('gulp-svg-sprite');
 const responsive = require('gulp-responsive');
+
 
 //Build tools
 const data = require('gulp-data');
@@ -22,6 +25,7 @@ const marked = require('marked');
 const gulpnunjucks = require('gulp-nunjucks');
 const banner = require('gulp-banner');
 const htmlbeautify = require('gulp-html-beautify');
+const removeEmptyLines = require('gulp-remove-empty-lines');
 
 
 //System and Utilities
@@ -195,13 +199,38 @@ gulp.task('images', () => {
     .pipe(gulp.dest(path.join(dir.dist, 'images')))
 });
 
+
+// SVGs
+gulp.task('svgs', () => {
+  return gulp
+    .src('assets/images/icons/**/*.svg')
+    .pipe(svgSprite( config = {
+      shape: {
+        dimension: { // Set maximum dimensions
+          maxWidth: 30,
+          maxHeight: 30
+        }
+      },
+      mode: {
+        css: { // Activate the «css» mode
+          bust: false,
+          render: {
+            scss: true // Activate CSS output (with default options)
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest('assets/styles/partials'))
+});
+
 // Copying fonts
 gulp.task('fonts', () => {  
-  return gulp.src('assets/fonts/**/*')
+  return gulp
+    .src('assets/fonts/**/*')
     .pipe(gulp.dest(path.join(dir.dist, 'fonts')))
 });
 
-// Banner
+// Banner - insert banner into CSS files
 gulp.task('banner', () => {
   return gulp
     .src(path.join(dir.dist, 'css/main.css'))
@@ -215,7 +244,8 @@ gulp.task('banner', () => {
 gulp.task('htmlbeautify', () => {
   return gulp
       .src(path.join(dir.dist, '*.html'))
-      .pipe(htmlbeautify({indentSize: 2}))
+      .pipe(removeEmptyLines()) //remove empty lines
+      .pipe(htmlbeautify({indentSize: 2})) //tidy up HTML
       .pipe(gulp.dest(dir.dist));
 });
 
@@ -245,6 +275,17 @@ gulp.task('move-files', () => {
     .pipe(gulp.dest(dir.dist));
 });
 
+
+// Moving the service worker
+gulp.task('move-icons', () => {  
+  return gulp
+    .src([
+      'assets/styles/partials/css/svg/sprite.css.svg'
+    ])
+    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
+});
+
+
 // Moving misc files
 gulp.task('move-js', () => {  
   return gulp
@@ -270,7 +311,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images', 'svgs'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-icons', 'move-js', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 

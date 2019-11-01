@@ -86,9 +86,9 @@
    li {
 	   display: block;
 	   width: 100%;
-	   font-size: 3rem;
+	   font-size: 2rem;
 	   @media #{$large-up} {
-		   font-size: 4rem;
+		   font-size: 3rem;
 	   }
 	   line-height: 1.5;
 	   > a {
