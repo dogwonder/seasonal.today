@@ -201,34 +201,22 @@ gulp.task('images', () => {
     .pipe(gulp.dest(path.join(dir.dist, 'images')))
 });
 
-
 // SVGs
-gulp.task('svgsprite', () => {
+
+//Minify
+gulp.task('svgmin', () => {
   return gulp
-    .src('assets/images/icons/**/*.svg')
-    .pipe(svgSprite( config = {
-      shape: {
-        dimension: { // Set maximum dimensions
-          maxWidth: 30,
-          maxHeight: 30
-        }
-      },
-      mode: {
-        css: { // Activate the «css» mode
-          bust: false,
-          render: {
-            scss: true // Activate CSS output (with default options)
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest('assets/styles/partials'))
+      .src('assets/icons/**/*.svg')
+      .pipe(svgmin())
+      .pipe(gulp.dest('assets/svgs/'));
 });
 
+
+//Create a symbol sprite from the optimised SVGs
 gulp.task('svgstore', () => {
   
   var svgs = gulp
-      .src('assets/images/icons/**/*.svg')
+      .src('assets/svgs/**/*.svg')
       .pipe(rename({prefix: 'icon-'}))
       .pipe(svgstore({ inlineSvg: true }));
 
@@ -241,8 +229,6 @@ gulp.task('svgstore', () => {
       .pipe(inject(svgs, { transform: fileContents }))
       .pipe(gulp.dest(dir.dist));
 });
-
-
 
 // Copying fonts
 gulp.task('fonts', () => {  
@@ -297,16 +283,6 @@ gulp.task('move-files', () => {
 });
 
 
-// Moving the service worker
-gulp.task('move-icons', () => {  
-  return gulp
-    .src([
-      'assets/styles/partials/css/svg/sprite.css.svg'
-    ])
-    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
-});
-
-
 // Moving misc files
 gulp.task('move-js', () => {  
   return gulp
@@ -332,7 +308,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'svgstore', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-icons', 'move-js', 'svgstore', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'svgmin', 'svgstore', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 
