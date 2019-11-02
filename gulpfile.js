@@ -207,8 +207,23 @@ gulp.task('images', () => {
 gulp.task('svgmin', () => {
   return gulp
       .src('assets/icons/**/*.svg')
-      .pipe(svgmin())
-      .pipe(gulp.dest('assets/svgs/'));
+      .pipe(svgmin({
+        plugins: [{
+            removeDoctype: false
+        }, {
+            removeComments: false
+        }, {
+            cleanupNumericValues: {
+                floatPrecision: 2
+            }
+        }, {
+            convertColors: {
+                names2hex: false,
+                rgb2hex: false
+            }
+        }]
+    }))
+    .pipe(gulp.dest('assets/svgs/'));
 });
 
 
@@ -216,7 +231,7 @@ gulp.task('svgmin', () => {
 gulp.task('svgstore', () => {
   
   var svgs = gulp
-      .src('assets/svgs/**/*.svg')
+      .src('assets/icons/**/*.svg')
       .pipe(rename({prefix: 'icon-'}))
       .pipe(svgstore({ inlineSvg: true }));
 
