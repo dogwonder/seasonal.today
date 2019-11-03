@@ -40,6 +40,8 @@
             {# {{ vegetables | length }} #}
             {% for month in vegetableDuring %}
                 {% if month == thismonth %}    
+                    {# <span class="icon svg-vegetables--{{ vegetable.name | lower |  replace(" ", "_") }}"></span> #}
+                    {# <img class="icon" src="images/icons/vegetables/{{ vegetable.name | lower |  replace(" ", "_") }}.svg" alt="{{ vegetable.name }}"> #}
                     <li><svg class="icon"><use xlink:href="#icon-{{ vegetable.name | lower |  replace(" ", "_") }}" /></svg>{{ vegetable.name }} </li>
                 {# Set the count #}
                 {% set vegcount = vegcount + 1 %}
@@ -62,6 +64,8 @@
         {% set fruitDuring = fruit.during %}
             {% for month in fruitDuring %}
                 {% if month == thismonth %}
+                    {# <span class="icon svg-fruit--{{ fruit.name | lower |  replace(" ", "_") }}"></span> #}
+                    {# <img class="icon" src="images/icons/fruit/{{ fruit.name | lower |  replace(" ", "_") }}.svg" alt="{{ fruit.name }}">  #}
                     <li><svg class="icon"><use xlink:href="#icon-{{ fruit.name | lower |  replace(" ", "_") }}" /></svg>{{ fruit.name }}</li>
                 {# Set the count #}
                 {% set fruitcount = fruitcount + 1 %}
@@ -83,6 +87,8 @@
             {% set herbDuring = herb.during %}
             {% for month in herbDuring %}
                 {% if month == thismonth %}
+                    {# <span class="icon svg-herbs--{{ herb.name | lower |  replace(" ", "_") }}"></span> #}
+                    {# <img class="icon" src="images/icons/herbs/{{ herb.name | lower |  replace(" ", "_") }}.svg" alt="{{ herb.name }}"> #}
                     <li><svg class="icon"><use xlink:href="#icon-{{ herb.name | lower |  replace(" ", "_") }}" /></svg>{{ herb.name }}</li>
                 {# Set the count #}
                 {% set herbcount = herbcount + 1 %}

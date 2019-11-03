@@ -245,6 +245,38 @@ gulp.task('svgstore', () => {
       .pipe(gulp.dest(dir.dist));
 });
 
+gulp.task('svgsprite', () => {
+  return gulp
+    .src('assets/images/icons/**/*.svg')
+    .pipe(svgSprite( config = {
+      shape: {
+        dimension: { // Set maximum dimensions
+          maxWidth: 30,
+          maxHeight: 30
+        }
+      },
+      mode: {
+        css: { // Activate the «css» mode
+          bust: false,
+          render: {
+            scss: true // Activate CSS output (with default options)
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest('assets/styles/partials'))
+});
+
+
+// Moving the sprite
+gulp.task('move-icons', () => {  
+  return gulp
+    .src([
+      'assets/styles/partials/css/svg/sprite.css.svg'
+    ])
+    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
+});
+
 // Copying fonts
 gulp.task('fonts', () => {  
   return gulp
