@@ -1,6 +1,6 @@
 {
   "name": "seasonal.today",
-  "version": "1.89.0",
+  "version": "1.108.0",
   "description": "",
   "main": "gulpfile.js",
   "directories": {
@@ -51,10 +51,12 @@
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^1.2.0",
     "marked": "^0.7.0",
+    "merge-stream": "^2.0.0",
     "nunjucks-markdown": "^2.0.1",
     "path": "^0.12.7",
     "postcss-clean": "^1.1.0",

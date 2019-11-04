@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What&#39;s in Season</title>
+    <meta name="description" content="See what&#39;s food is in season for each month" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="./scripts/js.cookie.js"></script>
+    <link rel="stylesheet" href="./css/main.css?cache_bust=1.107.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+    <link rel="mask-icon" sizes="any" href="./images/logotype.svg" color="#14d5de">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./images/fav/apple-touch-icon.png" />
+    <link rel="manifest" href="./images/fav/manifest.json">
+    <meta name="apple-mobile-web-app-title" content="What&#39;s in Season" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="msapplication-TileColor" content="#14d5de">
+    <meta name="theme-color" content="#14d5de">
+    <meta property="og:url" content="https://seasonal.today" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="What&#39;s in Season">
+    <meta property="og:description" content="See what&#39;s food is in season for each month">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://seasonal.today/images/og/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dogwonder">
+    <meta name="twitter:title" content="What&#39;s in Season">
+    <meta name="twitter:description" content="See what&#39;s food is in season for each month">
+    <meta name="twitter:image" content="https://seasonal.today/images/og/og-image.png">
+    <meta property="twitter:url" content="https://seasonal.today" />
+    <script type='application/ld+json'>
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://seasonal.today#website",
+            "url": "https://seasonal.today",
+            "name": "Dogwonder Ltd",
+            "logo": "https://seasonal.today/images/og/logo-160x60.png"
+        }
+    </script>
+    <script>
+        (function(w, d, s, o, f, js, fjs) {
+            w[o] = w[o] || function() {
+                (w[o].q = w[o].q || []).push(arguments)
+            };
+            js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+            js.id = o;
+            js.src = f;
+            js.async = 1;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
+        plausible('page')
+    </script>
+</head>
+
+<body class="jw jw-seasonal" data-theme="default">
+    <div id="cookieNotice" class="cookie-notice open" role="region">
+        <div class="container">
+            <p>Like most websites What&#39;s in Season uses cookies to give you the best experience. <a href="./privacy.html">Read our privacy policy</a>
+                <button id="cookieButton" class="cookieButton close" type="button" aria-label="Accept cookies">Accept cookies</button>
+            </p>
+        </div>
+    </div>
+    <div class="jw-wrapper">
+        <div class="jw-masthead">
+            <div class="jw-masthead__container">
+                <header class="jw-masthead__logo">
+                    <a href="./">
+                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                            <path d="M225.87 451.35L440.93 17.86l58.18 27.68L284.05 479l-58.18-27.65zM198.7 154.27L64.7 258.7v5.72l133.55 103.44-37.7 48.67L4.14 289.69v-55.83l158.8-127.8 35.76 48.21z" fill-rule="nonzero" /></svg>
+                        <span class="sr-only">Go to the homepage</span>
+                    </a>
+                </header>
+                <nav id="site-navigation" class="nav-collapse jw-masthead__nav navigation-sidebar">
+                    <a class="skip-link sr-only" href="#content">Skip to content</a>
+                    <a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
+                        <svg class="🍔" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" /></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </a>
+                    <div id="nav-menu" class="nav-menu">
+                        <a class="nav-toggle" data-nav-toggle="#nav-menu" href="#">
+                            <svg class="🚫" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z" />
+                                <span class="sr-only">Toggle menu</span>
+                        </a>
+                        <ul>
+                            <li><a href="./index.html">What's in season</a></li>
+                            <li><a href="./about.html">About this project</a></li>
+                        </ul>
+                    </div><!-- #nav-menu -->
+                </nav><!-- #site-navigation -->
+            </div>
+        </div>
+        <main id="content" class="jw-container">
+            <div class="jw-content">
+                <link rel="stylesheet" href="./css/sprite.css">
+                <div class="seasons">
+                    <nav class="nav-months">
+                        <span data-month="january">Jan</span>
+                        <span data-month="february">Feb</span>
+                        <span data-month="march">Mar</span>
+                        <span data-month="april">Apr</span>
+                        <span data-month="may">May</span>
+                        <span data-month="june">Jun</span>
+                        <span data-month="july">Jul</span>
+                        <span data-month="august">Aug</span>
+                        <span data-month="september">Sep</span>
+                        <span data-month="october">Oct</span>
+                        <span data-month="november">Nov</span>
+                        <span data-month="december">Dec</span>
+                    </nav>
+                    <div class="month" data-season="january">
+                        <h1>What's in season in <span>January </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--brussels_sprouts"></span>Brussels sprouts </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cauliflower"></span>Cauliflower </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--celery"></span>Celery </li>
+                            <li><span class="icon svg-vegetables--chicory"></span>Chicory </li>
+                            <li><span class="icon svg-vegetables--jerusalem_artichoke"></span>Jerusalem artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--salsify"></span>Salsify </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                            <li><span class="icon svg-vegetables--black_truffles"></span>Black Truffles </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apple"></span>Apple</li>
+                            <li><span class="icon svg-fruits--bramley_apple"></span>Bramley apple</li>
+                            <li><span class="icon svg-fruits--clementine"></span>Clementine</li>
+                            <li><span class="icon svg-fruits--date"></span>Date</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--lemon"></span>Lemon</li>
+                            <li><span class="icon svg-fruits--orange"></span>Orange</li>
+                            <li><span class="icon svg-fruits--pear"></span>Pear</li>
+                            <li><span class="icon svg-fruits--pomegranate"></span>Pomegranate</li>
+                            <li><span class="icon svg-fruits--rhubarb"></span>Rhubarb</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                        </ul>
+                        <p>Sorry, nothing in season</p>
+                    </div>
+                    <div class="month" data-season="february">
+                        <h1>What's in season in <span>February </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--brussels_sprouts"></span>Brussels sprouts </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cauliflower"></span>Cauliflower </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--chicory"></span>Chicory </li>
+                            <li><span class="icon svg-vegetables--jerusalem_artichoke"></span>Jerusalem artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--purple_sprouting_broccoli"></span>Purple sprouting broccoli </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                            <li><span class="icon svg-vegetables--black_truffles"></span>Black Truffles </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--banana"></span>Banana</li>
+                            <li><span class="icon svg-fruits--bramley_apple"></span>Bramley apple</li>
+                            <li><span class="icon svg-fruits--clementine"></span>Clementine</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--lemon"></span>Lemon</li>
+                            <li><span class="icon svg-fruits--orange"></span>Orange</li>
+                            <li><span class="icon svg-fruits--pomegranate"></span>Pomegranate</li>
+                            <li><span class="icon svg-fruits--rhubarb"></span>Rhubarb</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                        </ul>
+                        <p>Sorry, nothing in season</p>
+                    </div>
+                    <div class="month" data-season="march">
+                        <h1>What's in season in <span>March </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cauliflower"></span>Cauliflower </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--purple_sprouting_broccoli"></span>Purple sprouting broccoli </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--spinach"></span>Spinach </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--spring_greens"></span>Spring greens </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--banana"></span>Banana</li>
+                            <li><span class="icon svg-fruits--bramley_apple"></span>Bramley apple</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--lemon"></span>Lemon</li>
+                            <li><span class="icon svg-fruits--orange"></span>Orange</li>
+                            <li><span class="icon svg-fruits--rhubarb"></span>Rhubarb</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--wild_nettles"></span>Wild nettles</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="april">
+                        <h1>What's in season in <span>April </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--asparagus"></span>Asparagus </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--new_potatoes"></span>New potatoes </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--purple_sprouting_broccoli"></span>Purple sprouting broccoli </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--spinach"></span>Spinach </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--spring_greens"></span>Spring greens </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--banana"></span>Banana</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--rhubarb"></span>Rhubarb</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--dill"></span>Dill</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--wild_nettles"></span>Wild nettles</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="may">
+                        <h1>What's in season in <span>May </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--asparagus"></span>Asparagus </li>
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--carrot"></span>Carrot </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--new_potatoes"></span>New potatoes </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--peas"></span>Peas </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--spinach"></span>Spinach </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--spring_greens"></span>Spring greens </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--banana"></span>Banana</li>
+                            <li><span class="icon svg-fruits--blackcurrants"></span>Blackcurrants</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--nectarine"></span>Nectarine</li>
+                            <li><span class="icon svg-fruits--rhubarb"></span>Rhubarb</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--chervil"></span>Chervil</li>
+                            <li><span class="icon svg-herbs--coriander"></span>Coriander</li>
+                            <li><span class="icon svg-herbs--dill"></span>Dill</li>
+                            <li><span class="icon svg-herbs--mint"></span>Mint</li>
+                            <li><span class="icon svg-herbs--oregano"></span>Oregano</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--tarragon"></span>Tarragon</li>
+                            <li><span class="icon svg-herbs--wild_nettles"></span>Wild nettles</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="june">
+                        <h1>What's in season in <span>June </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--asparagus"></span>Asparagus </li>
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--broad_beans"></span>Broad Beans </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--carrot"></span>Carrot </li>
+                            <li><span class="icon svg-vegetables--cavolo_nero"></span>Cavolo nero </li>
+                            <li><span class="icon svg-vegetables--chillies"></span>Chillies </li>
+                            <li><span class="icon svg-vegetables--courgette"></span>Courgette </li>
+                            <li><span class="icon svg-vegetables--courgette_flower"></span>Courgette flower </li>
+                            <li><span class="icon svg-vegetables--fennel_bulb"></span>Fennel bulb </li>
+                            <li><span class="icon svg-vegetables--french_beans"></span>French beans </li>
+                            <li><span class="icon svg-vegetables--garlic"></span>Garlic </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--mangetout"></span>Mangetout </li>
+                            <li><span class="icon svg-vegetables--new_potatoes"></span>New potatoes </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--pak_choi"></span>Pak choi </li>
+                            <li><span class="icon svg-vegetables--peas"></span>Peas </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--runner_bean"></span>Runner bean </li>
+                            <li><span class="icon svg-vegetables--samphire"></span>Samphire </li>
+                            <li><span class="icon svg-vegetables--spinach"></span>Spinach </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--spring_greens"></span>Spring greens </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apricot"></span>Apricot</li>
+                            <li><span class="icon svg-fruits--bilberries"></span>Bilberries</li>
+                            <li><span class="icon svg-fruits--blackcurrants"></span>Blackcurrants</li>
+                            <li><span class="icon svg-fruits--cherry"></span>Cherry</li>
+                            <li><span class="icon svg-fruits--gooseberry"></span>Gooseberry</li>
+                            <li><span class="icon svg-fruits--greengages"></span>Greengages</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--nectarine"></span>Nectarine</li>
+                            <li><span class="icon svg-fruits--peach"></span>Peach</li>
+                            <li><span class="icon svg-fruits--strawberry"></span>Strawberry</li>
+                            <li><span class="icon svg-fruits--tomato"></span>Tomato</li>
+                            <li><span class="icon svg-fruits--watermelon"></span>Watermelon</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--basil"></span>Basil</li>
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--chervil"></span>Chervil</li>
+                            <li><span class="icon svg-herbs--coriander"></span>Coriander</li>
+                            <li><span class="icon svg-herbs--dill"></span>Dill</li>
+                            <li><span class="icon svg-herbs--elderflowers"></span>Elderflowers</li>
+                            <li><span class="icon svg-herbs--mint"></span>Mint</li>
+                            <li><span class="icon svg-herbs--oregano"></span>Oregano</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--tarragon"></span>Tarragon</li>
+                            <li><span class="icon svg-herbs--thyme"></span>Thyme</li>
+                            <li><span class="icon svg-herbs--wild_nettles"></span>Wild nettles</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="july">
+                        <h1>What's in season in <span>July </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--broad_beans"></span>Broad Beans </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--carrot"></span>Carrot </li>
+                            <li><span class="icon svg-vegetables--cavolo_nero"></span>Cavolo nero </li>
+                            <li><span class="icon svg-vegetables--chillies"></span>Chillies </li>
+                            <li><span class="icon svg-vegetables--courgette"></span>Courgette </li>
+                            <li><span class="icon svg-vegetables--courgette_flower"></span>Courgette flower </li>
+                            <li><span class="icon svg-vegetables--fennel_bulb"></span>Fennel bulb </li>
+                            <li><span class="icon svg-vegetables--french_beans"></span>French beans </li>
+                            <li><span class="icon svg-vegetables--garlic"></span>Garlic </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--mangetout"></span>Mangetout </li>
+                            <li><span class="icon svg-vegetables--new_potatoes"></span>New potatoes </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--pak_choi"></span>Pak choi </li>
+                            <li><span class="icon svg-vegetables--peas"></span>Peas </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--runner_bean"></span>Runner bean </li>
+                            <li><span class="icon svg-vegetables--samphire"></span>Samphire </li>
+                            <li><span class="icon svg-vegetables--spinach"></span>Spinach </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--swiss_chard"></span>Swiss chard </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apricot"></span>Apricot</li>
+                            <li><span class="icon svg-fruits--bilberries"></span>Bilberries</li>
+                            <li><span class="icon svg-fruits--blackcurrants"></span>Blackcurrants</li>
+                            <li><span class="icon svg-fruits--cherry"></span>Cherry</li>
+                            <li><span class="icon svg-fruits--gooseberry"></span>Gooseberry</li>
+                            <li><span class="icon svg-fruits--greengages"></span>Greengages</li>
+                            <li><span class="icon svg-fruits--kiwi_fruit"></span>Kiwi fruit</li>
+                            <li><span class="icon svg-fruits--nectarine"></span>Nectarine</li>
+                            <li><span class="icon svg-fruits--peach"></span>Peach</li>
+                            <li><span class="icon svg-fruits--strawberry"></span>Strawberry</li>
+                            <li><span class="icon svg-fruits--tomato"></span>Tomato</li>
+                            <li><span class="icon svg-fruits--watermelon"></span>Watermelon</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--basil"></span>Basil</li>
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--chervil"></span>Chervil</li>
+                            <li><span class="icon svg-herbs--coriander"></span>Coriander</li>
+                            <li><span class="icon svg-herbs--dill"></span>Dill</li>
+                            <li><span class="icon svg-herbs--elderflowers"></span>Elderflowers</li>
+                            <li><span class="icon svg-herbs--mint"></span>Mint</li>
+                            <li><span class="icon svg-herbs--oregano"></span>Oregano</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--tarragon"></span>Tarragon</li>
+                            <li><span class="icon svg-herbs--thyme"></span>Thyme</li>
+                            <li><span class="icon svg-herbs--wild_nettles"></span>Wild nettles</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="august">
+                        <h1>What's in season in <span>August </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--broad_beans"></span>Broad Beans </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--carrot"></span>Carrot </li>
+                            <li><span class="icon svg-vegetables--cavolo_nero"></span>Cavolo nero </li>
+                            <li><span class="icon svg-vegetables--chillies"></span>Chillies </li>
+                            <li><span class="icon svg-vegetables--courgette"></span>Courgette </li>
+                            <li><span class="icon svg-vegetables--courgette_flower"></span>Courgette flower </li>
+                            <li><span class="icon svg-vegetables--fennel_bulb"></span>Fennel bulb </li>
+                            <li><span class="icon svg-vegetables--field_mushrooms"></span>Field Mushrooms </li>
+                            <li><span class="icon svg-vegetables--french_beans"></span>French beans </li>
+                            <li><span class="icon svg-vegetables--garlic"></span>Garlic </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--mangetout"></span>Mangetout </li>
+                            <li><span class="icon svg-vegetables--marrow"></span>Marrow </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--pak_choi"></span>Pak choi </li>
+                            <li><span class="icon svg-vegetables--peas"></span>Peas </li>
+                            <li><span class="icon svg-vegetables--pepper"></span>Pepper </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--runner_bean"></span>Runner bean </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--sweetcorn"></span>Sweetcorn </li>
+                            <li><span class="icon svg-vegetables--swiss_chard"></span>Swiss chard </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apricot"></span>Apricot</li>
+                            <li><span class="icon svg-fruits--bilberries"></span>Bilberries</li>
+                            <li><span class="icon svg-fruits--crab_apple"></span>Crab apple</li>
+                            <li><span class="icon svg-fruits--damson"></span>Damson</li>
+                            <li><span class="icon svg-fruits--fig"></span>Fig</li>
+                            <li><span class="icon svg-fruits--greengages"></span>Greengages</li>
+                            <li><span class="icon svg-fruits--nectarine"></span>Nectarine</li>
+                            <li><span class="icon svg-fruits--peach"></span>Peach</li>
+                            <li><span class="icon svg-fruits--plum"></span>Plum</li>
+                            <li><span class="icon svg-fruits--raspberry"></span>Raspberry</li>
+                            <li><span class="icon svg-fruits--redcurrant"></span>Redcurrant</li>
+                            <li><span class="icon svg-fruits--strawberry"></span>Strawberry</li>
+                            <li><span class="icon svg-fruits--tomato"></span>Tomato</li>
+                            <li><span class="icon svg-fruits--watermelon"></span>Watermelon</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--basil"></span>Basil</li>
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--coriander"></span>Coriander</li>
+                            <li><span class="icon svg-herbs--mint"></span>Mint</li>
+                            <li><span class="icon svg-herbs--oregano"></span>Oregano</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--tarragon"></span>Tarragon</li>
+                            <li><span class="icon svg-herbs--thyme"></span>Thyme</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="september">
+                        <h1>What's in season in <span>September </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--butternut_squash"></span>Butternut Squash </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--carrot"></span>Carrot </li>
+                            <li><span class="icon svg-vegetables--cavolo_nero"></span>Cavolo nero </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--celery"></span>Celery </li>
+                            <li><span class="icon svg-vegetables--chillies"></span>Chillies </li>
+                            <li><span class="icon svg-vegetables--courgette"></span>Courgette </li>
+                            <li><span class="icon svg-vegetables--fennel_bulb"></span>Fennel bulb </li>
+                            <li><span class="icon svg-vegetables--field_mushrooms"></span>Field Mushrooms </li>
+                            <li><span class="icon svg-vegetables--french_beans"></span>French beans </li>
+                            <li><span class="icon svg-vegetables--garlic"></span>Garlic </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--mangetout"></span>Mangetout </li>
+                            <li><span class="icon svg-vegetables--marrow"></span>Marrow </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--pak_choi"></span>Pak choi </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--pepper"></span>Pepper </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--pumpkin"></span>Pumpkin </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--runner_bean"></span>Runner bean </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--spring_onion"></span>Spring Onion </li>
+                            <li><span class="icon svg-vegetables--sweetcorn"></span>Sweetcorn </li>
+                            <li><span class="icon svg-vegetables--swiss_chard"></span>Swiss chard </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apple"></span>Apple</li>
+                            <li><span class="icon svg-fruits--bilberries"></span>Bilberries</li>
+                            <li><span class="icon svg-fruits--blackberry"></span>Blackberry</li>
+                            <li><span class="icon svg-fruits--damson"></span>Damson</li>
+                            <li><span class="icon svg-fruits--elderberries"></span>Elderberries</li>
+                            <li><span class="icon svg-fruits--fig"></span>Fig</li>
+                            <li><span class="icon svg-fruits--nectarine"></span>Nectarine</li>
+                            <li><span class="icon svg-fruits--peach"></span>Peach</li>
+                            <li><span class="icon svg-fruits--pear"></span>Pear</li>
+                            <li><span class="icon svg-fruits--plum"></span>Plum</li>
+                            <li><span class="icon svg-fruits--raspberry"></span>Raspberry</li>
+                            <li><span class="icon svg-fruits--redcurrant"></span>Redcurrant</li>
+                            <li><span class="icon svg-fruits--tomato"></span>Tomato</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--coriander"></span>Coriander</li>
+                            <li><span class="icon svg-herbs--mint"></span>Mint</li>
+                            <li><span class="icon svg-herbs--oregano"></span>Oregano</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--thyme"></span>Thyme</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="october">
+                        <h1>What's in season in <span>October </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--aubergine"></span>Aubergine </li>
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--broccoli"></span>Broccoli </li>
+                            <li><span class="icon svg-vegetables--butternut_squash"></span>Butternut Squash </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cavolo_nero"></span>Cavolo nero </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--celery"></span>Celery </li>
+                            <li><span class="icon svg-vegetables--chillies"></span>Chillies </li>
+                            <li><span class="icon svg-vegetables--fennel_bulb"></span>Fennel bulb </li>
+                            <li><span class="icon svg-vegetables--field_mushrooms"></span>Field Mushrooms </li>
+                            <li><span class="icon svg-vegetables--garlic"></span>Garlic </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--jerusalem_artichoke"></span>Jerusalem artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--lettuce"></span>Lettuce </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--marrow"></span>Marrow </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--pumpkin"></span>Pumpkin </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--radish"></span>Radish </li>
+                            <li><span class="icon svg-vegetables--rocket"></span>Rocket </li>
+                            <li><span class="icon svg-vegetables--runner_bean"></span>Runner bean </li>
+                            <li><span class="icon svg-vegetables--salsify"></span>Salsify </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                            <li><span class="icon svg-vegetables--sweetcorn"></span>Sweetcorn </li>
+                            <li><span class="icon svg-vegetables--swiss_chard"></span>Swiss chard </li>
+                            <li><span class="icon svg-vegetables--black_truffles"></span>Black Truffles </li>
+                            <li><span class="icon svg-vegetables--white_truffles"></span>White Truffles </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apple"></span>Apple</li>
+                            <li><span class="icon svg-fruits--bilberries"></span>Bilberries</li>
+                            <li><span class="icon svg-fruits--blackberry"></span>Blackberry</li>
+                            <li><span class="icon svg-fruits--date"></span>Date</li>
+                            <li><span class="icon svg-fruits--elderberries"></span>Elderberries</li>
+                            <li><span class="icon svg-fruits--fig"></span>Fig</li>
+                            <li><span class="icon svg-fruits--pear"></span>Pear</li>
+                            <li><span class="icon svg-fruits--plum"></span>Plum</li>
+                            <li><span class="icon svg-fruits--quince"></span>Quince</li>
+                            <li><span class="icon svg-fruits--sloes"></span>Sloes</li>
+                            <li><span class="icon svg-fruits--tomato"></span>Tomato</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--chives"></span>Chives</li>
+                            <li><span class="icon svg-herbs--parsley"></span>Parsley</li>
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                            <li><span class="icon svg-herbs--sorrel"></span>Sorrel</li>
+                            <li><span class="icon svg-herbs--thyme"></span>Thyme</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="november">
+                        <h1>What's in season in <span>November </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--butternut_squash"></span>Butternut Squash </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cauliflower"></span>Cauliflower </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--celery"></span>Celery </li>
+                            <li><span class="icon svg-vegetables--field_mushrooms"></span>Field Mushrooms </li>
+                            <li><span class="icon svg-vegetables--globe_artichoke"></span>Globe artichoke </li>
+                            <li><span class="icon svg-vegetables--jerusalem_artichoke"></span>Jerusalem artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--pumpkin"></span>Pumpkin </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--salsify"></span>Salsify </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                            <li><span class="icon svg-vegetables--swiss_chard"></span>Swiss chard </li>
+                            <li><span class="icon svg-vegetables--black_truffles"></span>Black Truffles </li>
+                            <li><span class="icon svg-vegetables--white_truffles"></span>White Truffles </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                            <li><span class="icon svg-vegetables--watercress"></span>Watercress </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apple"></span>Apple</li>
+                            <li><span class="icon svg-fruits--bramley_apple"></span>Bramley apple</li>
+                            <li><span class="icon svg-fruits--clementine"></span>Clementine</li>
+                            <li><span class="icon svg-fruits--cranberry"></span>Cranberry</li>
+                            <li><span class="icon svg-fruits--date"></span>Date</li>
+                            <li><span class="icon svg-fruits--pear"></span>Pear</li>
+                            <li><span class="icon svg-fruits--pomegranate"></span>Pomegranate</li>
+                            <li><span class="icon svg-fruits--quince"></span>Quince</li>
+                            <li><span class="icon svg-fruits--sloes"></span>Sloes</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                            <li><span class="icon svg-herbs--rosemary"></span>Rosemary</li>
+                            <li><span class="icon svg-herbs--sage"></span>Sage</li>
+                        </ul>
+                    </div>
+                    <div class="month" data-season="december">
+                        <h1>What's in season in <span>December </span></h1>
+                        <h2>Vegetables</h2>
+                        <ul class="months vegetables">
+                            <li><span class="icon svg-vegetables--beetroot"></span>Beetroot </li>
+                            <li><span class="icon svg-vegetables--brussels_sprouts"></span>Brussels sprouts </li>
+                            <li><span class="icon svg-vegetables--cabbage"></span>Cabbage </li>
+                            <li><span class="icon svg-vegetables--cauliflower"></span>Cauliflower </li>
+                            <li><span class="icon svg-vegetables--celeriac"></span>Celeriac </li>
+                            <li><span class="icon svg-vegetables--celery"></span>Celery </li>
+                            <li><span class="icon svg-vegetables--field_mushrooms"></span>Field Mushrooms </li>
+                            <li><span class="icon svg-vegetables--jerusalem_artichoke"></span>Jerusalem artichoke </li>
+                            <li><span class="icon svg-vegetables--kale"></span>Kale </li>
+                            <li><span class="icon svg-vegetables--kohlrabi"></span>Kohlrabi </li>
+                            <li><span class="icon svg-vegetables--leek"></span>Leek </li>
+                            <li><span class="icon svg-vegetables--onion"></span>Onion </li>
+                            <li><span class="icon svg-vegetables--parsnip"></span>Parsnip </li>
+                            <li><span class="icon svg-vegetables--potatoes"></span>Potatoes </li>
+                            <li><span class="icon svg-vegetables--radicchio"></span>Radicchio </li>
+                            <li><span class="icon svg-vegetables--salsify"></span>Salsify </li>
+                            <li><span class="icon svg-vegetables--shallots"></span>Shallots </li>
+                            <li><span class="icon svg-vegetables--swede"></span>Swede </li>
+                            <li><span class="icon svg-vegetables--sweet_potato"></span>Sweet potato </li>
+                            <li><span class="icon svg-vegetables--black_truffles"></span>Black Truffles </li>
+                            <li><span class="icon svg-vegetables--white_truffles"></span>White Truffles </li>
+                            <li><span class="icon svg-vegetables--turnip"></span>Turnip </li>
+                        </ul>
+                        <h2>Fruit</h2>
+                        <ul class="months fruits">
+                            <li><span class="icon svg-fruits--apple"></span>Apple</li>
+                            <li><span class="icon svg-fruits--bramley_apple"></span>Bramley apple</li>
+                            <li><span class="icon svg-fruits--clementine"></span>Clementine</li>
+                            <li><span class="icon svg-fruits--cranberry"></span>Cranberry</li>
+                            <li><span class="icon svg-fruits--date"></span>Date</li>
+                            <li><span class="icon svg-fruits--grapefruit"></span>Grapefruit</li>
+                            <li><span class="icon svg-fruits--pear"></span>Pear</li>
+                            <li><span class="icon svg-fruits--pomegranate"></span>Pomegranate</li>
+                            <li><span class="icon svg-fruits--sloes"></span>Sloes</li>
+                        </ul>
+                        <h2>Herbs</h2>
+                        <ul class="months herbs">
+                        </ul>
+                        <p>Sorry, nothing in season</p>
+                    </div>
+                </div>
+                <!--.week-->
+            </div>
+        </main>
+        <!--/.container-->
+        <footer id="footer" class="jw-footer">
+            <ul class="nav-social">
+                <li class="nav-social__item">
+                    <a href="https://instagram.com/dogwonder" rel="external">
+                        <svg class="icon icon-social icon-social-instagram" viewBox="0 0 448 512" aria-labelledby="title" role="img">
+                            <title id="title">Follow us on Instagram</title>
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                        <span class="sr-only">Visit instagram</span>
+                    </a>
+                </li>
+                <li class="nav-social__item">
+                    <a href="mailto:dogwonder@gmail.com" rel="external">
+                        <svg class="icon icon-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" />
+                            <span class="sr-only">Email</span>
+                    </a>
+                </li>
+            </ul>
+            <!--/nav-->
+            <p>© Copyright 2019 <br />
+                <a href="./privacy.html" aria-label="Read this site's Privacy policy">Privacy policy</a> | <a href="./cookies.html" aria-label="Read this site's Cookie policy">Cookie policy</a> | <a href="./terms.html" aria-label="Read this site's Terms of Service">Terms of Service</a>
+            </p>
+            <svg width="0" height="0">
+                <radialGradient id="rg" r="150%" cx="30%" cy="107%">
+                    <stop stop-color="#fdf497" offset="0" />
+                    <stop stop-color="#fdf497" offset="0.05" />
+                    <stop stop-color="#fd5949" offset="0.45" />
+                    <stop stop-color="#d6249f" offset="0.6" />
+                    <stop stop-color="#285AEB" offset="0.9" />
+                </radialGradient>
+            </svg>
+        </footer>
+    </div>
+    <!--/.wrapper-->
+    <script src="./scripts/app.js"></script>
+    <script>
+        // This is the service worker with the combined offline experience (Cache-first network) - https://preview.pwabuilder.com/serviceworker
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                //console.log("active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        //console.log("Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+    <script>
+        astro.init();
+    </script>
+</body>
+
+</html>

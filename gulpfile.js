@@ -37,6 +37,7 @@ const plumber = require('gulp-plumber');
 const inject = require('gulp-inject');
 const rename = require('gulp-rename');
 const bump = require('gulp-bump');
+const merge = require('merge-stream');
 const shell = require('gulp-shell');
 const browserSync = require('browser-sync').create();
 const log = require('fancy-log');
@@ -247,8 +248,8 @@ gulp.task('svgstore', () => {
 
 gulp.task('svgsprite', () => {
   return gulp
-    .src('assets/images/icons/**/*.svg')
-    .pipe(svgSprite( config = {
+    .src('assets/icons/**/*.svg')
+    .pipe(svgsprite( config = {
       shape: {
         dimension: { // Set maximum dimensions
           maxWidth: 30,
@@ -259,7 +260,7 @@ gulp.task('svgsprite', () => {
         css: { // Activate the «css» mode
           bust: false,
           render: {
-            scss: true // Activate CSS output (with default options)
+            css: true // Activate CSS output (with default options)
           }
         }
       }
@@ -268,14 +269,17 @@ gulp.task('svgsprite', () => {
 });
 
 
-// Moving the sprite
-gulp.task('move-icons', () => {  
-  return gulp
-    .src([
-      'assets/styles/partials/css/svg/sprite.css.svg'
-    ])
+// Moving the sprite and css
+gulp.task('move-sprite', () => {  
+  let svgs = gulp.src(['assets/icons/**/*'])
+    .pipe(gulp.dest(path.join(dir.dist, 'images/icons')));
+  let sprite = gulp.src(['assets/styles/partials/css/svg/sprite.css.svg'])
     .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
+  let css = gulp.src(['assets/styles/partials/css/sprite.css'])
+    .pipe(gulp.dest(path.join(dir.dist, 'css')));
+    return merge(sprite, css);
 });
+
 
 // Copying fonts
 gulp.task('fonts', () => {  
@@ -355,7 +359,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'svgstore', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'svgmin', 'svgstore', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'svgmin', 'svgstore', 'svgsprite', 'move-sprite', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 
