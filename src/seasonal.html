@@ -110,15 +110,21 @@
     </div>
 
     {% for vegetable in vegetables %}
-    <a href="http://www.eattheseasons.co.uk/Articles/{{ vegetable.name | lower }}.php" rel="external">{{ vegetable.name | lower }}</a><br />
+    .food-{{ vegetable.name | lower |  replace(" ", "_") }} {
+        color: #000;
+    }<br />
     {% endfor %}
 
     {% for fruit in fruits %}
-    <a href="http://www.eattheseasons.co.uk/Articles/{{ fruit.name | lower }}.php" rel="external">{{ fruit.name | lower }}</a><br />
+    .food-{{ fruit.name | lower |  replace(" ", "_")}}{
+        color: #000;
+    }<br />
     {% endfor %}
 
     {% for herb in herbs %}
-    <a href="http://www.eattheseasons.co.uk/Articles/{{ herb.name | lower }}.php" rel="external">{{ herb.name | lower }}</a><br />
+    .food-{{ herb.name | lower |  replace(" ", "_") }}{
+        color: #000;
+    }<br />
     {% endfor %}
 
 

@@ -18,6 +18,7 @@
 ] %}
 
 {% block content %}
+
 <div class="seasons">
     <nav class="nav-months">
     {% for month in months %}
@@ -39,7 +40,7 @@
             {# {{ vegetables | length }} #}
             {% for month in vegetableDuring %}
                 {% if month == thismonth %}    
-                    <li><img class="icon" src="images/icons/vegetables/{{ vegetable.name | lower |  replace(" ", "_") }}.svg" alt="{{ vegetable.name }}">{{ vegetable.name }} </li>
+                    <li class="food-{{ vegetable.name | lower |  replace(" ", "_") }}"><svg class="icon"><use xlink:href="#icon-{{ vegetable.name | lower |  replace(" ", "_") }}" /></svg>{{ vegetable.name }} </li>
                 {# Set the count #}
                 {% set vegcount = vegcount + 1 %}
                 {% endif %}
@@ -61,7 +62,7 @@
         {% set fruitDuring = fruit.during %}
             {% for month in fruitDuring %}
                 {% if month == thismonth %}
-                    <li><img class="icon" src="images/icons/fruit/{{ fruit.name | lower |  replace(" ", "_") }}.svg" alt="{{ fruit.name }}"> {{ fruit.name }}</li>
+                    <li class="icfoodon-{{ fruit.name | lower |  replace(" ", "_") }}"><svg class="icon"><use xlink:href="#icon-{{ fruit.name | lower |  replace(" ", "_") }}" /></svg>{{ fruit.name }}</li>
                 {# Set the count #}
                 {% set fruitcount = fruitcount + 1 %}
                 {% endif %}
@@ -82,7 +83,7 @@
             {% set herbDuring = herb.during %}
             {% for month in herbDuring %}
                 {% if month == thismonth %}
-                    <li><img class="icon" src="images/icons/herbs/{{ herb.name | lower |  replace(" ", "_") }}.svg" alt="{{ herb.name }}">{{ herb.name }}</li>
+                    <li class="food-{{ herb.name | lower |  replace(" ", "_") }}"><svg class="icon"><use xlink:href="#icon-{{ herb.name | lower |  replace(" ", "_") }}" /></svg>{{ herb.name }}</li>
                 {# Set the count #}
                 {% set herbcount = herbcount + 1 %}
                 {% endif %}
@@ -96,5 +97,9 @@
       </div>
       {% endfor %}
 </div><!--.week-->
+
+<div class="visuallyhidden">
+  <!-- inject:svg --><!-- endinject -->
+</div>
 
 {% endblock %} 

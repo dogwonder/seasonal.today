@@ -17,7 +17,6 @@ const svgsprite = require('gulp-svg-sprite');
 const svgstore = require('gulp-svgstore');
 const responsive = require('gulp-responsive');
 
-
 //Build tools
 const data = require('gulp-data');
 const nunjucks = require('nunjucks');
@@ -246,6 +245,7 @@ gulp.task('svgstore', () => {
       .pipe(gulp.dest(dir.dist));
 });
 
+//Create a sprite SVG
 gulp.task('svgsprite', () => {
   return gulp
     .src('assets/icons/**/*.svg')
@@ -260,26 +260,13 @@ gulp.task('svgsprite', () => {
         css: { // Activate the «css» mode
           bust: false,
           render: {
-            css: true // Activate CSS output (with default options)
+            scss: true // Activate CSS output (with default options)
           }
         }
       }
     }))
     .pipe(gulp.dest('assets/styles/partials'))
 });
-
-
-// Moving the sprite and css
-gulp.task('move-sprite', () => {  
-  let svgs = gulp.src(['assets/icons/**/*'])
-    .pipe(gulp.dest(path.join(dir.dist, 'images/icons')));
-  let sprite = gulp.src(['assets/styles/partials/css/svg/sprite.css.svg'])
-    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
-  let css = gulp.src(['assets/styles/partials/css/sprite.css'])
-    .pipe(gulp.dest(path.join(dir.dist, 'css')));
-    return merge(sprite, css);
-});
-
 
 // Copying fonts
 gulp.task('fonts', () => {  
@@ -324,24 +311,21 @@ gulp.task('serviceworker', () => {
       .pipe(gulp.dest(dir.dist));
 });
 
-// Moving the service worker
-gulp.task('move-files', () => {  
-  return gulp
-    .src([
-      'assets/CNAME'
-    ])
-    .pipe(gulp.dest(dir.dist));
-});
-
-
 // Moving misc files
-gulp.task('move-js', () => {  
-  return gulp
-      .src([
-      'assets/vendor/js.cookie.js'
-      ])
+gulp.task('move-files', () => {  
+  let sprite = gulp.src(['assets/styles/partials/css/svg/sprite.css.svg'])
+    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
+
+  let js = gulp.src(['assets/vendor/js.cookie.js'])
     .pipe(gulp.dest(path.join(dir.dist, 'scripts')));
+
+  let cname = gulp.src(['assets/CNAME'])
+    .pipe(gulp.dest(dir.dist));
+    
+  //Merge the requests
+    return merge(sprite, js, cname);
 });
+
 
 // Static Server + watching scss/html files
 gulp.task('serve', () => {
@@ -359,7 +343,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'svgstore', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'move-files', 'move-js', 'svgmin', 'svgstore', 'svgsprite', 'move-sprite', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'svgsprite', 'move-files', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 

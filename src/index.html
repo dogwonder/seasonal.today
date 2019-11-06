@@ -1,5 +1,9 @@
 {% set body_class = "jw-seasonal" %}
 
+{# {% block styles %}
+  <link rel="stylesheet" href="./css/custom.css">
+{% endblock %} #}
+
 {% extends "layout/_layout.njk" %}
 
 {% set months = [
@@ -40,7 +44,7 @@
             {# {{ vegetables | length }} #}
             {% for month in vegetableDuring %}
                 {% if month == thismonth %}    
-                    <li><svg class="icon"><use xlink:href="#icon-{{ vegetable.name | lower |  replace(" ", "_") }}" /></svg>{{ vegetable.name }} </li>
+                    <li><span class="icon svg-vegetables--{{ vegetable.name | lower |  replace(" ", "_") }}"></span>{{ vegetable.name }} </li>
                 {# Set the count #}
                 {% set vegcount = vegcount + 1 %}
                 {% endif %}
@@ -62,7 +66,7 @@
         {% set fruitDuring = fruit.during %}
             {% for month in fruitDuring %}
                 {% if month == thismonth %}
-                    <li><svg class="icon"><use xlink:href="#icon-{{ fruit.name | lower |  replace(" ", "_") }}" /></svg>{{ fruit.name }}</li>
+                    <li><span class="icon svg-fruit--{{ fruit.name | lower |  replace(" ", "_") }}"></span>{{ fruit.name }}</li>
                 {# Set the count #}
                 {% set fruitcount = fruitcount + 1 %}
                 {% endif %}
@@ -83,7 +87,7 @@
             {% set herbDuring = herb.during %}
             {% for month in herbDuring %}
                 {% if month == thismonth %}
-                    <li><svg class="icon"><use xlink:href="#icon-{{ herb.name | lower |  replace(" ", "_") }}" /></svg>{{ herb.name }}</li>
+                    <li><span class="icon svg-herbs--{{ herb.name | lower |  replace(" ", "_") }}"></span>{{ herb.name }}</li>
                 {# Set the count #}
                 {% set herbcount = herbcount + 1 %}
                 {% endif %}
@@ -97,9 +101,5 @@
       </div>
       {% endfor %}
 </div><!--.week-->
-
-<div class="visuallyhidden">
-  <!-- inject:svg --><!-- endinject -->
-</div>
 
 {% endblock %} 

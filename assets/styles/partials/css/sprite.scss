@@ -1,5 +1,10 @@
+%svg-common {
+	background: url("svg/sprite.css.svg") no-repeat;
+}
+
 .svg-fruit--apple {
-	background: url("svg/sprite.css.svg") 0 0 no-repeat;
+	@extend %svg-common;
+	background-position: 0 0;
 }
 
 .svg-fruit--apple-dims {
@@ -8,7 +13,8 @@
 }
 
 .svg-fruit--apricot {
-	background: url("svg/sprite.css.svg") 10% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 10% 0;
 }
 
 .svg-fruit--apricot-dims {
@@ -17,7 +23,8 @@
 }
 
 .svg-fruit--banana {
-	background: url("svg/sprite.css.svg") 0 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 0 11.11111111111111%;
 }
 
 .svg-fruit--banana-dims {
@@ -26,7 +33,8 @@
 }
 
 .svg-fruit--bilberries {
-	background: url("svg/sprite.css.svg") 10% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 11.11111111111111%;
 }
 
 .svg-fruit--bilberries-dims {
@@ -35,7 +43,8 @@
 }
 
 .svg-fruit--blackberry {
-	background: url("svg/sprite.css.svg") 20% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 20% 0;
 }
 
 .svg-fruit--blackberry-dims {
@@ -44,7 +53,8 @@
 }
 
 .svg-fruit--blackcurrants {
-	background: url("svg/sprite.css.svg") 20% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 11.11111111111111%;
 }
 
 .svg-fruit--blackcurrants-dims {
@@ -53,7 +63,8 @@
 }
 
 .svg-fruit--bramley_apple {
-	background: url("svg/sprite.css.svg") 0 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 0 22.22222222222222%;
 }
 
 .svg-fruit--bramley_apple-dims {
@@ -62,7 +73,8 @@
 }
 
 .svg-fruit--cherry {
-	background: url("svg/sprite.css.svg") 10% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 22.22222222222222%;
 }
 
 .svg-fruit--cherry-dims {
@@ -71,7 +83,8 @@
 }
 
 .svg-fruit--clementine {
-	background: url("svg/sprite.css.svg") 20% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 22.22222222222222%;
 }
 
 .svg-fruit--clementine-dims {
@@ -80,7 +93,8 @@
 }
 
 .svg-fruit--crab_apple {
-	background: url("svg/sprite.css.svg") 30% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 30% 0;
 }
 
 .svg-fruit--crab_apple-dims {
@@ -89,7 +103,8 @@
 }
 
 .svg-fruit--cranberry {
-	background: url("svg/sprite.css.svg") 30% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 11.11111111111111%;
 }
 
 .svg-fruit--cranberry-dims {
@@ -98,7 +113,8 @@
 }
 
 .svg-fruit--damson {
-	background: url("svg/sprite.css.svg") 30% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 22.22222222222222%;
 }
 
 .svg-fruit--damson-dims {
@@ -107,7 +123,8 @@
 }
 
 .svg-fruit--date {
-	background: url("svg/sprite.css.svg") 0 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 0 33.333333333333336%;
 }
 
 .svg-fruit--date-dims {
@@ -116,7 +133,8 @@
 }
 
 .svg-fruit--elderberries {
-	background: url("svg/sprite.css.svg") 10% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 33.333333333333336%;
 }
 
 .svg-fruit--elderberries-dims {
@@ -125,7 +143,8 @@
 }
 
 .svg-fruit--fig {
-	background: url("svg/sprite.css.svg") 20% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 33.333333333333336%;
 }
 
 .svg-fruit--fig-dims {
@@ -134,7 +153,8 @@
 }
 
 .svg-fruit--gooseberry {
-	background: url("svg/sprite.css.svg") 30% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 33.333333333333336%;
 }
 
 .svg-fruit--gooseberry-dims {
@@ -143,7 +163,8 @@
 }
 
 .svg-fruit--grapefruit {
-	background: url("svg/sprite.css.svg") 40% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 40% 0;
 }
 
 .svg-fruit--grapefruit-dims {
@@ -152,7 +173,8 @@
 }
 
 .svg-fruit--greengages {
-	background: url("svg/sprite.css.svg") 40% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 11.11111111111111%;
 }
 
 .svg-fruit--greengages-dims {
@@ -161,7 +183,8 @@
 }
 
 .svg-fruit--kiwi_fruit {
-	background: url("svg/sprite.css.svg") 40% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 22.22222222222222%;
 }
 
 .svg-fruit--kiwi_fruit-dims {
@@ -170,7 +193,8 @@
 }
 
 .svg-fruit--lemon {
-	background: url("svg/sprite.css.svg") 40% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 33.333333333333336%;
 }
 
 .svg-fruit--lemon-dims {
@@ -179,7 +203,8 @@
 }
 
 .svg-fruit--nectarine {
-	background: url("svg/sprite.css.svg") 0 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 0 44.44444444444444%;
 }
 
 .svg-fruit--nectarine-dims {
@@ -188,7 +213,8 @@
 }
 
 .svg-fruit--orange {
-	background: url("svg/sprite.css.svg") 10% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 44.44444444444444%;
 }
 
 .svg-fruit--orange-dims {
@@ -197,7 +223,8 @@
 }
 
 .svg-fruit--peach {
-	background: url("svg/sprite.css.svg") 20% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 44.44444444444444%;
 }
 
 .svg-fruit--peach-dims {
@@ -206,7 +233,8 @@
 }
 
 .svg-fruit--pear {
-	background: url("svg/sprite.css.svg") 30% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 44.44444444444444%;
 }
 
 .svg-fruit--pear-dims {
@@ -215,7 +243,8 @@
 }
 
 .svg-fruit--plum {
-	background: url("svg/sprite.css.svg") 40% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 44.44444444444444%;
 }
 
 .svg-fruit--plum-dims {
@@ -224,7 +253,8 @@
 }
 
 .svg-fruit--pomegranate {
-	background: url("svg/sprite.css.svg") 50% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 50% 0;
 }
 
 .svg-fruit--pomegranate-dims {
@@ -233,7 +263,8 @@
 }
 
 .svg-fruit--quince {
-	background: url("svg/sprite.css.svg") 50% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 11.11111111111111%;
 }
 
 .svg-fruit--quince-dims {
@@ -242,7 +273,8 @@
 }
 
 .svg-fruit--raspberry {
-	background: url("svg/sprite.css.svg") 50% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 22.22222222222222%;
 }
 
 .svg-fruit--raspberry-dims {
@@ -251,7 +283,8 @@
 }
 
 .svg-fruit--redcurrant {
-	background: url("svg/sprite.css.svg") 50% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 33.333333333333336%;
 }
 
 .svg-fruit--redcurrant-dims {
@@ -260,7 +293,8 @@
 }
 
 .svg-fruit--rhubarb {
-	background: url("svg/sprite.css.svg") 50% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 44.44444444444444%;
 }
 
 .svg-fruit--rhubarb-dims {
@@ -269,7 +303,8 @@
 }
 
 .svg-fruit--sloes {
-	background: url("svg/sprite.css.svg") 0 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 0 55.55555555555556%;
 }
 
 .svg-fruit--sloes-dims {
@@ -278,7 +313,8 @@
 }
 
 .svg-fruit--strawberry {
-	background: url("svg/sprite.css.svg") 10% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 55.55555555555556%;
 }
 
 .svg-fruit--strawberry-dims {
@@ -287,7 +323,8 @@
 }
 
 .svg-fruit--tomato {
-	background: url("svg/sprite.css.svg") 20% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 55.55555555555556%;
 }
 
 .svg-fruit--tomato-dims {
@@ -296,7 +333,8 @@
 }
 
 .svg-fruit--watermelon {
-	background: url("svg/sprite.css.svg") 30% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 55.55555555555556%;
 }
 
 .svg-fruit--watermelon-dims {
@@ -305,7 +343,8 @@
 }
 
 .svg-herbs--basil {
-	background: url("svg/sprite.css.svg") 40% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 55.55555555555556%;
 }
 
 .svg-herbs--basil-dims {
@@ -314,7 +353,8 @@
 }
 
 .svg-herbs--chervil {
-	background: url("svg/sprite.css.svg") 50% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 55.55555555555556%;
 }
 
 .svg-herbs--chervil-dims {
@@ -323,7 +363,8 @@
 }
 
 .svg-herbs--chives {
-	background: url("svg/sprite.css.svg") 60% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 60% 0;
 }
 
 .svg-herbs--chives-dims {
@@ -332,7 +373,8 @@
 }
 
 .svg-herbs--coriander {
-	background: url("svg/sprite.css.svg") 60% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 11.11111111111111%;
 }
 
 .svg-herbs--coriander-dims {
@@ -341,7 +383,8 @@
 }
 
 .svg-herbs--dill {
-	background: url("svg/sprite.css.svg") 60% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 22.22222222222222%;
 }
 
 .svg-herbs--dill-dims {
@@ -350,7 +393,8 @@
 }
 
 .svg-herbs--elderflowers {
-	background: url("svg/sprite.css.svg") 60% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 33.333333333333336%;
 }
 
 .svg-herbs--elderflowers-dims {
@@ -359,7 +403,8 @@
 }
 
 .svg-herbs--mint {
-	background: url("svg/sprite.css.svg") 60% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 44.44444444444444%;
 }
 
 .svg-herbs--mint-dims {
@@ -368,7 +413,8 @@
 }
 
 .svg-herbs--oregano {
-	background: url("svg/sprite.css.svg") 60% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 55.55555555555556%;
 }
 
 .svg-herbs--oregano-dims {
@@ -377,7 +423,8 @@
 }
 
 .svg-herbs--parsley {
-	background: url("svg/sprite.css.svg") 0 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 0 66.66666666666667%;
 }
 
 .svg-herbs--parsley-dims {
@@ -386,7 +433,8 @@
 }
 
 .svg-herbs--rosemary {
-	background: url("svg/sprite.css.svg") 10% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 66.66666666666667%;
 }
 
 .svg-herbs--rosemary-dims {
@@ -395,7 +443,8 @@
 }
 
 .svg-herbs--sage {
-	background: url("svg/sprite.css.svg") 20% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 66.66666666666667%;
 }
 
 .svg-herbs--sage-dims {
@@ -404,7 +453,8 @@
 }
 
 .svg-herbs--sorrel {
-	background: url("svg/sprite.css.svg") 30% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 66.66666666666667%;
 }
 
 .svg-herbs--sorrel-dims {
@@ -413,7 +463,8 @@
 }
 
 .svg-herbs--tarragon {
-	background: url("svg/sprite.css.svg") 40% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 66.66666666666667%;
 }
 
 .svg-herbs--tarragon-dims {
@@ -422,7 +473,8 @@
 }
 
 .svg-herbs--thyme {
-	background: url("svg/sprite.css.svg") 50% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 66.66666666666667%;
 }
 
 .svg-herbs--thyme-dims {
@@ -431,7 +483,8 @@
 }
 
 .svg-herbs--wild_nettles {
-	background: url("svg/sprite.css.svg") 60% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 66.66666666666667%;
 }
 
 .svg-herbs--wild_nettles-dims {
@@ -440,7 +493,8 @@
 }
 
 .svg-vegetables--asparagus {
-	background: url("svg/sprite.css.svg") 70% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 70% 0;
 }
 
 .svg-vegetables--asparagus-dims {
@@ -449,7 +503,8 @@
 }
 
 .svg-vegetables--aubergine {
-	background: url("svg/sprite.css.svg") 70% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 11.11111111111111%;
 }
 
 .svg-vegetables--aubergine-dims {
@@ -458,7 +513,8 @@
 }
 
 .svg-vegetables--beetroot {
-	background: url("svg/sprite.css.svg") 70% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 22.22222222222222%;
 }
 
 .svg-vegetables--beetroot-dims {
@@ -467,7 +523,8 @@
 }
 
 .svg-vegetables--black_truffles {
-	background: url("svg/sprite.css.svg") 70% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 33.333333333333336%;
 }
 
 .svg-vegetables--black_truffles-dims {
@@ -476,7 +533,8 @@
 }
 
 .svg-vegetables--broad_beans {
-	background: url("svg/sprite.css.svg") 70% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 44.44444444444444%;
 }
 
 .svg-vegetables--broad_beans-dims {
@@ -485,7 +543,8 @@
 }
 
 .svg-vegetables--broccoli {
-	background: url("svg/sprite.css.svg") 70% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 55.55555555555556%;
 }
 
 .svg-vegetables--broccoli-dims {
@@ -494,7 +553,8 @@
 }
 
 .svg-vegetables--brussels_sprouts {
-	background: url("svg/sprite.css.svg") 70% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 66.66666666666667%;
 }
 
 .svg-vegetables--brussels_sprouts-dims {
@@ -503,7 +563,8 @@
 }
 
 .svg-vegetables--butternut_squash {
-	background: url("svg/sprite.css.svg") 0 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 0 77.77777777777777%;
 }
 
 .svg-vegetables--butternut_squash-dims {
@@ -512,7 +573,8 @@
 }
 
 .svg-vegetables--cabbage {
-	background: url("svg/sprite.css.svg") 10% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 77.77777777777777%;
 }
 
 .svg-vegetables--cabbage-dims {
@@ -521,7 +583,8 @@
 }
 
 .svg-vegetables--carrot {
-	background: url("svg/sprite.css.svg") 20% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 77.77777777777777%;
 }
 
 .svg-vegetables--carrot-dims {
@@ -530,7 +593,8 @@
 }
 
 .svg-vegetables--cauliflower {
-	background: url("svg/sprite.css.svg") 30% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 77.77777777777777%;
 }
 
 .svg-vegetables--cauliflower-dims {
@@ -539,7 +603,8 @@
 }
 
 .svg-vegetables--cavolo_nero {
-	background: url("svg/sprite.css.svg") 40% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 77.77777777777777%;
 }
 
 .svg-vegetables--cavolo_nero-dims {
@@ -548,7 +613,8 @@
 }
 
 .svg-vegetables--celeriac {
-	background: url("svg/sprite.css.svg") 50% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 77.77777777777777%;
 }
 
 .svg-vegetables--celeriac-dims {
@@ -557,7 +623,8 @@
 }
 
 .svg-vegetables--celery {
-	background: url("svg/sprite.css.svg") 60% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 77.77777777777777%;
 }
 
 .svg-vegetables--celery-dims {
@@ -566,7 +633,8 @@
 }
 
 .svg-vegetables--chicory {
-	background: url("svg/sprite.css.svg") 70% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 77.77777777777777%;
 }
 
 .svg-vegetables--chicory-dims {
@@ -575,7 +643,8 @@
 }
 
 .svg-vegetables--chillies {
-	background: url("svg/sprite.css.svg") 80% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 80% 0;
 }
 
 .svg-vegetables--chillies-dims {
@@ -584,7 +653,8 @@
 }
 
 .svg-vegetables--courgette {
-	background: url("svg/sprite.css.svg") 80% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 11.11111111111111%;
 }
 
 .svg-vegetables--courgette-dims {
@@ -593,7 +663,8 @@
 }
 
 .svg-vegetables--courgette_flower {
-	background: url("svg/sprite.css.svg") 80% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 22.22222222222222%;
 }
 
 .svg-vegetables--courgette_flower-dims {
@@ -602,7 +673,8 @@
 }
 
 .svg-vegetables--fennel_bulb {
-	background: url("svg/sprite.css.svg") 80% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 33.333333333333336%;
 }
 
 .svg-vegetables--fennel_bulb-dims {
@@ -611,7 +683,8 @@
 }
 
 .svg-vegetables--field_mushrooms {
-	background: url("svg/sprite.css.svg") 80% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 44.44444444444444%;
 }
 
 .svg-vegetables--field_mushrooms-dims {
@@ -620,7 +693,8 @@
 }
 
 .svg-vegetables--french_beans {
-	background: url("svg/sprite.css.svg") 80% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 55.55555555555556%;
 }
 
 .svg-vegetables--french_beans-dims {
@@ -629,7 +703,8 @@
 }
 
 .svg-vegetables--garlic {
-	background: url("svg/sprite.css.svg") 80% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 66.66666666666667%;
 }
 
 .svg-vegetables--garlic-dims {
@@ -638,7 +713,8 @@
 }
 
 .svg-vegetables--globe_artichoke {
-	background: url("svg/sprite.css.svg") 80% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 77.77777777777777%;
 }
 
 .svg-vegetables--globe_artichoke-dims {
@@ -647,7 +723,8 @@
 }
 
 .svg-vegetables--jerusalem_artichoke {
-	background: url("svg/sprite.css.svg") 0 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 0 88.88888888888889%;
 }
 
 .svg-vegetables--jerusalem_artichoke-dims {
@@ -656,7 +733,8 @@
 }
 
 .svg-vegetables--kale {
-	background: url("svg/sprite.css.svg") 10% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 88.88888888888889%;
 }
 
 .svg-vegetables--kale-dims {
@@ -665,7 +743,8 @@
 }
 
 .svg-vegetables--kohlrabi {
-	background: url("svg/sprite.css.svg") 20% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 88.88888888888889%;
 }
 
 .svg-vegetables--kohlrabi-dims {
@@ -674,7 +753,8 @@
 }
 
 .svg-vegetables--leek {
-	background: url("svg/sprite.css.svg") 30% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 88.88888888888889%;
 }
 
 .svg-vegetables--leek-dims {
@@ -683,7 +763,8 @@
 }
 
 .svg-vegetables--lettuce {
-	background: url("svg/sprite.css.svg") 40% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 88.88888888888889%;
 }
 
 .svg-vegetables--lettuce-dims {
@@ -692,7 +773,8 @@
 }
 
 .svg-vegetables--mangetout {
-	background: url("svg/sprite.css.svg") 50% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 88.88888888888889%;
 }
 
 .svg-vegetables--mangetout-dims {
@@ -701,7 +783,8 @@
 }
 
 .svg-vegetables--marrow {
-	background: url("svg/sprite.css.svg") 60% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 88.88888888888889%;
 }
 
 .svg-vegetables--marrow-dims {
@@ -710,7 +793,8 @@
 }
 
 .svg-vegetables--new_potatoes {
-	background: url("svg/sprite.css.svg") 70% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 88.88888888888889%;
 }
 
 .svg-vegetables--new_potatoes-dims {
@@ -719,7 +803,8 @@
 }
 
 .svg-vegetables--onion {
-	background: url("svg/sprite.css.svg") 80% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 88.88888888888889%;
 }
 
 .svg-vegetables--onion-dims {
@@ -728,7 +813,8 @@
 }
 
 .svg-vegetables--pak_choi {
-	background: url("svg/sprite.css.svg") 90% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 90% 0;
 }
 
 .svg-vegetables--pak_choi-dims {
@@ -737,7 +823,8 @@
 }
 
 .svg-vegetables--parsnip {
-	background: url("svg/sprite.css.svg") 90% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 11.11111111111111%;
 }
 
 .svg-vegetables--parsnip-dims {
@@ -746,7 +833,8 @@
 }
 
 .svg-vegetables--peas {
-	background: url("svg/sprite.css.svg") 90% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 22.22222222222222%;
 }
 
 .svg-vegetables--peas-dims {
@@ -755,7 +843,8 @@
 }
 
 .svg-vegetables--pepper {
-	background: url("svg/sprite.css.svg") 90% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 33.333333333333336%;
 }
 
 .svg-vegetables--pepper-dims {
@@ -764,7 +853,8 @@
 }
 
 .svg-vegetables--potatoes {
-	background: url("svg/sprite.css.svg") 90% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 44.44444444444444%;
 }
 
 .svg-vegetables--potatoes-dims {
@@ -773,7 +863,8 @@
 }
 
 .svg-vegetables--pumpkin {
-	background: url("svg/sprite.css.svg") 90% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 55.55555555555556%;
 }
 
 .svg-vegetables--pumpkin-dims {
@@ -782,7 +873,8 @@
 }
 
 .svg-vegetables--purple_sprouting_broccoli {
-	background: url("svg/sprite.css.svg") 90% 66.66666666666667% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 66.66666666666667%;
 }
 
 .svg-vegetables--purple_sprouting_broccoli-dims {
@@ -791,7 +883,8 @@
 }
 
 .svg-vegetables--radicchio {
-	background: url("svg/sprite.css.svg") 90% 77.77777777777777% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 77.77777777777777%;
 }
 
 .svg-vegetables--radicchio-dims {
@@ -800,7 +893,8 @@
 }
 
 .svg-vegetables--radish {
-	background: url("svg/sprite.css.svg") 90% 88.88888888888889% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 88.88888888888889%;
 }
 
 .svg-vegetables--radish-dims {
@@ -809,7 +903,8 @@
 }
 
 .svg-vegetables--rocket {
-	background: url("svg/sprite.css.svg") 0 100% no-repeat;
+	@extend %svg-common;
+	background-position: 0 100%;
 }
 
 .svg-vegetables--rocket-dims {
@@ -818,7 +913,8 @@
 }
 
 .svg-vegetables--runner_bean {
-	background: url("svg/sprite.css.svg") 10% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 10% 100%;
 }
 
 .svg-vegetables--runner_bean-dims {
@@ -827,7 +923,8 @@
 }
 
 .svg-vegetables--salsify {
-	background: url("svg/sprite.css.svg") 20% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 20% 100%;
 }
 
 .svg-vegetables--salsify-dims {
@@ -836,7 +933,8 @@
 }
 
 .svg-vegetables--samphire {
-	background: url("svg/sprite.css.svg") 30% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 30% 100%;
 }
 
 .svg-vegetables--samphire-dims {
@@ -845,7 +943,8 @@
 }
 
 .svg-vegetables--scallions {
-	background: url("svg/sprite.css.svg") 40% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 40% 100%;
 }
 
 .svg-vegetables--scallions-dims {
@@ -854,7 +953,8 @@
 }
 
 .svg-vegetables--shallots {
-	background: url("svg/sprite.css.svg") 50% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 50% 100%;
 }
 
 .svg-vegetables--shallots-dims {
@@ -863,7 +963,8 @@
 }
 
 .svg-vegetables--spinach {
-	background: url("svg/sprite.css.svg") 60% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 60% 100%;
 }
 
 .svg-vegetables--spinach-dims {
@@ -872,7 +973,8 @@
 }
 
 .svg-vegetables--spring_greens {
-	background: url("svg/sprite.css.svg") 70% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 70% 100%;
 }
 
 .svg-vegetables--spring_greens-dims {
@@ -881,7 +983,8 @@
 }
 
 .svg-vegetables--spring_onion {
-	background: url("svg/sprite.css.svg") 80% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 80% 100%;
 }
 
 .svg-vegetables--spring_onion-dims {
@@ -890,7 +993,8 @@
 }
 
 .svg-vegetables--swede {
-	background: url("svg/sprite.css.svg") 90% 100% no-repeat;
+	@extend %svg-common;
+	background-position: 90% 100%;
 }
 
 .svg-vegetables--swede-dims {
@@ -899,7 +1003,8 @@
 }
 
 .svg-vegetables--sweet_potato {
-	background: url("svg/sprite.css.svg") 100% 0 no-repeat;
+	@extend %svg-common;
+	background-position: 100% 0;
 }
 
 .svg-vegetables--sweet_potato-dims {
@@ -908,7 +1013,8 @@
 }
 
 .svg-vegetables--sweetcorn {
-	background: url("svg/sprite.css.svg") 100% 11.11111111111111% no-repeat;
+	@extend %svg-common;
+	background-position: 100% 11.11111111111111%;
 }
 
 .svg-vegetables--sweetcorn-dims {
@@ -917,7 +1023,8 @@
 }
 
 .svg-vegetables--swiss_chard {
-	background: url("svg/sprite.css.svg") 100% 22.22222222222222% no-repeat;
+	@extend %svg-common;
+	background-position: 100% 22.22222222222222%;
 }
 
 .svg-vegetables--swiss_chard-dims {
@@ -926,7 +1033,8 @@
 }
 
 .svg-vegetables--turnip {
-	background: url("svg/sprite.css.svg") 100% 33.333333333333336% no-repeat;
+	@extend %svg-common;
+	background-position: 100% 33.333333333333336%;
 }
 
 .svg-vegetables--turnip-dims {
@@ -935,7 +1043,8 @@
 }
 
 .svg-vegetables--watercress {
-	background: url("svg/sprite.css.svg") 100% 44.44444444444444% no-repeat;
+	@extend %svg-common;
+	background-position: 100% 44.44444444444444%;
 }
 
 .svg-vegetables--watercress-dims {
@@ -944,7 +1053,8 @@
 }
 
 .svg-vegetables--white_truffles {
-	background: url("svg/sprite.css.svg") 100% 55.55555555555556% no-repeat;
+	@extend %svg-common;
+	background-position: 100% 55.55555555555556%;
 }
 
 .svg-vegetables--white_truffles-dims {

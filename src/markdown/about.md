@@ -1,5 +1,3 @@
-## About Seasonal.Today
-
 I've been thinking a lot about food and how we trasport stuff from far flung places, at huge environmental costs. I've come to expect to be able to buy strawberries at any point of the year, very rarely checking the label to see where they are from. 
 
 I wanted something simple that I could use when I was out shopping for produce that I could check for UK seasonality. There are many brilliant resources out there that are more than good enough (see below), and indeed I used them to source the data for this project. 

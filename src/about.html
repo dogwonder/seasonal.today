@@ -1,18 +1,10 @@
 {% set body_class = "jw-home" %}
 
 {% extends "layout/_layout.njk" %}
-{% from "macros/hero.njk" import hero %}
 {% from "macros/text.njk" import text %}
-{% from "macros/cta.njk" import cta %}
-{% from "macros/image.njk" import image %}
 
 {% block content %}
 
-{{ text('', 'center', '', '', '', 'About', 'markdown/about.md') }}
-
-{# {{ hero('path/to/image.jpg', 'path/to/image-large.jpg', 'Block title', 'Block content', 'class') }} #}
-{# {{ text('#backgroundcolor', 'alignment', '#blockcolor', 'path/to/image.jpg', 'path/to/image-large.jpg', 'Block title', 'markdown.md', 'class') }} #}
-{# {{ cta('#backgroundcolor', 'Block title', 'url', 'class') }} #}
-{# {{ image('path/to/image.jpg', 'path/to/imageLarge.jpg', 'Alttext', 'class') }} #}
+{{ text('', 'center', '', '', '', 'About Seasonal.Today', 'markdown/about.md') }}
 
 {% endblock %} 
