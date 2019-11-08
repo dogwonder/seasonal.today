@@ -7,7 +7,8 @@
     <meta name="description" content="{{ siteDesc }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="./scripts/js.cookie.js"></script>
-    <link rel="stylesheet" href="./css/main.css?cache_bust={{ pkgVersion() }}">
+    {# <link rel="stylesheet" href="./css/main.css?cache_bust={{ pkgVersion() }}"> #}
+    <link rel="stylesheet" href="./css/main.css">
     {% block styles %}{% endblock %}
     {% include "../partials/_meta.njk" %}
     {% include "../partials/_structured-data.njk" %}

@@ -34,6 +34,8 @@ const del = require('del');
 const path = require('path');
 const plumber = require('gulp-plumber');
 const inject = require('gulp-inject');
+const replace = require('gulp-replace');
+const fs = require('file-system');
 const rename = require('gulp-rename');
 const bump = require('gulp-bump');
 const merge = require('merge-stream');
@@ -294,6 +296,18 @@ gulp.task('htmlbeautify', () => {
       .pipe(gulp.dest(dir.dist));
 });
 
+
+// Inject CSS
+gulp.task('injectCSS', () => {
+  return gulp
+      .src(path.join(dir.dist, '*.html'))
+      .pipe(replace(/<link rel="stylesheet" href=".\/css\/main.css"[^>]*>/, function(s) {
+        var style = fs.readFileSync('./docs/css/main.css', 'utf8');
+        return '<style>' + style + '</style>';
+      }))
+      .pipe(gulp.dest(dir.dist));
+});
+
 // Versioning
 gulp.task('bump', () => {
   return gulp
@@ -343,7 +357,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'svgstore', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'svgsprite', 'move-files', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker'), 'svgsprite', 'move-files', 'htmlbeautify', 'injectCSS');
 exports.default = dev;
 exports.build = build;
 
