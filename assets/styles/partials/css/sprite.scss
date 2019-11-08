@@ -2,39 +2,19 @@
 	background: url("svg/sprite.css.svg") no-repeat;
 }
 
-.svg-fruit--apple {
+.svg-fruit--apples {
 	@extend %svg-common;
 	background-position: 0 0;
 }
 
-.svg-fruit--apple-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--apricot {
-	@extend %svg-common;
-	background-position: 10% 0;
-}
-
-.svg-fruit--apricot-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--banana {
-	@extend %svg-common;
-	background-position: 0 11.11111111111111%;
-}
-
-.svg-fruit--banana-dims {
+.svg-fruit--apples-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--bilberries {
 	@extend %svg-common;
-	background-position: 10% 11.11111111111111%;
+	background-position: 11.11111111111111% 0;
 }
 
 .svg-fruit--bilberries-dims {
@@ -42,19 +22,19 @@
 	height: 30px;
 }
 
-.svg-fruit--blackberry {
+.svg-fruit--blackberries {
 	@extend %svg-common;
-	background-position: 20% 0;
+	background-position: 0 11.11111111111111%;
 }
 
-.svg-fruit--blackberry-dims {
+.svg-fruit--blackberries-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--blackcurrants {
 	@extend %svg-common;
-	background-position: 20% 11.11111111111111%;
+	background-position: 11.11111111111111% 11.11111111111111%;
 }
 
 .svg-fruit--blackcurrants-dims {
@@ -64,7 +44,7 @@
 
 .svg-fruit--bramley_apple {
 	@extend %svg-common;
-	background-position: 0 22.22222222222222%;
+	background-position: 22.22222222222222% 0;
 }
 
 .svg-fruit--bramley_apple-dims {
@@ -72,29 +52,19 @@
 	height: 30px;
 }
 
-.svg-fruit--cherry {
+.svg-fruit--cherries {
 	@extend %svg-common;
-	background-position: 10% 22.22222222222222%;
+	background-position: 22.22222222222222% 11.11111111111111%;
 }
 
-.svg-fruit--cherry-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--clementine {
-	@extend %svg-common;
-	background-position: 20% 22.22222222222222%;
-}
-
-.svg-fruit--clementine-dims {
+.svg-fruit--cherries-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--crab_apple {
 	@extend %svg-common;
-	background-position: 30% 0;
+	background-position: 0 22.22222222222222%;
 }
 
 .svg-fruit--crab_apple-dims {
@@ -102,39 +72,29 @@
 	height: 30px;
 }
 
-.svg-fruit--cranberry {
+.svg-fruit--cranberries {
 	@extend %svg-common;
-	background-position: 30% 11.11111111111111%;
+	background-position: 11.11111111111111% 22.22222222222222%;
 }
 
-.svg-fruit--cranberry-dims {
+.svg-fruit--cranberries-dims {
 	width: 30px;
 	height: 30px;
 }
 
-.svg-fruit--damson {
+.svg-fruit--damsons {
 	@extend %svg-common;
-	background-position: 30% 22.22222222222222%;
+	background-position: 22.22222222222222% 22.22222222222222%;
 }
 
-.svg-fruit--damson-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--date {
-	@extend %svg-common;
-	background-position: 0 33.333333333333336%;
-}
-
-.svg-fruit--date-dims {
+.svg-fruit--damsons-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--elderberries {
 	@extend %svg-common;
-	background-position: 10% 33.333333333333336%;
+	background-position: 33.333333333333336% 0;
 }
 
 .svg-fruit--elderberries-dims {
@@ -142,39 +102,19 @@
 	height: 30px;
 }
 
-.svg-fruit--fig {
+.svg-fruit--gooseberries {
 	@extend %svg-common;
-	background-position: 20% 33.333333333333336%;
+	background-position: 33.333333333333336% 11.11111111111111%;
 }
 
-.svg-fruit--fig-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--gooseberry {
-	@extend %svg-common;
-	background-position: 30% 33.333333333333336%;
-}
-
-.svg-fruit--gooseberry-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--grapefruit {
-	@extend %svg-common;
-	background-position: 40% 0;
-}
-
-.svg-fruit--grapefruit-dims {
+.svg-fruit--gooseberries-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--greengages {
 	@extend %svg-common;
-	background-position: 40% 11.11111111111111%;
+	background-position: 33.333333333333336% 22.22222222222222%;
 }
 
 .svg-fruit--greengages-dims {
@@ -182,89 +122,29 @@
 	height: 30px;
 }
 
-.svg-fruit--kiwi_fruit {
+.svg-fruit--pears {
 	@extend %svg-common;
-	background-position: 40% 22.22222222222222%;
+	background-position: 0 33.333333333333336%;
 }
 
-.svg-fruit--kiwi_fruit-dims {
+.svg-fruit--pears-dims {
 	width: 30px;
 	height: 30px;
 }
 
-.svg-fruit--lemon {
+.svg-fruit--plums {
 	@extend %svg-common;
-	background-position: 40% 33.333333333333336%;
+	background-position: 11.11111111111111% 33.333333333333336%;
 }
 
-.svg-fruit--lemon-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--nectarine {
-	@extend %svg-common;
-	background-position: 0 44.44444444444444%;
-}
-
-.svg-fruit--nectarine-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--orange {
-	@extend %svg-common;
-	background-position: 10% 44.44444444444444%;
-}
-
-.svg-fruit--orange-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--peach {
-	@extend %svg-common;
-	background-position: 20% 44.44444444444444%;
-}
-
-.svg-fruit--peach-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--pear {
-	@extend %svg-common;
-	background-position: 30% 44.44444444444444%;
-}
-
-.svg-fruit--pear-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--plum {
-	@extend %svg-common;
-	background-position: 40% 44.44444444444444%;
-}
-
-.svg-fruit--plum-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--pomegranate {
-	@extend %svg-common;
-	background-position: 50% 0;
-}
-
-.svg-fruit--pomegranate-dims {
+.svg-fruit--plums-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--quince {
 	@extend %svg-common;
-	background-position: 50% 11.11111111111111%;
+	background-position: 22.22222222222222% 33.333333333333336%;
 }
 
 .svg-fruit--quince-dims {
@@ -272,29 +152,29 @@
 	height: 30px;
 }
 
-.svg-fruit--raspberry {
+.svg-fruit--raspberries {
 	@extend %svg-common;
-	background-position: 50% 22.22222222222222%;
+	background-position: 33.333333333333336% 33.333333333333336%;
 }
 
-.svg-fruit--raspberry-dims {
+.svg-fruit--raspberries-dims {
 	width: 30px;
 	height: 30px;
 }
 
-.svg-fruit--redcurrant {
+.svg-fruit--redcurrants {
 	@extend %svg-common;
-	background-position: 50% 33.333333333333336%;
+	background-position: 44.44444444444444% 0;
 }
 
-.svg-fruit--redcurrant-dims {
+.svg-fruit--redcurrants-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-fruit--rhubarb {
 	@extend %svg-common;
-	background-position: 50% 44.44444444444444%;
+	background-position: 44.44444444444444% 11.11111111111111%;
 }
 
 .svg-fruit--rhubarb-dims {
@@ -304,7 +184,7 @@
 
 .svg-fruit--sloes {
 	@extend %svg-common;
-	background-position: 0 55.55555555555556%;
+	background-position: 44.44444444444444% 22.22222222222222%;
 }
 
 .svg-fruit--sloes-dims {
@@ -312,39 +192,29 @@
 	height: 30px;
 }
 
-.svg-fruit--strawberry {
+.svg-fruit--strawberries {
 	@extend %svg-common;
-	background-position: 10% 55.55555555555556%;
+	background-position: 44.44444444444444% 33.333333333333336%;
 }
 
-.svg-fruit--strawberry-dims {
+.svg-fruit--strawberries-dims {
 	width: 30px;
 	height: 30px;
 }
 
-.svg-fruit--tomato {
+.svg-fruit--tomatoes {
 	@extend %svg-common;
-	background-position: 20% 55.55555555555556%;
+	background-position: 0 44.44444444444444%;
 }
 
-.svg-fruit--tomato-dims {
-	width: 30px;
-	height: 30px;
-}
-
-.svg-fruit--watermelon {
-	@extend %svg-common;
-	background-position: 30% 55.55555555555556%;
-}
-
-.svg-fruit--watermelon-dims {
+.svg-fruit--tomatoes-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-herbs--basil {
 	@extend %svg-common;
-	background-position: 40% 55.55555555555556%;
+	background-position: 11.11111111111111% 44.44444444444444%;
 }
 
 .svg-herbs--basil-dims {
@@ -354,7 +224,7 @@
 
 .svg-herbs--chervil {
 	@extend %svg-common;
-	background-position: 50% 55.55555555555556%;
+	background-position: 22.22222222222222% 44.44444444444444%;
 }
 
 .svg-herbs--chervil-dims {
@@ -364,7 +234,7 @@
 
 .svg-herbs--chives {
 	@extend %svg-common;
-	background-position: 60% 0;
+	background-position: 33.333333333333336% 44.44444444444444%;
 }
 
 .svg-herbs--chives-dims {
@@ -374,7 +244,7 @@
 
 .svg-herbs--coriander {
 	@extend %svg-common;
-	background-position: 60% 11.11111111111111%;
+	background-position: 44.44444444444444% 44.44444444444444%;
 }
 
 .svg-herbs--coriander-dims {
@@ -384,7 +254,7 @@
 
 .svg-herbs--dill {
 	@extend %svg-common;
-	background-position: 60% 22.22222222222222%;
+	background-position: 55.55555555555556% 0;
 }
 
 .svg-herbs--dill-dims {
@@ -394,7 +264,7 @@
 
 .svg-herbs--elderflowers {
 	@extend %svg-common;
-	background-position: 60% 33.333333333333336%;
+	background-position: 55.55555555555556% 11.11111111111111%;
 }
 
 .svg-herbs--elderflowers-dims {
@@ -404,7 +274,7 @@
 
 .svg-herbs--mint {
 	@extend %svg-common;
-	background-position: 60% 44.44444444444444%;
+	background-position: 55.55555555555556% 22.22222222222222%;
 }
 
 .svg-herbs--mint-dims {
@@ -414,7 +284,7 @@
 
 .svg-herbs--oregano {
 	@extend %svg-common;
-	background-position: 60% 55.55555555555556%;
+	background-position: 55.55555555555556% 33.333333333333336%;
 }
 
 .svg-herbs--oregano-dims {
@@ -424,7 +294,7 @@
 
 .svg-herbs--parsley {
 	@extend %svg-common;
-	background-position: 0 66.66666666666667%;
+	background-position: 55.55555555555556% 44.44444444444444%;
 }
 
 .svg-herbs--parsley-dims {
@@ -434,7 +304,7 @@
 
 .svg-herbs--rosemary {
 	@extend %svg-common;
-	background-position: 10% 66.66666666666667%;
+	background-position: 0 55.55555555555556%;
 }
 
 .svg-herbs--rosemary-dims {
@@ -444,7 +314,7 @@
 
 .svg-herbs--sage {
 	@extend %svg-common;
-	background-position: 20% 66.66666666666667%;
+	background-position: 11.11111111111111% 55.55555555555556%;
 }
 
 .svg-herbs--sage-dims {
@@ -454,7 +324,7 @@
 
 .svg-herbs--sorrel {
 	@extend %svg-common;
-	background-position: 30% 66.66666666666667%;
+	background-position: 22.22222222222222% 55.55555555555556%;
 }
 
 .svg-herbs--sorrel-dims {
@@ -464,7 +334,7 @@
 
 .svg-herbs--tarragon {
 	@extend %svg-common;
-	background-position: 40% 66.66666666666667%;
+	background-position: 33.333333333333336% 55.55555555555556%;
 }
 
 .svg-herbs--tarragon-dims {
@@ -474,7 +344,7 @@
 
 .svg-herbs--thyme {
 	@extend %svg-common;
-	background-position: 50% 66.66666666666667%;
+	background-position: 44.44444444444444% 55.55555555555556%;
 }
 
 .svg-herbs--thyme-dims {
@@ -484,7 +354,7 @@
 
 .svg-herbs--wild_nettles {
 	@extend %svg-common;
-	background-position: 60% 66.66666666666667%;
+	background-position: 55.55555555555556% 55.55555555555556%;
 }
 
 .svg-herbs--wild_nettles-dims {
@@ -494,7 +364,7 @@
 
 .svg-vegetables--asparagus {
 	@extend %svg-common;
-	background-position: 70% 0;
+	background-position: 66.66666666666667% 0;
 }
 
 .svg-vegetables--asparagus-dims {
@@ -504,7 +374,7 @@
 
 .svg-vegetables--aubergine {
 	@extend %svg-common;
-	background-position: 70% 11.11111111111111%;
+	background-position: 66.66666666666667% 11.11111111111111%;
 }
 
 .svg-vegetables--aubergine-dims {
@@ -514,7 +384,7 @@
 
 .svg-vegetables--beetroot {
 	@extend %svg-common;
-	background-position: 70% 22.22222222222222%;
+	background-position: 66.66666666666667% 22.22222222222222%;
 }
 
 .svg-vegetables--beetroot-dims {
@@ -522,19 +392,9 @@
 	height: 30px;
 }
 
-.svg-vegetables--black_truffles {
-	@extend %svg-common;
-	background-position: 70% 33.333333333333336%;
-}
-
-.svg-vegetables--black_truffles-dims {
-	width: 30px;
-	height: 30px;
-}
-
 .svg-vegetables--broad_beans {
 	@extend %svg-common;
-	background-position: 70% 44.44444444444444%;
+	background-position: 66.66666666666667% 33.333333333333336%;
 }
 
 .svg-vegetables--broad_beans-dims {
@@ -544,7 +404,7 @@
 
 .svg-vegetables--broccoli {
 	@extend %svg-common;
-	background-position: 70% 55.55555555555556%;
+	background-position: 66.66666666666667% 44.44444444444444%;
 }
 
 .svg-vegetables--broccoli-dims {
@@ -554,7 +414,7 @@
 
 .svg-vegetables--brussels_sprouts {
 	@extend %svg-common;
-	background-position: 70% 66.66666666666667%;
+	background-position: 66.66666666666667% 55.55555555555556%;
 }
 
 .svg-vegetables--brussels_sprouts-dims {
@@ -564,7 +424,7 @@
 
 .svg-vegetables--butternut_squash {
 	@extend %svg-common;
-	background-position: 0 77.77777777777777%;
+	background-position: 0 66.66666666666667%;
 }
 
 .svg-vegetables--butternut_squash-dims {
@@ -574,7 +434,7 @@
 
 .svg-vegetables--cabbage {
 	@extend %svg-common;
-	background-position: 10% 77.77777777777777%;
+	background-position: 11.11111111111111% 66.66666666666667%;
 }
 
 .svg-vegetables--cabbage-dims {
@@ -582,19 +442,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--carrot {
+.svg-vegetables--carrots {
 	@extend %svg-common;
-	background-position: 20% 77.77777777777777%;
+	background-position: 22.22222222222222% 66.66666666666667%;
 }
 
-.svg-vegetables--carrot-dims {
+.svg-vegetables--carrots-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--cauliflower {
 	@extend %svg-common;
-	background-position: 30% 77.77777777777777%;
+	background-position: 33.333333333333336% 66.66666666666667%;
 }
 
 .svg-vegetables--cauliflower-dims {
@@ -604,7 +464,7 @@
 
 .svg-vegetables--cavolo_nero {
 	@extend %svg-common;
-	background-position: 40% 77.77777777777777%;
+	background-position: 44.44444444444444% 66.66666666666667%;
 }
 
 .svg-vegetables--cavolo_nero-dims {
@@ -614,7 +474,7 @@
 
 .svg-vegetables--celeriac {
 	@extend %svg-common;
-	background-position: 50% 77.77777777777777%;
+	background-position: 55.55555555555556% 66.66666666666667%;
 }
 
 .svg-vegetables--celeriac-dims {
@@ -624,7 +484,7 @@
 
 .svg-vegetables--celery {
 	@extend %svg-common;
-	background-position: 60% 77.77777777777777%;
+	background-position: 66.66666666666667% 66.66666666666667%;
 }
 
 .svg-vegetables--celery-dims {
@@ -634,7 +494,7 @@
 
 .svg-vegetables--chicory {
 	@extend %svg-common;
-	background-position: 70% 77.77777777777777%;
+	background-position: 77.77777777777777% 0;
 }
 
 .svg-vegetables--chicory-dims {
@@ -644,7 +504,7 @@
 
 .svg-vegetables--chillies {
 	@extend %svg-common;
-	background-position: 80% 0;
+	background-position: 77.77777777777777% 11.11111111111111%;
 }
 
 .svg-vegetables--chillies-dims {
@@ -654,7 +514,7 @@
 
 .svg-vegetables--courgette {
 	@extend %svg-common;
-	background-position: 80% 11.11111111111111%;
+	background-position: 77.77777777777777% 22.22222222222222%;
 }
 
 .svg-vegetables--courgette-dims {
@@ -664,7 +524,7 @@
 
 .svg-vegetables--courgette_flower {
 	@extend %svg-common;
-	background-position: 80% 22.22222222222222%;
+	background-position: 77.77777777777777% 33.333333333333336%;
 }
 
 .svg-vegetables--courgette_flower-dims {
@@ -674,7 +534,7 @@
 
 .svg-vegetables--fennel_bulb {
 	@extend %svg-common;
-	background-position: 80% 33.333333333333336%;
+	background-position: 77.77777777777777% 44.44444444444444%;
 }
 
 .svg-vegetables--fennel_bulb-dims {
@@ -682,19 +542,9 @@
 	height: 30px;
 }
 
-.svg-vegetables--field_mushrooms {
-	@extend %svg-common;
-	background-position: 80% 44.44444444444444%;
-}
-
-.svg-vegetables--field_mushrooms-dims {
-	width: 30px;
-	height: 30px;
-}
-
 .svg-vegetables--french_beans {
 	@extend %svg-common;
-	background-position: 80% 55.55555555555556%;
+	background-position: 77.77777777777777% 55.55555555555556%;
 }
 
 .svg-vegetables--french_beans-dims {
@@ -704,7 +554,7 @@
 
 .svg-vegetables--garlic {
 	@extend %svg-common;
-	background-position: 80% 66.66666666666667%;
+	background-position: 77.77777777777777% 66.66666666666667%;
 }
 
 .svg-vegetables--garlic-dims {
@@ -714,7 +564,7 @@
 
 .svg-vegetables--globe_artichoke {
 	@extend %svg-common;
-	background-position: 80% 77.77777777777777%;
+	background-position: 0 77.77777777777777%;
 }
 
 .svg-vegetables--globe_artichoke-dims {
@@ -724,7 +574,7 @@
 
 .svg-vegetables--jerusalem_artichoke {
 	@extend %svg-common;
-	background-position: 0 88.88888888888889%;
+	background-position: 11.11111111111111% 77.77777777777777%;
 }
 
 .svg-vegetables--jerusalem_artichoke-dims {
@@ -734,7 +584,7 @@
 
 .svg-vegetables--kale {
 	@extend %svg-common;
-	background-position: 10% 88.88888888888889%;
+	background-position: 22.22222222222222% 77.77777777777777%;
 }
 
 .svg-vegetables--kale-dims {
@@ -744,7 +594,7 @@
 
 .svg-vegetables--kohlrabi {
 	@extend %svg-common;
-	background-position: 20% 88.88888888888889%;
+	background-position: 33.333333333333336% 77.77777777777777%;
 }
 
 .svg-vegetables--kohlrabi-dims {
@@ -752,19 +602,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--leek {
+.svg-vegetables--leeks {
 	@extend %svg-common;
-	background-position: 30% 88.88888888888889%;
+	background-position: 44.44444444444444% 77.77777777777777%;
 }
 
-.svg-vegetables--leek-dims {
+.svg-vegetables--leeks-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--lettuce {
 	@extend %svg-common;
-	background-position: 40% 88.88888888888889%;
+	background-position: 55.55555555555556% 77.77777777777777%;
 }
 
 .svg-vegetables--lettuce-dims {
@@ -774,7 +624,7 @@
 
 .svg-vegetables--mangetout {
 	@extend %svg-common;
-	background-position: 50% 88.88888888888889%;
+	background-position: 66.66666666666667% 77.77777777777777%;
 }
 
 .svg-vegetables--mangetout-dims {
@@ -784,7 +634,7 @@
 
 .svg-vegetables--marrow {
 	@extend %svg-common;
-	background-position: 60% 88.88888888888889%;
+	background-position: 77.77777777777777% 77.77777777777777%;
 }
 
 .svg-vegetables--marrow-dims {
@@ -792,9 +642,19 @@
 	height: 30px;
 }
 
+.svg-vegetables--mushrooms {
+	@extend %svg-common;
+	background-position: 88.88888888888889% 0;
+}
+
+.svg-vegetables--mushrooms-dims {
+	width: 30px;
+	height: 30px;
+}
+
 .svg-vegetables--new_potatoes {
 	@extend %svg-common;
-	background-position: 70% 88.88888888888889%;
+	background-position: 88.88888888888889% 11.11111111111111%;
 }
 
 .svg-vegetables--new_potatoes-dims {
@@ -802,19 +662,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--onion {
+.svg-vegetables--onions {
 	@extend %svg-common;
-	background-position: 80% 88.88888888888889%;
+	background-position: 88.88888888888889% 22.22222222222222%;
 }
 
-.svg-vegetables--onion-dims {
+.svg-vegetables--onions-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--pak_choi {
 	@extend %svg-common;
-	background-position: 90% 0;
+	background-position: 88.88888888888889% 33.333333333333336%;
 }
 
 .svg-vegetables--pak_choi-dims {
@@ -822,19 +682,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--parsnip {
+.svg-vegetables--parsnips {
 	@extend %svg-common;
-	background-position: 90% 11.11111111111111%;
+	background-position: 88.88888888888889% 44.44444444444444%;
 }
 
-.svg-vegetables--parsnip-dims {
+.svg-vegetables--parsnips-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--peas {
 	@extend %svg-common;
-	background-position: 90% 22.22222222222222%;
+	background-position: 88.88888888888889% 55.55555555555556%;
 }
 
 .svg-vegetables--peas-dims {
@@ -842,19 +702,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--pepper {
+.svg-vegetables--peppers {
 	@extend %svg-common;
-	background-position: 90% 33.333333333333336%;
+	background-position: 88.88888888888889% 66.66666666666667%;
 }
 
-.svg-vegetables--pepper-dims {
+.svg-vegetables--peppers-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--potatoes {
 	@extend %svg-common;
-	background-position: 90% 44.44444444444444%;
+	background-position: 88.88888888888889% 77.77777777777777%;
 }
 
 .svg-vegetables--potatoes-dims {
@@ -864,7 +724,7 @@
 
 .svg-vegetables--pumpkin {
 	@extend %svg-common;
-	background-position: 90% 55.55555555555556%;
+	background-position: 0 88.88888888888889%;
 }
 
 .svg-vegetables--pumpkin-dims {
@@ -874,7 +734,7 @@
 
 .svg-vegetables--purple_sprouting_broccoli {
 	@extend %svg-common;
-	background-position: 90% 66.66666666666667%;
+	background-position: 11.11111111111111% 88.88888888888889%;
 }
 
 .svg-vegetables--purple_sprouting_broccoli-dims {
@@ -884,7 +744,7 @@
 
 .svg-vegetables--radicchio {
 	@extend %svg-common;
-	background-position: 90% 77.77777777777777%;
+	background-position: 22.22222222222222% 88.88888888888889%;
 }
 
 .svg-vegetables--radicchio-dims {
@@ -892,19 +752,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--radish {
+.svg-vegetables--radishes {
 	@extend %svg-common;
-	background-position: 90% 88.88888888888889%;
+	background-position: 33.333333333333336% 88.88888888888889%;
 }
 
-.svg-vegetables--radish-dims {
+.svg-vegetables--radishes-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--rocket {
 	@extend %svg-common;
-	background-position: 0 100%;
+	background-position: 44.44444444444444% 88.88888888888889%;
 }
 
 .svg-vegetables--rocket-dims {
@@ -912,19 +772,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--runner_bean {
+.svg-vegetables--runner_beans {
 	@extend %svg-common;
-	background-position: 10% 100%;
+	background-position: 55.55555555555556% 88.88888888888889%;
 }
 
-.svg-vegetables--runner_bean-dims {
+.svg-vegetables--runner_beans-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--salsify {
 	@extend %svg-common;
-	background-position: 20% 100%;
+	background-position: 66.66666666666667% 88.88888888888889%;
 }
 
 .svg-vegetables--salsify-dims {
@@ -934,7 +794,7 @@
 
 .svg-vegetables--samphire {
 	@extend %svg-common;
-	background-position: 30% 100%;
+	background-position: 77.77777777777777% 88.88888888888889%;
 }
 
 .svg-vegetables--samphire-dims {
@@ -944,7 +804,7 @@
 
 .svg-vegetables--scallions {
 	@extend %svg-common;
-	background-position: 40% 100%;
+	background-position: 88.88888888888889% 88.88888888888889%;
 }
 
 .svg-vegetables--scallions-dims {
@@ -954,7 +814,7 @@
 
 .svg-vegetables--shallots {
 	@extend %svg-common;
-	background-position: 50% 100%;
+	background-position: 100% 0;
 }
 
 .svg-vegetables--shallots-dims {
@@ -964,7 +824,7 @@
 
 .svg-vegetables--spinach {
 	@extend %svg-common;
-	background-position: 60% 100%;
+	background-position: 100% 11.11111111111111%;
 }
 
 .svg-vegetables--spinach-dims {
@@ -974,7 +834,7 @@
 
 .svg-vegetables--spring_greens {
 	@extend %svg-common;
-	background-position: 70% 100%;
+	background-position: 100% 22.22222222222222%;
 }
 
 .svg-vegetables--spring_greens-dims {
@@ -982,19 +842,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--spring_onion {
+.svg-vegetables--spring_onions {
 	@extend %svg-common;
-	background-position: 80% 100%;
+	background-position: 100% 33.333333333333336%;
 }
 
-.svg-vegetables--spring_onion-dims {
+.svg-vegetables--spring_onions-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--swede {
 	@extend %svg-common;
-	background-position: 90% 100%;
+	background-position: 100% 44.44444444444444%;
 }
 
 .svg-vegetables--swede-dims {
@@ -1002,19 +862,9 @@
 	height: 30px;
 }
 
-.svg-vegetables--sweet_potato {
-	@extend %svg-common;
-	background-position: 100% 0;
-}
-
-.svg-vegetables--sweet_potato-dims {
-	width: 30px;
-	height: 30px;
-}
-
 .svg-vegetables--sweetcorn {
 	@extend %svg-common;
-	background-position: 100% 11.11111111111111%;
+	background-position: 100% 55.55555555555556%;
 }
 
 .svg-vegetables--sweetcorn-dims {
@@ -1024,7 +874,7 @@
 
 .svg-vegetables--swiss_chard {
 	@extend %svg-common;
-	background-position: 100% 22.22222222222222%;
+	background-position: 100% 66.66666666666667%;
 }
 
 .svg-vegetables--swiss_chard-dims {
@@ -1032,19 +882,19 @@
 	height: 30px;
 }
 
-.svg-vegetables--turnip {
+.svg-vegetables--turnips {
 	@extend %svg-common;
-	background-position: 100% 33.333333333333336%;
+	background-position: 100% 77.77777777777777%;
 }
 
-.svg-vegetables--turnip-dims {
+.svg-vegetables--turnips-dims {
 	width: 30px;
 	height: 30px;
 }
 
 .svg-vegetables--watercress {
 	@extend %svg-common;
-	background-position: 100% 44.44444444444444%;
+	background-position: 100% 88.88888888888889%;
 }
 
 .svg-vegetables--watercress-dims {
@@ -1052,12 +902,12 @@
 	height: 30px;
 }
 
-.svg-vegetables--white_truffles {
+.svg-vegetables--wild_mushrooms {
 	@extend %svg-common;
-	background-position: 100% 55.55555555555556%;
+	background-position: 0 100%;
 }
 
-.svg-vegetables--white_truffles-dims {
+.svg-vegetables--wild_mushrooms-dims {
 	width: 30px;
 	height: 30px;
 }

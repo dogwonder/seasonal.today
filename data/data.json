@@ -32,6 +32,11 @@
           "name":"Beetroot",
           "during":[ 
              "january",
+             "february",
+             "march",
+             "april",
+             "may",
+             "june",
              "july",
              "august",
              "september",
@@ -67,6 +72,9 @@
           "during":[ 
              "january",
              "february",
+             "september",
+             "october",
+             "november",
              "december"
           ]
        },
@@ -85,34 +93,34 @@
              "february",
              "march",
              "april",
-             "may",
-             "june",
+             "november",
+             "december"
+          ]
+       },
+       { 
+          "name":"Carrots",
+          "during":[ 
+             "january",
+             "february",
+             "march",
+             "april",
              "july",
              "august",
-             "september",
+             "september", 
              "october",
              "november",
              "december"
           ]
        },
        { 
-          "name":"Carrot",
-          "during":[ 
-             "may",
-             "june",
-             "july",
-             "august",
-             "september"
-          ]
-       },
-       { 
           "name":"Cauliflower",
           "during":[ 
-             "january",
-             "february",
-             "march",
-             "november",
-             "december"
+            "june", 
+            "july",
+            "august",
+            "september", 
+            "october",
+            "november"
           ]
        },
        { 
@@ -149,13 +157,24 @@
        { 
           "name":"Chicory",
           "during":[ 
-             "january",
-             "february"
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september", 
+            "october",
+            "november",
+            "december"
           ]
        },
        { 
          "name":"Chillies",
          "during":[ 
+            "may",
             "june",
             "july",
             "august",
@@ -169,7 +188,8 @@
              "june",
              "july",
              "august",
-             "september"
+             "september",
+             "october"
           ]
        },
        { 
@@ -184,17 +204,21 @@
           "name":"Fennel bulb",
           "during":[ 
              "june",
-             "july",
-             "august",
-             "september",
-             "october"
+             "july"
           ]
        },
        { 
-         "name":"Field Mushrooms",
+         "name":"Mushrooms",
          "during":[ 
+            "january",
+            "february",
             "august",
-            "september",
+            "december"
+         ]
+      },
+      { 
+         "name":"Wild Mushrooms",
+         "during":[ 
             "october",
             "november",
             "december"
@@ -203,10 +227,8 @@
       { 
          "name":"French beans",
          "during":[ 
-            "june",
             "july",
-            "august",
-            "september"
+            "august"
          ]
       },
        { 
@@ -215,19 +237,15 @@
              "june",
              "july",
              "august",
-             "september",
-             "october"
+             "september"
           ]
        },
        { 
           "name":"Globe artichoke",
           "during":[ 
-             "june",
-             "july",
-             "august",
-             "september",
-             "october",
-             "november"
+             "march", 
+             "april",
+             "may"
           ]
        },
        { 
@@ -235,7 +253,6 @@
           "during":[ 
              "january",
              "february",
-             "october",
              "november",
              "december"
           ]
@@ -257,9 +274,7 @@
           "during":[ 
              "january",
              "february",
-             "june",
-             "july",
-             "august",
+             "april",
              "september",
              "october",
              "november",
@@ -269,21 +284,20 @@
        { 
           "name":"Lettuce",
           "during":[ 
-             "april",
              "may",
              "june",
-             "july",
              "august",
              "september",
              "october"
           ]
        },
        { 
-          "name":"Leek",
+          "name":"Leeks",
           "during":[ 
              "january",
              "february",
              "march",
+             "august",
              "september",
              "october",
              "november",
@@ -293,8 +307,6 @@
        { 
          "name":"Mangetout",
          "during":[ 
-            "june",
-            "july",
             "august",
             "september"
          ]
@@ -302,6 +314,8 @@
        { 
           "name":"Marrow",
           "during":[ 
+            "may",
+            "june",
              "august",
              "september",
              "october"
@@ -317,7 +331,7 @@
           ]
        },
        {
-         "name":"Onion",
+         "name":"Onions",
          "during":[ 
             "january",
              "february",
@@ -343,10 +357,12 @@
           ]
        },
        { 
-          "name":"Parsnip",
+          "name":"Parsnips",
           "during":[ 
              "january",
              "february",
+             "april",
+             "august",
              "september",
              "october",
              "november",
@@ -359,12 +375,15 @@
              "may",
              "june",
              "july",
-             "august"
+             "august",
+             "september",
+             "october"
           ]
        },
        { 
-          "name":"Pepper",
+          "name":"Peppers",
           "during":[ 
+             "june",
              "august",
              "september"
           ]
@@ -372,8 +391,7 @@
        { 
          "name":"Potatoes",
          "during":[ 
-            "january",
-            "february",
+            "july",
             "august",
             "september",
             "october", 
@@ -384,17 +402,18 @@
        { 
           "name":"Pumpkin",
           "during":[ 
+            "august",
             "september",
              "october",
-             "november"
+             "november",
+             "december"
           ]
        },
        { 
           "name":"Purple sprouting broccoli",
           "during":[ 
              "february",
-             "march",
-             "april"
+             "march"
           ]
        },
        { 
@@ -415,8 +434,9 @@
           ]
        },
        { 
-          "name":"Radish",
+          "name":"Radishes",
           "during":[ 
+            "march",
              "april",
              "may",
              "june",
@@ -439,9 +459,8 @@
          ]
       },
        { 
-          "name":"Runner bean",
+          "name":"Runner beans",
           "during":[ 
-             "june",
              "july",
              "august",
              "september",
@@ -460,8 +479,11 @@
        { 
           "name":"Samphire",
           "during":[ 
+             "may",
              "june",
-             "july"
+             "july",
+             "august",
+             "september"
           ]
        },
        { 
@@ -478,47 +500,44 @@
        { 
           "name":"Spinach",
           "during":[ 
-             "march",
              "april",
              "may",
-             "june",
-             "july"
+             "september",
+             "october"
           ]
        },
        { 
-         "name":"Spring Onion",
+         "name":"Spring Onions",
          "during":[ 
+            "january",
+            "february",
             "march",
             "april",
             "may",
             "june",
             "july",
             "august",
-            "september"
+            "september",
+            "october"
          ]
       },
        { 
-          "name":"Spring greens",
-          "during":[ 
-             "march",
-             "april",
-             "may",
-             "june"
-          ]
-       },
-       { 
-          "name":"Swede",
+          "name":"Spring Greens",
           "during":[ 
              "january",
              "february",
              "march",
-             "october",
-             "november",
-             "december"
+             "april",
+             "may",
+             "june",
+             "july",
+             "august",
+             "september",
+             "october"
           ]
        },
        { 
-          "name":"Sweet potato",
+          "name":"Swede",
           "during":[ 
              "january",
              "february",
@@ -543,29 +562,12 @@
              "august",
              "september",
              "october",
-             "november"
+             "november",
+             "december"
           ]
        },
        { 
-         "name":"Black Truffles",
-         "during":[ 
-            "january",
-            "february",
-            "october",
-            "november",
-            "december"
-         ]
-      },
-      { 
-         "name":"White Truffles",
-         "during":[ 
-            "october",
-            "november",
-            "december"
-         ]
-      },
-       { 
-          "name":"Turnip",
+          "name":"Turnips",
           "during":[ 
              "january",
              "february",
@@ -578,6 +580,7 @@
        { 
           "name":"Watercress",
           "during":[ 
+             "march",
              "april",
              "may",
              "june",
@@ -591,30 +594,14 @@
     ],
     "fruits":[ 
        { 
-          "name":"Apple",
+          "name":"Apples",
           "during":[ 
              "january",
+             "february",
              "september",
              "october",
              "november",
              "december"
-          ]
-       },
-       { 
-          "name":"Apricot",
-          "during":[ 
-             "june",
-             "july",
-             "august"
-          ]
-       },
-       { 
-          "name":"Banana",
-          "during":[ 
-             "february",
-             "march",
-             "april",
-             "may"
           ]
        },
        { 
@@ -628,8 +615,10 @@
          ]
       },
        { 
-          "name":"Blackberry",
+          "name":"Blackberries",
           "during":[ 
+             "july",
+             "august",
              "september",
              "october"
           ]
@@ -637,9 +626,9 @@
        { 
           "name":"Blackcurrants",
           "during":[ 
-             "may",
              "june",
-             "july"
+             "july",
+             "august"
           ]
        },
        { 
@@ -653,19 +642,11 @@
           ]
        },
        { 
-          "name":"Cherry",
+          "name":"Cherries",
           "during":[ 
              "june",
-             "july"
-          ]
-       },
-       { 
-          "name":"Clementine",
-          "during":[ 
-             "january",
-             "february",
-             "november",
-             "december"
+             "july",
+             "august"
           ]
        },
        { 
@@ -675,26 +656,17 @@
           ]
        },
        { 
-          "name":"Cranberry",
+          "name":"Cranberries",
           "during":[ 
              "november",
              "december"
           ]
        },
        { 
-          "name":"Damson",
+          "name":"Damsons",
           "during":[ 
              "august",
              "september"
-          ]
-       },
-       { 
-          "name":"Date",
-          "during":[ 
-             "january",
-             "october",
-             "november",
-             "december"
           ]
        },
        { 
@@ -705,90 +677,24 @@
           ]
        },
        { 
-          "name":"Fig",
-          "during":[ 
-             "august",
-             "september",
-             "october"
-          ]
-       },
-       { 
-          "name":"Gooseberry",
+          "name":"Gooseberries",
           "during":[ 
              "june",
              "july"
           ]
        },
        { 
-          "name":"Grapefruit",
-          "during":[ 
-             "january",
-             "february",
-             "march",
-             "april",
-             "may",
-             "december"
-          ]
-       },
-       { 
          "name":"Greengages",
          "during":[ 
-            "june",
             "july",
             "august"
          ]
       },
-      { 
-         "name":"Kiwi fruit",
-         "during":[ 
-            "january",
-            "february",
-            "march",
-            "april",
-            "may",
-            "june",
-            "july"
-         ]
-      },
        { 
-          "name":"Lemon",
+          "name":"Pears",
           "during":[ 
              "january",
              "february",
-             "march"
-          ]
-       },
-       { 
-          "name":"Nectarine",
-          "during":[ 
-             "may",
-             "june",
-             "july",
-             "august",
-             "september"
-          ]
-       },
-       { 
-         "name":"Orange",
-         "during":[ 
-            "january",
-            "february",
-            "march"
-         ]
-      },
-       { 
-          "name":"Peach",
-          "during":[
-            "june",
-             "july",
-             "august",
-             "september"
-          ]
-       },
-       { 
-          "name":"Pear",
-          "during":[ 
-             "january",
              "september",
              "october",
              "november",
@@ -796,20 +702,10 @@
           ]
        },
        { 
-          "name":"Plum",
+          "name":"Plums",
           "during":[ 
              "august",
-             "september",
-             "october"
-          ]
-       },
-       { 
-          "name":"Pomegranate",
-          "during":[ 
-             "january",
-             "february",
-             "november",
-             "december"
+             "september"
           ]
        },
        { 
@@ -820,27 +716,32 @@
           ]
        },
        { 
-          "name":"Raspberry",
+          "name":"Raspberries",
           "during":[ 
+             "june",
+             "july",
              "august",
              "september"
           ]
        },
        { 
-          "name":"Redcurrant",
+          "name":"Redcurrants",
           "during":[ 
-             "august",
-             "september"
+             "june",
+             "july",
+             "august"
           ]
        },
        { 
           "name":"Rhubarb",
           "during":[ 
-             "january",
-             "february",
              "march",
              "april",
-             "may"
+             "may",
+             "june",
+             "july",
+             "august",
+             "september"
           ]
        },
        { 
@@ -852,29 +753,21 @@
          ]
       },
        { 
-          "name":"Strawberry",
+          "name":"Strawberries",
           "during":[ 
+             "may",
              "june",
              "july",
              "august"
           ]
        },
        { 
-          "name":"Tomato",
+          "name":"Tomatoes",
           "during":[ 
-             "june",
              "july",
              "august",
              "september",
              "october"
-          ]
-       },
-       { 
-          "name":"Watermelon",
-          "during":[ 
-             "june",
-             "july",
-             "august"
           ]
        }
     ],
