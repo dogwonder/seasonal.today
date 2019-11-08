@@ -328,7 +328,7 @@ gulp.task('serviceworker', () => {
 // Moving misc files
 gulp.task('move-files', () => {  
   let sprite = gulp.src(['assets/styles/partials/css/svg/sprite.css.svg'])
-    .pipe(gulp.dest(path.join(dir.dist, 'css/svg')));
+    .pipe(gulp.dest(path.join(dir.dist, 'svg')));
 
   let js = gulp.src(['assets/vendor/js.cookie.js'])
     .pipe(gulp.dest(path.join(dir.dist, 'scripts')));
