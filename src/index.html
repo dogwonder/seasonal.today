@@ -44,7 +44,7 @@
             {# {{ vegetables | length }} #}
             {% for month in vegetableDuring %}
                 {% if month == thismonth %}    
-                    <li><span class="icon svg-vegetables--{{ vegetable.name | lower |  replace(" ", "_") }}"></span>{{ vegetable.name }} </li>
+                    <li><span class="roundel"><span class="icon svg-vegetables--{{ vegetable.name | lower |  replace(" ", "_") }}"></span></span>{{ vegetable.name }} </li>
                 {# Set the count #}
                 {% set vegcount = vegcount + 1 %}
                 {% endif %}
@@ -66,7 +66,7 @@
         {% set fruitDuring = fruit.during %}
             {% for month in fruitDuring %}
                 {% if month == thismonth %}
-                    <li><span class="icon svg-fruit--{{ fruit.name | lower |  replace(" ", "_") }}"></span>{{ fruit.name }}</li>
+                    <li><span class="roundel"><span class="icon svg-fruit--{{ fruit.name | lower |  replace(" ", "_") }}"></span></span>{{ fruit.name }}</li>
                 {# Set the count #}
                 {% set fruitcount = fruitcount + 1 %}
                 {% endif %}
@@ -87,7 +87,7 @@
             {% set herbDuring = herb.during %}
             {% for month in herbDuring %}
                 {% if month == thismonth %}
-                    <li><span class="icon svg-herbs--{{ herb.name | lower |  replace(" ", "_") }}"></span>{{ herb.name }}</li>
+                    <li><span class="roundel"><span class="icon svg-herbs--{{ herb.name | lower |  replace(" ", "_") }}"></span></span>{{ herb.name }}</li>
                 {# Set the count #}
                 {% set herbcount = herbcount + 1 %}
                 {% endif %}
