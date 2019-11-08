@@ -1,11 +1,12 @@
-const CACHE = "stCache-1.126.0";
+const CACHE = "stCache-1.127.0";
 
 // This is the service worker with the Cache-first network
 const precacheFiles = [
   /* Add an array of files to precache for your app */
-  'offline.html', 
-  'index.html', 
-  'css/main.css', 
+  'offline.html',
+  'index.html',
+  'css/main.css',
+  'css/svg/sprite.css.svg',
   'scripts/app.js',
   'images/fav/favicon-32x32.png',
   'images/fav/favicon-16x16.png'
@@ -36,7 +37,7 @@ self.addEventListener("activate", function(event) {
         })
       );
     }).then(function() {
-      console.log('[ServiceWorker] Claiming clients for version - 1.126.0');
+      console.log('[ServiceWorker] Claiming clients for version - 1.127.0');
       return self.clients.claim();
     })  
   );
