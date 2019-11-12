@@ -56,7 +56,6 @@
        { 
           "name":"Broccoli",
           "during":[ 
-             "february",
              "march",
              "april",
              "may",
@@ -72,6 +71,7 @@
           "during":[ 
              "january",
              "february",
+             "march",
              "september",
              "october",
              "november",
@@ -89,12 +89,18 @@
        { 
           "name":"Cabbage",
           "during":[ 
-             "january",
-             "february",
-             "march",
-             "april",
-             "november",
-             "december"
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"
           ]
        },
        { 
@@ -115,12 +121,18 @@
        { 
           "name":"Cauliflower",
           "during":[ 
-            "june", 
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
             "july",
             "august",
-            "september", 
+            "september",
             "october",
-            "november"
+            "november",
+            "december"
           ]
        },
        { 
@@ -138,6 +150,7 @@
           "during":[ 
              "january",
              "february",
+             "march",
              "september",
              "october",
              "november",
@@ -147,7 +160,8 @@
        { 
           "name":"Celery",
           "during":[ 
-             "january",
+             "july",
+             "august",
              "september",
              "october",
              "november",
@@ -272,13 +286,11 @@
        { 
           "name":"Kohlrabi",
           "during":[ 
-             "january",
-             "february",
-             "april",
+             "july",
+             "august",
              "september",
              "october",
-             "november",
-             "december"
+             "november"
           ]
        },
        { 
@@ -307,6 +319,7 @@
        { 
          "name":"Mangetout",
          "during":[ 
+            "july",
             "august",
             "september"
          ]
@@ -314,11 +327,11 @@
        { 
           "name":"Marrow",
           "during":[ 
-            "may",
             "june",
-             "august",
-             "september",
-             "october"
+            "july",
+            "august",
+            "september",
+            "october"
           ]
        },
        { 
@@ -334,8 +347,23 @@
          "name":"Onions",
          "during":[ 
             "january",
-             "february",
-             "march",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"
+         ]
+       },
+       { 
+          "name":"Pak choi",
+          "during":[ 
+             "january",
              "april",
              "may",
              "june",
@@ -345,15 +373,6 @@
              "october",
              "november",
              "december"
-         ]
-       },
-       { 
-          "name":"Pak choi",
-          "during":[ 
-             "june",
-             "july",
-             "august",
-             "september"
           ]
        },
        { 
@@ -361,6 +380,7 @@
           "during":[ 
              "january",
              "february",
+             "march",
              "april",
              "august",
              "september",
@@ -391,10 +411,16 @@
        { 
          "name":"Potatoes",
          "during":[ 
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
             "july",
             "august",
             "september",
-            "october", 
+            "october",
             "november",
             "december"
          ]
@@ -436,7 +462,6 @@
        { 
           "name":"Radishes",
           "during":[ 
-            "march",
              "april",
              "may",
              "june",
@@ -542,6 +567,9 @@
              "january",
              "february",
              "march",
+             "july",
+             "august",
+             "september",
              "october",
              "november",
              "december"
@@ -764,6 +792,7 @@
        { 
           "name":"Tomatoes",
           "during":[ 
+             "june",
              "july",
              "august",
              "september",

@@ -7,7 +7,7 @@
 	
     --border:#e5e7e9;
 	
-    --text-color-normal: hsl(162, 2%, 0%);
+    --text: hsl(162, 2%, 0%);
     --heading: hsl(162, 20%, 0%);
 	--meta: hsl(162, 10%, 53%);
 
@@ -42,7 +42,7 @@ body {
     }
     font-weight: normal;
     background-color:var(--textbackground);
-    color: var(--text-color-normal);
+    color: var(--text);
     text-align:left;
 }
 
@@ -57,7 +57,7 @@ body {
 .jwTitle {
   font-size: 3rem;
   line-height: 3.2rem;
-  color:var(--text-color-normal);
+  color:var(--text);
   margin: 4rem 0 2rem 0;
   @media #{$large-up} {
     font-size:4.8rem;

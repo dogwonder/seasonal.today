@@ -1,7 +1,29 @@
 "use strict";
 
 (function () {
-  //remove no-js class
+  /**
+   * Get the URL parameters
+   * source: https://css-tricks.com/snippets/javascript/get-url-variables/
+   * @param  {String} url The URL
+   * @return {Object}     The URL parameters
+   */
+  var getParams = function getParams(url) {
+    var params = {};
+    var parser = document.createElement('a');
+    parser.href = url ? url : window.location.href;
+    var query = parser.search.substring(1);
+    var vars = query.split('&');
+    if (vars.length < 1 || vars[0].length < 1) return params;
+
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+    }
+
+    return params;
+  }; //remove no-js class
+
+
   document.documentElement.className = document.documentElement.className.replace("no-js", "js"); //🍪 notice
 
   function cookieNoticeSeen() {
@@ -40,20 +62,34 @@
 
 
   var hideMonths = function hideMonths() {
+    //Get the url variable
+    var getMonth = getParams().month; //Find all the seasons
+
     var months = document.querySelectorAll('[data-month]');
     months.forEach(function (month) {
-      // console.log(month);
-      // console.log(getCurrentMonth());
+      //Get the months and seasons
       var name = month.getAttribute('data-month');
       var season = document.querySelector('[data-season="' + name + '"]');
-      var month = document.querySelector('[data-month="' + name + '"]');
+      var month = document.querySelector('[data-month="' + name + '"]'); //Get the month based on URL parameters
 
-      if (name !== getCurrentMonth()) {
-        season.classList.add('hide');
-      }
+      var seasonparam = document.querySelector('[data-season="' + getMonth + '"]');
+      var monthparam = document.querySelector('[data-month="' + getMonth + '"]'); //If URL parameter
 
-      if (name == getCurrentMonth()) {
-        month.classList.add('selected');
+      if (getMonth) {
+        //Hide all the months
+        season.classList.add('hide'); //Now remove the hidden month that matchs the URL parameter
+
+        seasonparam.classList.remove('hide'); //And make the nav work as expected
+
+        monthparam.classList.add('selected');
+      } else {
+        if (name !== getCurrentMonth()) {
+          season.classList.add('hide');
+        }
+
+        if (name === getCurrentMonth()) {
+          month.classList.add('selected');
+        }
       }
     });
   }; // Listen for clicks in the document

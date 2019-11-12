@@ -26,7 +26,7 @@
 <div class="seasons">
     <nav class="nav-months">
     {% for month in months %}
-    <span data-month="{{ month }}">{{ month | capitalize | truncate(3, true, '') }}</span>
+    <a href="?month={{ month }}" data-month="{{ month }}">{{ month | capitalize | truncate(3, true, '') }}</a>
     {% endfor %}
     </nav>
 

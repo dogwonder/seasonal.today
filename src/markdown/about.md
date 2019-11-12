@@ -8,8 +8,12 @@ The view defaults to the current month, and allows you to click other months to 
 
 I tried to be pretty thorough in my research, but if I've made any mistakes or have missed things please [let me know](mailto:dogwonder@gmail.com). 
 
+Note some things like Onions and Potatoes are sometimes sold out of ambient, cold stores and controlled atmosphere stores all year round, even though their growing season is in the Spring / Summer. 
+
 ### Sources
 
 * [Eat the Seasons](http://www.eattheseasons.co.uk/)
+* [Seasonal UK grown produce](https://www.vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/)
 * [BBC Good Food](https://www.bbcgoodfood.com/seasonal-calendar/)
 * [Love British Food](http://www.lovebritishfood.co.uk/british-food-and-drinks/whats-in-season-when)
+* [Best in Season Calendar](https://www.bordbia.ie/lifestyle/information/fruit-vegetables/best-in-season-calendar/)

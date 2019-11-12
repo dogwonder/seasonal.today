@@ -10,6 +10,7 @@ seasonal.today is licensed under [MIT license](https://github.com/dogwonder/juck
 * [Seasonal UK grown produce](https://www.vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/)
 * [BBC Good Food](https://www.bbcgoodfood.com/seasonal-calendar/)
 * [Love British Food](http://www.lovebritishfood.co.uk/british-food-and-drinks/whats-in-season-when)
+* [Best in Season Calendar](https://www.bordbia.ie/lifestyle/information/fruit-vegetables/best-in-season-calendar/)
 
 
 ### SVG Sprite
