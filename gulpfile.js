@@ -26,6 +26,7 @@ const gulpnunjucks = require('gulp-nunjucks');
 const banner = require('gulp-banner');
 const htmlbeautify = require('gulp-html-beautify');
 const removeEmptyLines = require('gulp-remove-empty-lines');
+const dateFilter = require('nunjucks-date-filter');
 
 
 //System and Utilities
@@ -94,6 +95,9 @@ env.addGlobal('getCurrentMonth', function(){
   var thisMonth = months[now.getMonth()]; 
     return thisMonth;
 });
+
+//Add date - {{ creation_date | date("YYYY") }}
+env.addFilter('date', dateFilter);
 
 //Nunjucks
 gulp.task('nunjucks', () => {

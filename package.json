@@ -1,6 +1,6 @@
 {
   "name": "seasonal.today",
-  "version": "1.132.0",
+  "version": "1.136.0",
   "description": "",
   "main": "gulpfile.js",
   "directories": {
@@ -20,15 +20,15 @@
   },
   "homepage": "https://github.com/dogwonder/juckwonder#readme",
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-transform-template-literals": "^7.4.4",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-template-literals": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "ansi-colors": "^4.1.1",
-    "axe-core": "^3.3.2",
+    "axe-core": "^3.4.1",
     "browser-sync": "^2.26.7",
-    "cypress": "^3.4.1",
-    "cypress-axe": "^0.5.1",
+    "cypress": "^3.8.1",
+    "cypress-axe": "^0.5.3",
     "del": "^5.1.0",
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.2",
@@ -39,9 +39,9 @@
     "gulp-data": "^1.3.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-html-beautify": "^1.0.1",
-    "gulp-imagemin": "^6.1.0",
-    "gulp-inject": "^5.0.4",
-    "gulp-nunjucks": "^5.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-nunjucks": "^5.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-remove-empty-lines": "^0.1.0",
@@ -56,6 +56,7 @@
     "gulp-terser": "^1.2.0",
     "marked": "^0.7.0",
     "merge-stream": "^2.0.0",
+    "nunjucks-date-filter": "^0.1.1",
     "nunjucks-markdown": "^2.0.1",
     "path": "^0.12.7",
     "postcss-clean": "^1.1.0",
@@ -63,6 +64,7 @@
     "postcss-object-fit-images": "^1.1.2"
   },
   "dependencies": {
-    "sharp": "^0.23.1"
+    "nunjucks-date": "^1.5.0",
+    "sharp": "^0.23.4"
   }
 }

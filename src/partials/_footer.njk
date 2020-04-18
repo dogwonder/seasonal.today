@@ -1,7 +1,7 @@
 <footer id="footer" class="jw-footer">
     {% from "macros/social.njk" import social %}
     {{ social('dogwonder', 'dogwonder@gmail.com') }}
-    <p>© Copyright 2019 <br /> 
+    <p>© Copyright {{ creation_date | date("YYYY") }}<br /> 
     <a href="./privacy.html" aria-label="Read this site's Privacy policy">Privacy policy</a> | <a href="./terms.html" aria-label="Read this site's Terms of Service">Terms of Service</a>
     </p>
     <svg width="0" height="0">

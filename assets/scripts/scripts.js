@@ -18,7 +18,7 @@
             params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
         }
         return params;
-    };
+    }
 
     //remove no-js class
     document.documentElement.className = document.documentElement.className.replace("no-js","js");
@@ -56,7 +56,7 @@
         var now = new Date();
         var thisMonth = months[now.getMonth()]; 
             return thisMonth;
-    };
+    }
 
     // console.log(getCurrentMonth());
     
@@ -109,7 +109,7 @@
         });
 
 
-    };
+    }
 
     // Listen for clicks in the document
     document.addEventListener('click', function (event) {
