@@ -2,6 +2,7 @@
     "siteTitle":"What's in Season",
     "siteDesc":"See what's food is in season for each month",
     "siteUrl":"https://seasonal.today",
+    "siteUrlShort":"seasonal.today",
     "siteImage":"https://seasonal.today/images/og/og-image.png",
     "companyName":"Dogwonder Ltd",
     "privacyUrl":"./privacy.html",

@@ -3,7 +3,8 @@
 	--hue: 209; 
 	
     --background: white;
-    --masthead: #1E1E1E;
+    --masthead: hsl(162, 12%, 94%);
+    --footer: hsl(162, 30%, 98%);
 	
     --border:#e5e7e9;
 	
@@ -16,8 +17,8 @@
     --highlight-light: hsl(162, 30%, 92%);
     --hover: hsl(162, 34%, 30%);
 
-    --food: hsl(162, 10%, 90%);
-    --food-border: hsl(162, 12%, 80%);
+    --food: hsl(162, 12%, 94%);
+    --food-border: hsl(162, 12%, 84%);
 	
     --button-background: hsl(162, 39%, 24%);
     --button-background-hover: hsl(162, 61%, 16%);
@@ -151,7 +152,7 @@ h1,h2,h3,h4,h5,h6{
 
 .jw-masthead {
     padding:0;
-    background-color:var(--border);
+    background-color:var(--masthead);
     line-height: 1;
     .jw-masthead__container {
         padding:1rem;
@@ -167,11 +168,6 @@ h1,h2,h3,h4,h5,h6{
 //Sticky footer
 .jw-container {
     flex:1;
-}
-
-.jw-footer {
-  background-color: var(--masthead);
-  color:white;
 }
 
 //Nav
@@ -208,45 +204,19 @@ h1,h2,h3,h4,h5,h6{
 
 //Footer
 .jw-footer {
-    padding:4rem 0;
-    color:var(--border);
-    .nav-social {
-        margin: 2rem auto;
-        padding:0;
-        max-width: 40rem;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        li {
-            display: block;
-            flex: 0 1 auto;
-        }
-    }
-    .icon-social {
-        width: 3rem;
-        height: 3rem;
-        transition: all .3s ease;
-        fill: var(--border);
-        -webkit-transition: all 150ms ease;
-         transition: all 150ms ease;
-        &:hover {
-            opacity: 1;
-            fill: var(--highlight-light);
-        }
-    }
-    .icon-social-instagram {
-        fill: url(#rg);
-    }
+    margin-top: 4rem;
+    padding:0;
+    background-color: var(--footer);
     p {
         color:inherit;
-        font-size:12px;
+        font-size:14px;
         text-align: center;
         margin:2rem 0;
         > a {
             color:inherit;
             &:hover, &:focus {
                 text-decoration: none;
-                color: var(--highlight-light);
+                color: var(--highlight);
             }
         }
     }
