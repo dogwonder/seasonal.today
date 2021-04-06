@@ -311,7 +311,7 @@ gulp.task('favicon', () => {
         }
       )
     )
-    .pipe(gulp.dest('assets/images/fav'))
+    .pipe(gulp.dest(path.join(dir.dist, 'images/fav')));
 });
 
 
@@ -383,7 +383,7 @@ gulp.task('tests', shell.task('$(npm bin)/cypress run'))
 // Init
 // -----------------
 const dev = gulp.series('nunjucks', gulp.parallel('sass', 'scripts', 'serve', 'svgstore', 'watch'));
-const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'svgsprite', 'move-files', 'htmlbeautify');
+const build = gulp.series('clean', 'babel', 'nunjucks', gulp.parallel('sass-build', 'scripts-build', 'fonts', 'images'), gulp.parallel('bump', 'serviceworker', 'banner'), 'svgsprite', 'favicon', 'move-files', 'htmlbeautify');
 exports.default = dev;
 exports.build = build;
 
