@@ -1,0 +1,57 @@
+//Box sizing
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//Links
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.125rem;
+  &:visited {
+    color: var(--text-color);
+  }
+  &:hover {
+    color: var(--text-color);
+    text-decoration-color: var(--underline-hover);
+  }
+  &:active {
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  &:focus {
+    color: var(--text-color);
+    background-color: var(--focus);
+    outline: 3px solid transparent;
+    box-shadow: 0 -2px var(--focus), 0 4px #0b0c0c;
+    text-decoration: none;
+  }
+  &.dgwltd-button {
+    color: white;
+  }
+}
+
+hr {
+  margin: var(--gap-medium) 0;
+  height: 1px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Remove all animations and transitions
+for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

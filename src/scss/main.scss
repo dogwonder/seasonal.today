@@ -1,0 +1,32 @@
+@charset 'utf-8';
+@use 'sass:math';
+
+// RESET
+@import "modules/normalize";
+
+// MEDIA QUERIES
+@import "vendor/mq";
+
+// VARIBLES & FUNCTIONS
+@import "modules/vars_funcs_mixins";
+
+// BASE
+@import "site/base";
+
+// TYPOGRAPHY
+@import "site/typography";
+
+// LAYOUT
+@import "site/layout";
+@import "site/header";
+@import "site/footer";
+
+//PARTIALS
+@import "partials/food";
+@import "partials/pagination";
+
+//THEMES
+@import "modules/themes";
+
+// UTILITIES
+@import "modules/utilities";

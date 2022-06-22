@@ -1,0 +1,322 @@
+//Z-index
+@use "sass:math";
+
+//Font size
+$default-font-size: 1.125rem; //18px
+$default-line-height: 1.333; //24px
+
+//Custom typgraphy - https://type-scale.com
+$type-gigantic: 4.209;
+$type-huge: 3.157;
+$type-extra-large: 2.369;
+$type-large: 1.777;
+$type-medium: 1.333;
+$type-normal: 1.125;
+$type-small: 1;
+$type-tiny: 0.75;
+
+//Variables
+$bold: 700;
+
+//Themes
+$text-color: #414042;
+$black: black;
+$white: white;
+
+//Z-indexes
+$z-low: 3; //Move above hero
+$z-high: 10;
+$z-higher: 11;
+$z-highest-1: 998;
+$z-highest: 999;
+
+//Scale - used for iteration over breakpoints (keys only)
+$scale: ('sm','md','lg','xl');
+
+//Measures - for margin / padding
+$gaps: (5, 10, 15, 20, 25, 30, 35, 40, 50, 80);
+
+//Spacing - usedin fluid spacing
+$spaces: (
+    gaps: (
+      xlarge: (
+        lg: 8,
+        sm: 4
+      ),
+      large: (
+        lg: 4,
+        sm: 2
+      ),
+      medium: (
+        lg: 2,
+        sm: 1
+      ),
+      small: (
+        lg: 1,
+        sm: 1
+      ),
+      none: (
+        lg: 0, 
+        sm: 0
+      )
+    )
+);
+
+//Fetch nested spaces
+@function map-deep-get($spaces, $keys) {
+  $value: $spaces;
+  @each $key in $keys {
+      $value: map-get($value, $key);
+  }
+  @return $value;
+}
+
+//Calc rems 
+@mixin rem($value) {
+  width: math.div($value, 16) + rem;
+}
+
+//Redeclare from vendor/_mq.scss -- https://github.com/sass-mq/sass-mq
+$mq-breakpoints: (
+  sm: 320px,
+  md: 768px,
+  lg: 992px, 
+  xl: 1200px, 
+  xxl: 1400px
+);
+
+//CSS Vars - usage var(--background)
+:root {
+
+  --containerWidth: 87.5rem; //1400px
+  --contentWidth: 52rem; //832px
+  --contentWidthSmall: 16rem; //608px
+
+  //System font as default
+  --body: -apple-system, BlinkMacSystemFont,"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans","Helvetica Neue",sans-serif;
+  
+  --background: #ffffff;
+  --footer: #000000;
+  --alt: #fafafa;
+
+  --card: #f2f2f2; 
+  --meta: #424042;
+
+  --border: hsl(200, 12%, 60%);
+  --border-light: #ced1d6;
+  --border-dark: #414042;
+  --radius: 1rem;
+
+  --text-color: #111111;
+  --highlight: hsl(165, 67%, 24%);
+  --hover: hsl(165, 67%, 24%);
+  --focus: hsl(15, 99%, 52%);
+
+  --underline: #111111;
+  --underline-hover: hsl(165, 100%, 30%);
+
+  --success: #00703c;
+  --error: #d4351c;
+
+  --button-text-color: #111111;
+  --button-background: hsl(165, 67%, 24%);
+  --button-hover: hsl(165, 67%, 20%);
+  --button-focus: hsl(165, 67%, 20%);
+  --button-disabled: hsl(165, 67%, 80%);
+
+  --primary: hsla(15, 99%, 52%);
+  --dark: hsl(98, 0%, 0%);
+  --light: hsl(0, 0%, 98%);
+
+  @each $gap in $gaps {
+    --gap-#{$gap}: #{$gap}px;
+  }
+
+  //Named gaps
+  --gap-xlarge: 5rem; //80px;
+  --gap-large: 2.5rem; //40px;
+  --gap-medium: 1.25rem; //20px; //Matches --spacing--baseline
+  --gap-small: 0.625rem; //10px;
+  --gap-tiny: 0.3125rem; //5px;
+
+  //Z-index
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
+  --layer-4: 4;
+  --layer-5: 5;
+  --layer-important: 2147483647;
+
+  //Typography
+  --font-family--system-font: "untitled-serif", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif
+
+  //Font sizes
+  --font-size--small: 1rem;
+  --font-size--medium: 1.333rem;
+  --font-size--large: 1.777rem;
+  --font-size--x-large: 42px;
+  --font-size--tiny: 0.875rem;
+  --font-size--normal: 1.333rem;
+  --font-size--extra-large: 2.369rem;
+  --font-size--huge: 3.157rem;
+
+  //Line heights
+  --line-height--tiny: 1.15;
+  --line-height--small: 1.2;
+  --line-height--medium: 1.3333;
+  --line-height--normal: 1.5;
+
+}
+
+$palettes: (
+    themes: (
+      primary: (
+          background: var(--primary),
+          text: var(--light), 
+          border: var(--light), 
+          highlight: var(--secondary), 
+          inverse: var(--dark)
+      ),
+      secondary: (
+          background: var(--secondary),
+          text: var(--light), 
+          border: var(--light), 
+          highlight: var(--primary), 
+          inverse: var(--dark)
+      )
+    )
+);
+
+//Generates classes for margin and padding, e.g .m-t-10, p-b-20. 
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $gap in $gaps {
+
+    .#{$abbrev}-a-#{$gap} { #{$prop}:        #{$gap}px #{$gap}px !important; } // a = All sides
+    .#{$abbrev}-t-#{$gap} { #{$prop}-top:    #{$gap}px !important; }
+    .#{$abbrev}-r-#{$gap} { #{$prop}-right:  #{$gap}px !important; }
+    .#{$abbrev}-b-#{$gap} { #{$prop}-bottom: #{$gap}px !important; }
+    .#{$abbrev}-l-#{$gap} { #{$prop}-left:   #{$gap}px !important; }
+
+  }
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function clampCalc($minFontSize, $maxFontSize, $minWidth: sm, $maxWidth: lg) {
+  //Based on https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+  
+  // slope = (maxFontSize - minFontSize) / (maxBreakpoint - minBreakpoint) 
+  // yAxisIntersection = -maxBreakpoint * slope + minBreakpoint 
+  // preferredValue = yAxisIntersection[rem] + (slope * 100)[vw] 
+
+  /* Usage
+  padding: clampCalc(1.5, 3, sm, md); //fluid padding between 15px and 30px on small and medium screens
+   font-size: clampCalc(4.5, 5.5, sm, md); //45 to 55px on small and medium screens
+   @include mq($from: md) {
+    font-size: clampCalc(5.5, 8, md, lg); 55 to 80px on medium and large screens snaps to max 80px
+   }
+  */
+
+  $smBreakpoint: null;
+  $lgBreakpoint: null;
+  
+  //Breakpoints based on Bootstrap breakpoints, 320, 768, 992, 1200, 1400
+  @if $minWidth == sm {
+    $smBreakpoint: 20;
+  } @else if $minWidth == md {  
+    $smBreakpoint: 48;
+  } @else if $minWidth == lg {  
+    $smBreakpoint: 62;
+  } @else if $minWidth == xl {  
+    $smBreakpoint: 75;
+  } @else if $minWidth == xxl {  
+    $smBreakpoint: 87.5;
+  } @else {
+    @error "Unknown direction #{$minWidth}.";
+  }
+
+  @if $maxWidth == sm {
+    $lgBreakpoint: 20;
+  } @else if $maxWidth == md {  
+    $lgBreakpoint: 48;
+  } @else if $maxWidth == lg {  
+    $lgBreakpoint: 62;
+  } @else if $maxWidth == xl {  
+    $lgBreakpoint: 75;
+  } @else if $maxWidth == xxl {  
+    $lgBreakpoint: 87.5;
+  } @else {
+    @error "Unknown direction #{$maxWidth}.";
+  }
+
+  $slope: math.div(($maxFontSize - $minFontSize), ($lgBreakpoint - $smBreakpoint));
+  $yAxisIntersection: $minFontSize - ($smBreakpoint * $slope);
+  //clamp (minFontSize, yAxisIntersection[rem] + (slope * 100)[vw], maxFontSize)
+  @return clamp( ($minFontSize * 1rem), ($yAxisIntersection * 1rem) + (($slope * 100) * 1vw) , ($maxFontSize) * 1rem );
+}
+
+//Mixing for responsive typography
+// Usage @include fluidType(1.25, 1.3333, 1.5, 1.5, sm, md);
+@mixin fluidType($minFontSize: 1.25, $maxFontSize: 1.3333, $minLineHeight: 1.4, $maxLineHeight: 1.2, $breakpointSmall: sm, $breakpointLarge: md) {
+  //fallback for old browsers px values
+  font-size: $minFontSize; 
+  line-height: $minLineHeight; 
+  //modern browsers use clamp()
+  font-size: clampCalc($minFontSize, $maxFontSize, $breakpointSmall, $breakpointLarge);
+  line-height: clampCalc($minLineHeight, $maxLineHeight, $breakpointSmall, $breakpointLarge);
+} 
+
+//Color contrast
+@mixin text-contrast($n) {
+  $color-brightness: round(
+    (red($n) * 299) + (green($n) * 587) + (math.div(blue($n) * 114, 1000)));
+  $light-color: round(
+    (red(#ffffff) * 299) + (green(#ffffff) * 587) + (math.div(blue(#ffffff) * 114, 1000)));
+
+  @if abs($color-brightness) < (math.div($light-color, 2)) {
+    color: $white;
+    border-color: $white;
+  } @else {
+    color: $text-color;
+    border-color: $text-color;
+  }
+}
+
+//Font and line height calulation, with unitless line-height
+// Base font size of 16px and line-height of 1.25
+// Usage
+// @include rhythm(48, 50);
+@mixin rhythm($sizeValue: 16, $heightValue: 20) {
+  //Font sizes px + rem
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.625 * $sizeValue) + rem;
+  //Line height - unitless
+  line-height: math.div($heightValue, $sizeValue);
+}
+
+//Aspect ratio
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: math.div($height, $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,64 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+	<h1>{% currentMonth %}</h1>
+
+	<h2>Vegetables</h2>
+	<ul class="dgwltd-food dgwltd-food--vegetables">
+	{% set vegetablecount = 0 %}
+	{% for vegetable in vegetables  %}
+		{% for month in vegetable.during %}
+			{% if month == thisMonth %}
+				{% set foodName = vegetable.name %}
+				{% set vegetablecount = vegetablecount + 1 %}
+				{% include "molecules/_food-item.njk" %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+	</ul>
+
+	{% if vegetablecount == 0 %}
+		<p>No fruit in {{ title |  capitalize }}</p>
+	{% endif %}
+
+	<hr />
+	
+	<h2>Fruit</h2>
+	<ul class="dgwltd-food dgwltd-food--fruit">
+	{% set fruitcount = 0 %}
+	{% for fruit in fruits  %}
+		{% for month in fruit.during %}
+			{% if month == thisMonth %}
+				{% set foodName = fruit.name %}
+				{% set fruitcount = fruitcount + 1 %}
+				{% include "molecules/_food-item.njk" %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+	</ul>
+
+	{% if fruitcount == 0 %}
+		<p>No fruit in {{ title |  capitalize }}</p>
+	{% endif %}
+
+	<hr />
+
+	<h2>Herbs</h2>
+	<ul class="dgwltd-food dgwltd-food--herbs">
+	{% for herb in herbs  %}
+		{% for month in herb.during %}
+			{% if month == thisMonth %}
+				{% set foodName = herb.name %}
+				{% set herbcount = herbcount + 1 %}
+				{% include "molecules/_food-item.njk" %}
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+	</ul>
+
+	{% if herbcount == 0 %}
+		<p>No herbs in {{ title |  capitalize }}</p>
+	{% endif %}
+
+{% endblock %}

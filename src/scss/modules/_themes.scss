@@ -1,0 +1,28 @@
+//Color themes for background colours
+@each $theme in map-keys(map-get($palettes, themes)) {
+    //Colors
+    .c--#{"" + $theme} {
+      color: map-deep-get( $palettes, themes $theme background) !important;
+    }
+    //Borders
+    .border--#{"" + $theme} {
+      border-color: map-deep-get( $palettes, themes $theme border) !important;
+    }
+    //Background themes
+    .bg--#{"" + $theme} {
+      background-color: map-deep-get($palettes, themes $theme background) !important;
+      h1, h2, h3, > * {
+        color: map-deep-get($palettes, themes $theme text) !important;
+      }
+      //Links
+      a:not(.oneorg-button) {
+        color: map-deep-get( $palettes, themes $theme text);
+        &:hover, &:focus {
+          color: inherit;
+        }
+      }
+      svg {
+        fill: map-deep-get( $palettes, themes $theme text);
+      }
+    }
+  }

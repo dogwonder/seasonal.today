@@ -1,0 +1,27 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <style>{% include "css/main.css" %}</style>
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="{{ "/" | url }}images/fav/favicon-128x128.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ "/" | url }}images/fav/favicon-128x128.png">
+    <meta name="apple-mobile-web-app-title" content="{{ title or metadata.title }}" />
+    <meta name="theme-color" content="#75e6ef">
+  </head>
+  <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="dgwltd-wrapper">
+    {% include "partials/header.njk" %}
+    <main id="content" class="dgwltd-container">
+      {% block content %}{% endblock %}
+    </main>
+    {% include "partials/footer.njk" %}
+    </div>
+    <script type="module" src="{{ "/" | url }}js/app.js"></script>
+  </body>
+</html>

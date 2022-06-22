@@ -45,7 +45,4 @@ Thumbs.db
 *.tar
 *.zip
 
-# ignore node/grunt dependency directories
 node_modules/
-assets/icons/
-package-lock.json
