@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="{{ "/" | url }}images/fav/favicon-128x128.png">
     <meta name="apple-mobile-web-app-title" content="{{ title or metadata.title }}" />
     <meta name="theme-color" content="#75e6ef">
+    <script async defer data-domain="seasonal.today" src="https://plausible.io/js/plausible.js"></script>
   </head>
   <body{% if templateClass %} class="{{ templateClass }}"{% endif %}>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
