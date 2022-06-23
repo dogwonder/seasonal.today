@@ -7,5 +7,14 @@
         width: 4.4rem;
         height: 4.4rem;
         fill: var(--text-color);
+        margin-right: 2ch;
+    }
+    .main-navigation {
+        //CSS grid 6 items 
+        @include mq($until: md) {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 1ch;
+        }
     }
 }
