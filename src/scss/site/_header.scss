@@ -6,6 +6,10 @@
     svg {
         width: 4.4rem;
         height: 4.4rem;
+        @include mq($until: md) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
         fill: var(--text-color);
         margin-right: 2ch;
     }
@@ -14,7 +18,7 @@
         @include mq($until: md) {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            grid-gap: 1ch;
+            grid-gap: 0.5ch;
         }
     }
 }
