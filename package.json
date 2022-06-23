@@ -11,7 +11,9 @@
     "watch:css": "onchange \"**/*.scss\" -- npm run css --silent",
     "watch:eleventy": "npx eleventy --serve",
     "watch": "run-p watch:*",
-    "build": "NODE_ENV=production run-p css && NODE_ENV=production npx eleventy"
+    "move:cname": "copyfiles --flat src/CNAME docs/",
+    "move": "run-p move:*",
+    "build": "NODE_ENV=production run-p css && NODE_ENV=production npx eleventy && run-p move"
   },
   "author": "",
   "license": "ISC",
