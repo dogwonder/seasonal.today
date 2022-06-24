@@ -87,8 +87,7 @@ module.exports = config => {
 
     dir: {
       input: 'src',
-      output: 'docs', 
-      includes: '_includes'
+      output: 'docs'
     }
   };
 
