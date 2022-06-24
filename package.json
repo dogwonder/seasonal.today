@@ -20,7 +20,6 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0-canary.11",
-    "@11ty/eleventy-img": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "@11ty/eleventy-plugin-vite": "^1.0.0-canary.1",
