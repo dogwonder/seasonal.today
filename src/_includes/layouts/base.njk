@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title or metadata.title }}</title>
+    <meta name="generator" content="{{ eleventy.generator }}">
     <style>{% include "css/main.css" %}</style>
     <script async defer data-domain="seasonal.today" src="https://plausible.io/js/plausible.js"></script>
     {% include "../partials/_meta.njk" %}
