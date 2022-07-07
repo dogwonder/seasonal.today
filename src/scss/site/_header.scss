@@ -6,10 +6,6 @@
     svg {
         width: 4.4rem;
         height: 4.4rem;
-        @include mq($until: md) {
-            width: 3.2rem;
-            height: 3.2rem;
-        }
         fill: var(--text-color);
         margin-right: 2ch;
     }
@@ -17,8 +13,15 @@
         //CSS grid 6 items 
         @include mq($until: md) {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-gap: 0.5ch;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 3rem;
+                min-height: 3rem;
+            }
         }
     }
 }
