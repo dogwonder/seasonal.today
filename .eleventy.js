@@ -6,7 +6,7 @@ const { DateTime } = require("luxon");
 //Plugins
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
+const slinkity = require('slinkity');
 const markdownIt = require("markdown-it");
 const svgContents = require("eleventy-plugin-svg-contents");
 
@@ -30,7 +30,10 @@ module.exports = config => {
   // Add plugins
   config.addPlugin(pluginRss);
   config.addPlugin(pluginSyntaxHighlight);
-  config.addPlugin(EleventyVitePlugin);
+  config.addPlugin(slinkity.plugin, slinkity.defineConfig({
+    // optional: use slinkity.defineConfig
+    // for some handy autocomplete in your editor
+  }))
   config.addPlugin(svgContents);
 
   // Only minify HTML if we are in production because it slows builds _right_ down
