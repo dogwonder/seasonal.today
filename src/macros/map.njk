@@ -1,0 +1,40 @@
+
+{% macro map(address) %}
+    <script src="//maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDsHbDxcYMeWfD1kEFgy8qsPGuN0sL4mC8"></script>
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+
+        var geocoder = new google.maps.Geocoder();
+        var address = "{{ address }}";
+
+        geocoder.geocode( { 'address': address}, function(results, status) {
+
+        if (status == google.maps.GeocoderStatus.OK) {
+
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+
+            var myLatlng = new google.maps.LatLng(latitude,longitude);
+
+            var mapOptions = {
+            center: myLatlng,
+            zoom: 14
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map
+            });
+            }
+        });
+
+    });
+    </script>
+    <div class="block block--map">
+        <div class="inner">
+            <div id="map"></div>
+        </div><!--/inner-->
+    </div><!--/block-->
+{% endmacro %}

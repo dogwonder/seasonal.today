@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "dgw.ltd",
   "version": "1.0.0",
+=======
+  "name": "seasonal.today",
+  "version": "1.3.0",
+>>>>>>> parent of e7ec6d13 (update readme)
   "description": "",
   "main": "",
   "scripts": {
