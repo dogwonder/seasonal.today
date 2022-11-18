@@ -14,7 +14,8 @@
     "move:cname": "copyfiles --flat src/CNAME docs/",
     "move:meta": "copyfiles --flat src/images/meta/**/* docs/assets/images/meta",
     "move": "run-p move:*",
-    "build": "NODE_ENV=production run-p css && NODE_ENV=production npx eleventy && run-p move"
+    "build": "NODE_ENV=production run-p css && NODE_ENV=production npx eleventy && run-p move",
+    "cy:run": "cypress run"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +29,8 @@
     "concurrently": "^5.3.0",
     "copyfiles": "^2.4.1",
     "cssnano": "^5.0.8",
+    "cypress": "^11.1.0",
+    "cypress-axe": "^1.0.0",
     "del": "^5.1.0",
     "dotenv": "^16.0.0",
     "eleventy-plugin-svg-contents": "^0.7.0",
@@ -47,5 +50,8 @@
     "trash-cli": "^5.0.0",
     "uglify-js": "^3.14.2",
     "yaml": "^2.1.1"
+  },
+  "devDependencies": {
+    "axe-core": "^4.5.2"
   }
 }
