@@ -1,6 +1,6 @@
 ---
 title: july
-date: 2022-07-01
+date: 2023-07-01
 layout: layouts/month.njk
 ---
 
