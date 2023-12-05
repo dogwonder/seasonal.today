@@ -48,6 +48,10 @@ module.exports = config => {
   //
   config.addShortcode('year', () => `${new Date().getFullYear()}`);
 
+
+  //Get current Unix timestamp
+  config.addShortcode('timestamp', () => `${Date.now()}`);
+
   //Using Luxon https://moment.github.io/luxon/demo/global.html
   config.addShortcode('currentMonth', () => `${DateTime.local().monthLong}`);
 
