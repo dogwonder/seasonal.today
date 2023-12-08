@@ -25,9 +25,6 @@ module.exports = async function() {
                "january",
                "february",
                "march",
-               "april",
-               "may",
-               "june",
                "july",
                "august",
                "september",
@@ -47,7 +44,6 @@ module.exports = async function() {
          { 
             "name":"Broccoli",
             "during":[ 
-               "march",
                "april",
                "may",
                "june",
@@ -61,9 +57,6 @@ module.exports = async function() {
             "name":"Brussels sprouts",
             "during":[ 
                "january",
-               "february",
-               "march",
-               "september",
                "october",
                "november",
                "december"
@@ -74,7 +67,8 @@ module.exports = async function() {
            "during":[ 
               "september",
               "october",
-              "november"
+              "november", 
+              "december"
            ]
         },
          { 
@@ -99,8 +93,8 @@ module.exports = async function() {
             "during":[ 
                "january",
                "february",
-               "march",
-               "april",
+               "may",
+               "june",
                "july",
                "august",
                "september", 
@@ -117,9 +111,6 @@ module.exports = async function() {
               "march",
               "april",
               "may",
-              "june",
-              "july",
-              "august",
               "september",
               "october",
               "november",
@@ -141,8 +132,6 @@ module.exports = async function() {
             "during":[ 
                "january",
                "february",
-               "march",
-               "september",
                "october",
                "november",
                "december"
@@ -151,12 +140,12 @@ module.exports = async function() {
          { 
             "name":"Celery",
             "during":[ 
+               "may",
+               "june",
                "july",
                "august",
                "september",
-               "october",
-               "november",
-               "december"
+               "october"
             ]
          },
          { 
@@ -190,11 +179,11 @@ module.exports = async function() {
          { 
             "name":"Courgette",
             "during":[ 
+               "may",
                "june",
                "july",
                "august",
-               "september",
-               "october"
+               "september"
             ]
          },
          { 
@@ -208,17 +197,27 @@ module.exports = async function() {
          { 
             "name":"Fennel bulb",
             "during":[ 
-               "june",
-               "july"
+               "july", 
+               "august",
+               "september",
+               "october"
             ]
          },
          { 
            "name":"Mushrooms",
            "during":[ 
-              "january",
-              "february",
-              "august",
-              "december"
+               "january",
+               "february",
+               "march",
+               "april",
+               "may",
+               "june",
+               "july",
+               "august",
+               "september", 
+               "october",
+               "november",
+               "december"
            ]
         },
         { 
@@ -232,8 +231,10 @@ module.exports = async function() {
         { 
            "name":"French beans",
            "during":[ 
+              "june",
               "july",
-              "august"
+              "august",
+              "september"
            ]
         },
          { 
@@ -289,12 +290,14 @@ module.exports = async function() {
          },
          { 
             "name":"Lettuce",
-            "during":[ 
-               "may",
-               "june",
-               "august",
-               "september",
-               "october"
+            "during":[
+               "january",
+               "february",
+               "march",
+               "april", 
+               "october", 
+               "november",
+               "december"
             ]
          },
          { 
@@ -303,7 +306,6 @@ module.exports = async function() {
                "january",
                "february",
                "march",
-               "august",
                "september",
                "october",
                "november",
@@ -375,9 +377,6 @@ module.exports = async function() {
                "january",
                "february",
                "march",
-               "april",
-               "august",
-               "september",
                "october",
                "november",
                "december"
@@ -397,7 +396,7 @@ module.exports = async function() {
          { 
             "name":"Peppers",
             "during":[ 
-               "june",
+               "july",
                "august",
                "september"
             ]
@@ -466,6 +465,16 @@ module.exports = async function() {
             ]
          },
          { 
+            "name":"Red cabbage",
+            "during":[ 
+               "january",
+               "september",
+               "october", 
+               "november",
+               "december"
+            ]
+         },
+         { 
            "name":"Rocket",
            "during":[ 
               "april",
@@ -519,8 +528,10 @@ module.exports = async function() {
          { 
             "name":"Spinach",
             "during":[ 
-               "april",
                "may",
+               "june",
+               "july",
+               "august",
                "september",
                "october"
             ]
@@ -546,13 +557,10 @@ module.exports = async function() {
                "january",
                "february",
                "march",
-               "april",
-               "may",
-               "june",
-               "july",
-               "august",
                "september",
-               "october"
+               "october", 
+               "november",
+               "december"
             ]
          },
          { 
@@ -561,8 +569,6 @@ module.exports = async function() {
                "january",
                "february",
                "march",
-               "july",
-               "august",
                "september",
                "october",
                "november",
@@ -593,6 +599,7 @@ module.exports = async function() {
             "during":[ 
                "january",
                "february",
+               "march",
                "september",
                "october",
                "november",
@@ -602,15 +609,12 @@ module.exports = async function() {
          { 
             "name":"Watercress",
             "during":[ 
-               "march",
-               "april",
                "may",
                "june",
                "july",
                "august",
                "september",
-               "october",
-               "november"
+               "october"
             ]
          }
 	];

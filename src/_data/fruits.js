@@ -5,6 +5,8 @@ module.exports = async function() {
             "during":[ 
                "january",
                "february",
+               "march",
+               "august",
                "september",
                "october",
                "november",
