@@ -1,6 +1,10 @@
 {
-    "short_name": "seasonal.today",
     "name": "seasonal.today",
+    "short_name": "Seasonal",
+    "start_url": "/",
+    "description": "Calendar of seasonal produce", 
+    "display": "standalone",
+    "background_color": "#75e6ef",
     "icons": [
       {
         "src": "/assets/favicon-192x192.png",
@@ -13,9 +17,5 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/?source=pwa",
-    "background_color": "#75e6ef",
-    "display": "standalone",
-    "scope": "/",
     "theme_color": "#75e6ef"
 }
