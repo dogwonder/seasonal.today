@@ -1,6 +1,6 @@
 
 // Define the cache name
-const CACHE_NAME = 'seasonal-1711931263641';
+const CACHE_NAME = 'seasonal-1714523200330';
 
 // Add list of files to cache here
 const CACHE_ASSETS = [
