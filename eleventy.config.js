@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = async function(eleventyConfig) {
 
-  const {EleventyRenderPluging} = await import("@11ty/eleventy");
+  const {EleventyRenderPlugin} = await import("@11ty/eleventy");
 
   // Add plugins
   eleventyConfig.addPlugin(UpgradeHelper);
