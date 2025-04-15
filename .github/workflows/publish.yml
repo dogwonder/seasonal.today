@@ -34,6 +34,6 @@ jobs:
       - name: 🚀 Deploy to GitHub Pages
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: gh-pages
+          branch: main
           folder: docs
           commit_message: "chore: generate monthly build"
