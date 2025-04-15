@@ -4,15 +4,11 @@ const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const md = new markdownIt({html: true});  
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
-const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = async function(eleventyConfig) {
 
   const {EleventyRenderPlugin} = await import("@11ty/eleventy");
-
-  // Add plugins
-  eleventyConfig.addPlugin(UpgradeHelper);
 
   // Add passthroughs
   eleventyConfig.addPassthroughCopy("src/images");
