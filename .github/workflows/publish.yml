@@ -19,8 +19,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the site
       run: |
-        mkdir _site
-        echo '<h1>Hello, world!</h1>' > _site/index.html
+        mkdir dist
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
   deploy:
