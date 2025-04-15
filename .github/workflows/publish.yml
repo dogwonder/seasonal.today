@@ -1,13 +1,15 @@
 name: Build and Deploy
+
 on:
   schedule:
-    # Runs "At 00:05 on day-of-month 1." (see https://crontab.guru)
-    # Runs every day
-    - cron: '05 00 1 * *'
+    # Runs at 00:05 on the 1st of every month
+    - cron: '5 0 1 * *'
   workflow_dispatch:
+
 jobs:
   build-and-deploy:
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    name: Build and Deploy
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -15,21 +17,23 @@ jobs:
         node-version: [14.x]
 
     steps:
-      - name: Checkout 🛎️
+      - name: 📥 Checkout code
         uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: 🔧 Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-      - name: Install dependencies & build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.  
+      - name: 📦 Install dependencies & build project
         run: |
           npm ci
           npm run build
 
-      - name: Deploy 🚀
+      - name: 🚀 Deploy to GitHub Pages
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: docs # The folder the action should deploy.
-          commit_message: Generate monthly build
+          branch: gh-pages
+          folder: docs
+          commit_message: "chore: generate monthly build"
