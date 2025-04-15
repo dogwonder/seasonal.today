@@ -1,34 +1,36 @@
-name: Publish site
-
+name: Build and Deploy
 on:
-  push:
-  workflow_dispatch:
   schedule:
     # Runs "At 00:05 on day-of-month 1." (see https://crontab.guru)
     # Runs every day
     - cron: '05 00 1 * *'
-
-permissions:
-  pages: write
-  id-token: write
-
+  workflow_dispatch:
 jobs:
-  build:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the site
-      run: |
-        mkdir dist
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies & build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.  
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: docs # The folder the action should deploy.
+          commit_message: Generate monthly build
